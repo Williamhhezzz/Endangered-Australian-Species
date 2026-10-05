@@ -1,0 +1,241 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 340,
+  "title": {
+    "text": "Tracking Australia's Threatened Animals (1985–2022)",
+    "subtitle": "Monitored population trajectories relative to 1985 baseline (100%). Source: TSX 2025.",
+    "fontSize": 15,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/tsx_national_index.csv"
+  },
+  "layer": [
+    {
+      "description": "Uncertainty Envelope (95% Confidence Interval)",
+      "mark": {
+        "type": "area",
+        "opacity": 0.35,
+        "color": "#cbd5e1"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "scale": {"domain": [1985, 2024]},
+          "axis": {
+            "format": "d",
+            "title": "Year",
+            "grid": false,
+            "values": [1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2022]
+          }
+        },
+        "y": {
+          "field": "low",
+          "type": "quantitative",
+          "axis": {
+            "title": "Monitored Population (% of 1985 Level)",
+            "format": ".0%"
+          }
+        },
+        "y2": {
+          "field": "high"
+        }
+      }
+    },
+    {
+      "description": "Upper CI Boundary Line",
+      "mark": {
+        "type": "line",
+        "strokeDash": [2, 2],
+        "strokeWidth": 1,
+        "color": "#94a3b8"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "high", "type": "quantitative"}
+      }
+    },
+    {
+      "description": "Lower CI Boundary Line",
+      "mark": {
+        "type": "line",
+        "strokeDash": [2, 2],
+        "strokeWidth": 1,
+        "color": "#94a3b8"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "low", "type": "quantitative"}
+      }
+    },
+    {
+      "description": "100% Baseline Reference Line",
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#64748b",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "datum": 1.0
+        }
+      }
+    },
+    {
+      "description": "Main Population Index Line",
+      "mark": {
+        "type": "line",
+        "color": "#b2182b",
+        "strokeWidth": 3.5
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "value", "type": "quantitative"}
+      }
+    },
+    {
+      "description": "Hover Guide Line",
+      "transform": [
+        {"filter": {"param": "hover", "empty": false}}
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#0284c7",
+        "strokeWidth": 1.5,
+        "strokeDash": [3, 3]
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"}
+      }
+    },
+    {
+      "description": "Hover Interactive Point & Tooltip",
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["year"],
+            "on": "mousemove",
+            "clear": "mouseout",
+            "nearest": true
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 85
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "value", "type": "quantitative"},
+        "color": {
+          "condition": {"param": "hover", "empty": false, "value": "#0284c7"},
+          "value": "transparent"
+        },
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year"},
+          {"field": "value", "type": "quantitative", "title": "Population Level", "format": ".1%"},
+          {"field": "low", "type": "quantitative", "title": "Lower 95% Bound", "format": ".1%"},
+          {"field": "high", "type": "quantitative", "title": "Upper 95% Bound", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "description": "2022 Endpoint Marker Dot",
+      "transform": [
+        {"filter": "datum.year == 2022"}
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#b2182b",
+        "size": 75
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "value", "type": "quantitative"}
+      }
+    },
+    {
+      "description": "Multi-Line Editorial Annotations",
+      "data": {
+        "values": [
+          {
+            "year": 1991,
+            "yPosition": 2.22,
+            "Title": "Uncertainty Envelope:",
+            "Annotation": [
+              "Shaded band covers 95% CI",
+              "reflecting survey variability",
+              "and site differences."
+            ],
+            "align": "left",
+            "dx": 0
+          },
+          {
+            "year": 2004,
+            "yPosition": 1.38,
+            "Title": "1985 Baseline (100%):",
+            "Annotation": [
+              "Standardized benchmark",
+              "index reference level."
+            ],
+            "align": "left",
+            "dx": 0
+          },
+          {
+            "year": 2022,
+            "yPosition": 0.80,
+            "Title": "2022 Status:",
+            "Annotation": [
+              "-75% overall decline",
+              "National index down to 0.25"
+            ],
+            "align": "right",
+            "dx": -15
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "baseline": "top",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#1e293b"
+          },
+          "encoding": {
+            "x": {"field": "year", "type": "quantitative"},
+            "y": {"field": "yPosition", "type": "quantitative"},
+            "align": {"field": "align", "type": "nominal"},
+            "dx": {"field": "dx", "type": "quantitative"},
+            "text": {"field": "Title"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "baseline": "top",
+            "fontSize": 10,
+            "color": "#475569",
+            "dy": 15
+          },
+          "encoding": {
+            "x": {"field": "year", "type": "quantitative"},
+            "y": {"field": "yPosition", "type": "quantitative"},
+            "align": {"field": "align", "type": "nominal"},
+            "dx": {"field": "dx", "type": "quantitative"},
+            "text": {"field": "Annotation"}
+          }
+        }
+      ]
+    }
+  ]
+}
