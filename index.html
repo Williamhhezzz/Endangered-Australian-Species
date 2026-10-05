@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  <title>Australia's Threatened Fauna: Trajectories, Protection & Recovery</title>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Australia's Threatened Fauna:<br>Trajectories, Protection & Recovery</h1>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section-container" id="macro-trend">
+      <div class="section-header-block">
+        <h2 class="section-header">The Big Picture: National Fauna Trajectory</h2>
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat-card">
+          <div class="stat-card__number">-75%</div>
+          <div class="stat-card__label">National index decline<br>since 1985</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">40</div>
+          <div class="stat-card__label">Years of continuous<br>population monitoring</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">2000</div>
+          <div class="stat-card__label">Baseline year for<br>current trajectories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">2022</div>
+          <div class="stat-card__label">Latest comprehensive<br>status update</div>
+        </div>
+      </div>
+
+      <div class="chart-row row-md">
+        <div class="chart-block chart-block--side-caption full-width">
+          <div id="vis-c1" class="full-width"></div>
+          <p class="chart-caption chart-caption--side">
+            Since 1985, Australia's overall monitored threatened fauna populations have suffered a steep, continuous decline. The national index has fallen by approximately <strong>75%</strong> over the past four decades, indicating a persistent crisis across ecosystems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-container" id="taxonomic-breakdown">
+      <div class="section-header-block">
+        <p class="section-kicker">Section 1 of 6 — Divergent Trends</p>
+        <h2 class="section-header">Taxonomic & Functional Group Divergence</h2>
+      </div>
+
+      <div class="chart-row row-xl">
+        <div class="chart-block half-width">
+          <div id="vis-c2" class="full-width"></div>
+          <p class="chart-caption chart-caption--bottom">
+            Population trajectories vary drastically across animal groups. Monitored amphibians have collapsed to under <strong>5%</strong> of their baseline levels.
+          </p>
+        </div>
+        <div class="chart-block half-width">
+          <div id="vis-c3" class="full-width"></div>
+          <p class="chart-caption chart-caption--bottom">
+            Conversely, marine mammals show signs of localized recovery, highlighting how threat severity and management efficacy differ by taxa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-container" id="geography">
+      <div class="section-header-block">
+        <p class="section-kicker">Section 2 of 6 — Spatial Context</p>
+        <h2 class="section-header">Geographic Spread & Survey Distribution</h2>
+      </div>
+
+      <div class="chart-row row-xl">
+        <div class="chart-block half-width">
+          <div id="vis-m1" class="full-width"></div>
+        </div>
+        <div class="chart-block half-width">
+          <div id="vis-m2" class="full-width"></div>
+        </div>
+      </div>
+      
+      <div class="chart-row row-md" style="margin-top: 2rem;">
+        <div class="chart-block chart-block--side-caption full-width">
+          <div id="vis-m3" class="full-width"></div>
+          <p class="chart-caption chart-caption--side">
+            Evaluating population decline across jurisdictions alongside survey effort density at regional IBRA centroids. The spatial distribution maps reveal where monitoring is concentrated and where data gaps persist.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-container" id="protection">
+      <div class="section-header-block">
+        <p class="section-kicker">Section 3 of 6 — Legislation</p>
+        <h2 class="section-header">Statutory Protection Categories & Cross-Tabulation</h2>
+      </div>
+
+      <div class="chart-row row-xl">
+        <div class="chart-block half-width">
+          <div id="vis-c4" class="full-width"></div>
+        </div>
+        <div class="chart-block half-width">
+          <div id="vis-c5" class="full-width"></div>
+        </div>
+      </div>
+      <div class="chart-row row-sm">
+         <p class="chart-caption chart-caption--bottom" style="text-align: center;">
+            Examining EPBC Act listing counts across Australian states and the distribution of risk categories by animal class.
+         </p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-container" id="interventions">
+      <div class="section-header-block">
+        <p class="section-kicker">Section 4 of 6 — Responses</p>
+        <h2 class="section-header">Risk Escalation & Intervention Outcomes</h2>
+      </div>
+
+      <div class="chart-row row-xl">
+        <div class="chart-block half-width">
+          <div id="vis-c6" class="full-width"></div>
+        </div>
+        <div class="chart-block half-width">
+          <div id="vis-c9" class="full-width"></div>
+        </div>
+      </div>
+
+      <div class="chart-row row-md" style="margin-top: 2rem;">
+        <div class="chart-block chart-block--side-caption full-width">
+          <div id="vis-c11" class="full-width"></div>
+          <p class="chart-caption chart-caption--side">
+            Tracking the growth of <strong>Critically Endangered</strong> species alongside the positive impact of predator-free havens and active management, demonstrating that targeted conservation interventions yield measurable population recoveries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-container" id="threats">
+      <div class="section-header-block">
+        <p class="section-kicker">Section 5 of 6 — Pressures</p>
+        <h2 class="section-header">Primary Threat Drivers & Invasive Species</h2>
+      </div>
+
+      <div class="chart-row row-md">
+        <div class="chart-block chart-block--side-caption full-width">
+          <div class="full-width" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between;">
+             <div id="vis-c7" style="flex: 1; min-width: 30%;"></div>
+             <div id="vis-c8" style="flex: 1; min-width: 30%;"></div>
+             <div id="vis-c10" style="flex: 1; min-width: 30%;"></div>
+          </div>
+          <p class="chart-caption chart-caption--side">
+            Invasive predators (such as feral cats and foxes) alongside expansive land clearing remain the leading drivers of fauna extinction risk across the continent.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-container" id="states">
+      <div class="section-header-block">
+        <p class="section-kicker">Section 6 of 6 — Regional Impact</p>
+        <h2 class="section-header">State-by-State Population Shifts</h2>
+      </div>
+
+      <div class="chart-row row-md">
+        <div class="chart-block chart-block--side-caption full-width">
+          <div id="vis-c12" class="full-width"></div>
+          <p class="chart-caption chart-caption--side">
+            Comparing population index declines across Australian states between the 2000 baseline and current monitoring. Variations reflect state-level environmental policies, funding, and historic baseline densities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <div>
+        Visualisation by <strong>Hong En Ho</strong>, 5 Oct 2026.
+      </div>
+      <div>
+        <strong>Data Sources</strong><br>
+        <span class="footer-link">Department of Climate Change, Energy, the Environment and Water (DCCEEW)</span> &nbsp;·&nbsp; 
+        <span class="footer-link">State of the Environment (SoE) 2021</span> &nbsp;·&nbsp; 
+        <span class="footer-link">Threatened Species Index (TSX 2025)</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vega_lite_vis.js"></script>
+
+</body>
+</html>
