@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Overall Population Lost vs. Remaining (2000–2022)",
+    "subtitle": "100 squares per class (1 square = 1% of 2000 baseline level). Source: TSX 2025.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/tsx_class_waffle.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "x": "number",
+        "y": "number"
+      }
+    }
+  },
+  "facet": {
+    "field": "class",
+    "type": "nominal",
+    "columns": 4,
+    "header": {
+      "title": null,
+      "labelFontSize": 12,
+      "labelFontWeight": "bold",
+      "labelPadding": 6
+    }
+  },
+  "spec": {
+    "width": 110,
+    "height": 110,
+    "mark": {
+      "type": "rect",
+      "stroke": "#ffffff",
+      "strokeWidth": 1,
+      "cornerRadius": 1
+    },
+    "encoding": {
+      "x": {
+        "field": "x",
+        "type": "ordinal",
+        "scale": {
+          "domain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        },
+        "axis": null
+      },
+      "y": {
+        "field": "y",
+        "type": "ordinal",
+        "scale": {
+          "domain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        },
+        "axis": null
+      },
+      "color": {
+        "field": "status",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Remaining", "Lost"],
+          "range": ["#b2182b", "#e2e8f0"]
+        },
+        "legend": {
+          "orient": "bottom",
+          "title": null,
+          "labelFontSize": 11,
+          "symbolSize": 120
+        }
+      },
+      "tooltip": [
+        {
+          "field": "class",
+          "type": "nominal",
+          "title": "Animal Class"
+        },
+        {
+          "field": "status",
+          "type": "nominal",
+          "title": "Status"
+        },
+        {
+          "field": "pct_remaining",
+          "type": "nominal",
+          "title": "% Remaining (2022)"
+        }
+      ]
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}
