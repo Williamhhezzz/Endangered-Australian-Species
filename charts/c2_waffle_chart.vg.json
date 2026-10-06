@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Overall Population Lost vs. Remaining (2000–2022)",
-    "subtitle": "100 squares per class (1 square = 1% of 2000 baseline level). Source: TSX 2025.",
+    "text": "Overall Population Lost vs. Remaining",
+    "subtitle": "100 squares per class (1 square = 1% of 1985 baseline level). Source: TSX 2025.",
     "fontSize": 14,
     "subtitleFontSize": 11,
     "anchor": "start"

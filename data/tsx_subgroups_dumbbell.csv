@@ -1,0 +1,17 @@
+class,subgroup,baseline_2000,current_2022,change_pct,order
+Amphibians,Land-breeding frogs,100,4.8,-95.2%,1
+Amphibians,Frogs resilient to fungus,100,27.2,-72.8%,2
+Amphibians,Wetland-breeding frogs,100,27.6,-72.4%,3
+Amphibians,Frogs hit by fungal disease,100,45.6,-54.4%,4
+Amphibians,Stream-dwelling frogs,100,84.1,-15.9%,5
+Reptiles,Freshwater reptiles,100,23.5,-76.5%,6
+Reptiles,Terrestrial reptiles,100,28.3,-71.7%,7
+Reptiles,Marine reptiles,100,107.1,+7.1%,8
+Birds,Migratory shorebirds,100,43.6,-56.4%,9
+Birds,Terrestrial birds,100,54.0,-46.0%,10
+Birds,Marine birds & seabirds,100,80.1,-19.9%,11
+Mammals,Medium land mammals,100,52.1,-47.9%,12
+Mammals,Terrestrial mammals (all),100,59.1,-40.9%,13
+Mammals,Small land mammals,100,84.2,-15.8%,14
+Mammals,Large land mammals,100,125.7,+25.7%,15
+Mammals,Marine mammals,100,142.9,+42.9%,16

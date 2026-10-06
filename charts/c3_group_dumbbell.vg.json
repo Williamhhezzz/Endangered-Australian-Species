@@ -1,0 +1,225 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Sub-Group Divergence Across Animal Classes",
+    "subtitle": "Index change in 2022 relative to 2000 baseline (100%). Crimson = decline, Teal = recovery. Source: TSX 2025.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/tsx_subgroups_dumbbell.csv"
+  },
+  "facet": {
+    "row": {
+      "field": "class",
+      "type": "nominal",
+      "title": null,
+      "header": {
+        "labelFontSize": 12,
+        "labelFontWeight": "bold",
+        "labelColor": "#0f172a",
+        "labelOrient": "left",
+        "labelAngle": 0,
+        "labelPadding": 10,
+        "labelAlign": "left"
+      }
+    }
+  },
+  "spec": {
+    "width": 850,
+    "height": {
+      "step": 26
+    },
+    "layer": [
+      {
+        "description": "Connecting Line Between 2000 Baseline and 2022 Level",
+        "mark": {
+          "type": "rule",
+          "color": "#cbd5e1",
+          "size": 2.5
+        },
+        "encoding": {
+          "y": {
+            "field": "subgroup",
+            "type": "nominal",
+            "sort": {
+              "field": "order"
+            },
+            "axis": {
+              "title": null,
+              "labelFontSize": 11,
+              "labelLimit": 280
+            }
+          },
+          "x": {
+            "field": "baseline_2000",
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 160]
+            },
+            "axis": {
+              "title": "Population Level (% of 2000 Baseline)",
+              "format": ".0f"
+            }
+          },
+          "x2": {
+            "field": "current_2022"
+          }
+        }
+      },
+      {
+        "description": "100% Baseline Reference Line",
+        "mark": {
+          "type": "rule",
+          "strokeDash": [3, 3],
+          "color": "#94a3b8",
+          "size": 1
+        },
+        "encoding": {
+          "x": {
+            "datum": 100
+          }
+        }
+      },
+      {
+        "description": "2000 Baseline Point",
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "color": "#94a3b8",
+          "size": 75
+        },
+        "encoding": {
+          "y": {
+            "field": "subgroup",
+            "type": "nominal",
+            "sort": {
+              "field": "order"
+            }
+          },
+          "x": {
+            "field": "baseline_2000",
+            "type": "quantitative"
+          },
+          "tooltip": [
+            {
+              "field": "class",
+              "type": "nominal",
+              "title": "Class"
+            },
+            {
+              "field": "subgroup",
+              "type": "nominal",
+              "title": "Sub-group"
+            },
+            {
+              "field": "baseline_2000",
+              "type": "quantitative",
+              "title": "2000 Baseline",
+              "format": ".0f"
+            }
+          ]
+        }
+      },
+      {
+        "description": "2022 Current Level Point",
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "size": 110
+        },
+        "encoding": {
+          "y": {
+            "field": "subgroup",
+            "type": "nominal",
+            "sort": {
+              "field": "order"
+            }
+          },
+          "x": {
+            "field": "current_2022",
+            "type": "quantitative"
+          },
+          "color": {
+            "condition": {
+              "test": "datum.current_2022 < 100",
+              "value": "#b2182b"
+            },
+            "value": "#059669"
+          },
+          "tooltip": [
+            {
+              "field": "class",
+              "type": "nominal",
+              "title": "Class"
+            },
+            {
+              "field": "subgroup",
+              "type": "nominal",
+              "title": "Sub-group"
+            },
+            {
+              "field": "current_2022",
+              "type": "quantitative",
+              "title": "2022 Level",
+              "format": ".1f"
+            },
+            {
+              "field": "change_pct",
+              "type": "nominal",
+              "title": "Net Change"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Percentage Change Text Label",
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 8,
+          "fontSize": 10,
+          "fontWeight": "bold"
+        },
+        "encoding": {
+          "y": {
+            "field": "subgroup",
+            "type": "nominal",
+            "sort": {
+              "field": "order"
+            }
+          },
+          "x": {
+            "field": "current_2022",
+            "type": "quantitative"
+          },
+          "text": {
+            "field": "change_pct",
+            "type": "nominal"
+          },
+          "color": {
+            "condition": {
+              "test": "datum.current_2022 < 100",
+              "value": "#b2182b"
+            },
+            "value": "#059669"
+          }
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "config": {
+    "facet": {
+      "spacing": 14
+    },
+    "header": {
+      "title": null
+    }
+  }
+}

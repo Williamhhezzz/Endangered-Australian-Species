@@ -278,3 +278,9 @@ body {
   }
 }
 
+.vega-embed canvas,
+.vega-embed svg {
+  max-width: 100%;
+  height: auto;
+}
+

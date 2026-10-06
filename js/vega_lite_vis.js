@@ -8,3 +8,4 @@ const embedSpec = (elementId, specPath) => {
 
 embedSpec("#vis-c1", "charts/c1_national_trend.vg.json");
 embedSpec("#vis-c2", "charts/c2_waffle_chart.vg.json");
+embedSpec("#vis-c3", "charts/c3_group_dumbbell.vg.json");
