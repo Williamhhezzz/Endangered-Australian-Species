@@ -12,3 +12,4 @@ embedSpec("#vis-c3", "charts/c3_group_dumbbell.vg.json");
 embedSpec("#vis-m1", "charts/m1_choropleth_map.vg.json");
 embedSpec("#vis-m2", "charts/m2_symbol_map.vg.json");
 embedSpec("#vis-m3", "charts/m3_dot_map.vg.json");
+embedSpec("#vis-c4", "charts/c4_heatmap.vg.json");

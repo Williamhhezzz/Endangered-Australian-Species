@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "title": {
+    "text": "Threatened Fauna Listings Across Australian Jurisdictions",
+    "subtitle": "Cross-tabulation of statutory EPBC Act threat listings by state/territory and fauna class. Source: DCCEEW EPBC Act Lists.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/c4_heatmap.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "State",
+      "type": "nominal",
+      "title": "State / Territory",
+      "axis": {
+        "labelAngle": 0,
+        "titlePadding": 10,
+        "domain": false,
+        "ticks": false
+      },
+      "sort": [
+        "ACT",
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ]
+    },
+    "y": {
+      "field": "TaxonomicGroup",
+      "type": "nominal",
+      "title": "Fauna Class",
+      "sort": [
+        "Birds",
+        "Mammals",
+        "Reptiles",
+        "Amphibians"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "Layer 1: Heatmap Rectangles with Clean White Grid Borders",
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 2,
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "species_count",
+          "type": "quantitative",
+          "title": "Listed Species",
+          "scale": {
+            "scheme": "reds"
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 180
+          }
+        },
+        "tooltip": [
+          {
+            "field": "TaxonomicGroup",
+            "type": "nominal",
+            "title": "Fauna Group"
+          },
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "species_count",
+            "type": "quantitative",
+            "title": "Threatened Species"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}
