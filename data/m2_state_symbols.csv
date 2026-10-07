@@ -1,9 +1,9 @@
 State,state_code,latitude,longitude,taxa_count,time_series_count
-Australian Capital Territory,ACT,-35.47, 148.98,12,451
-New South Wales,NSW,-32.16, 147.01,36,2939
-Northern Territory,NT,-19.49, 132.55,16,360
-Queensland,QLD,-22.50,144.50,32,819
-South Australia,SA,-30.00,135.75,27,1302
-Tasmania,TAS,-42.00,146.60,3,199
-Victoria,VIC,-36.98,144.28,28,3462
-Western Australia,WA,-25.33,122.03,28,918
+Australian Capital Territory,ACT,-35.47,148.98,14,460
+New South Wales,NSW,-32.16,147.01,62,3936
+Northern Territory,NT,-19.49,132.55,29,524
+Queensland,QLD,-22.5,144.5,58,3131
+South Australia,SA,-30.0,135.75,43,2115
+Tasmania,TAS,-42.0,146.6,22,408
+Victoria,VIC,-36.98,144.28,45,4566
+Western Australia,WA,-25.33,122.03,55,2429

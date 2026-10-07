@@ -1,0 +1,393 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Conservation Surveillance Networks Across Fauna Classes",
+    "subtitle": "Comparing site-level survey locations across major vertebrate groups in Australia. Source: TSX 2025.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "title": "Birds",
+          "width": 320,
+          "height": 250,
+          "projection": {
+            "type": "equirectangular"
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/ne_10m_admin_1_states_provinces.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "ne_10m_admin_1_states_provinces"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#f1f5f9",
+                "stroke": "#cbd5e1",
+                "strokeWidth": 0.8
+              }
+            },
+            {
+              "data": {
+                "url": "data/m3_dot_map.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.TaxonomicGroup == 'Birds'"
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "size": 25,
+                "opacity": 0.55,
+                "stroke": "#0f172a",
+                "strokeWidth": 0.5,
+                "color": "#0284c7"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "longitude",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "latitude",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "TaxonomicGroup",
+                    "type": "nominal",
+                    "title": "Fauna Group"
+                  },
+                  {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State / Territory"
+                  },
+                  {
+                    "field": "species_count",
+                    "type": "quantitative",
+                    "title": "Species Tracked at Site"
+                  },
+                  {
+                    "field": "species_monitored",
+                    "type": "nominal",
+                    "title": "Species List"
+                  },
+                  {
+                    "field": "EPBCStatus",
+                    "type": "nominal",
+                    "title": "EPBC Status"
+                  },
+                  {
+                    "field": "latitude",
+                    "type": "quantitative",
+                    "title": "Latitude",
+                    "format": ".2f"
+                  },
+                  {
+                    "field": "longitude",
+                    "type": "quantitative",
+                    "title": "Longitude",
+                    "format": ".2f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Mammals",
+          "width": 320,
+          "height": 250,
+          "projection": {
+            "type": "equirectangular"
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/ne_10m_admin_1_states_provinces.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "ne_10m_admin_1_states_provinces"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#f1f5f9",
+                "stroke": "#cbd5e1",
+                "strokeWidth": 0.8
+              }
+            },
+            {
+              "data": {
+                "url": "data/m3_dot_map.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.TaxonomicGroup == 'Mammals'"
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "size": 25,
+                "opacity": 0.55,
+                "stroke": "#0f172a",
+                "strokeWidth": 0.5,
+                "color": "#a4243b"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "longitude",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "latitude",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "TaxonomicGroup",
+                    "type": "nominal",
+                    "title": "Fauna Group"
+                  },
+                  {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State / Territory"
+                  },
+                  {
+                    "field": "species_count",
+                    "type": "quantitative",
+                    "title": "Species Tracked at Site"
+                  },
+                  {
+                    "field": "species_monitored",
+                    "type": "nominal",
+                    "title": "Species List"
+                  },
+                  {
+                    "field": "EPBCStatus",
+                    "type": "nominal",
+                    "title": "EPBC Status"
+                  },
+                  {
+                    "field": "latitude",
+                    "type": "quantitative",
+                    "title": "Latitude",
+                    "format": ".2f"
+                  },
+                  {
+                    "field": "longitude",
+                    "type": "quantitative",
+                    "title": "Longitude",
+                    "format": ".2f"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "title": "Reptiles",
+          "width": 320,
+          "height": 250,
+          "projection": {
+            "type": "equirectangular"
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/ne_10m_admin_1_states_provinces.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "ne_10m_admin_1_states_provinces"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#f1f5f9",
+                "stroke": "#cbd5e1",
+                "strokeWidth": 0.8
+              }
+            },
+            {
+              "data": {
+                "url": "data/m3_dot_map.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.TaxonomicGroup == 'Reptiles'"
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "size": 25,
+                "opacity": 0.55,
+                "stroke": "#0f172a",
+                "strokeWidth": 0.5,
+                "color": "#d97706"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "longitude",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "latitude",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "TaxonomicGroup",
+                    "type": "nominal",
+                    "title": "Fauna Group"
+                  },
+                  {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State / Territory"
+                  },
+                  {
+                    "field": "species_count",
+                    "type": "quantitative",
+                    "title": "Species Tracked at Site"
+                  },
+                  {
+                    "field": "species_monitored",
+                    "type": "nominal",
+                    "title": "Species List"
+                  },
+                  {
+                    "field": "EPBCStatus",
+                    "type": "nominal",
+                    "title": "EPBC Status"
+                  },
+                  {
+                    "field": "latitude",
+                    "type": "quantitative",
+                    "title": "Latitude",
+                    "format": ".2f"
+                  },
+                  {
+                    "field": "longitude",
+                    "type": "quantitative",
+                    "title": "Longitude",
+                    "format": ".2f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Amphibians",
+          "width": 320,
+          "height": 250,
+          "projection": {
+            "type": "equirectangular"
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/ne_10m_admin_1_states_provinces.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "ne_10m_admin_1_states_provinces"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#f1f5f9",
+                "stroke": "#cbd5e1",
+                "strokeWidth": 0.8
+              }
+            },
+            {
+              "data": {
+                "url": "data/m3_dot_map.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.TaxonomicGroup == 'Amphibians'"
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "size": 25,
+                "opacity": 0.55,
+                "stroke": "#0f172a",
+                "strokeWidth": 0.5,
+                "color": "#0d9488"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "longitude",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "latitude",
+                  "type": "quantitative"
+                },
+                "tooltip": [
+                  {
+                    "field": "TaxonomicGroup",
+                    "type": "nominal",
+                    "title": "Fauna Group"
+                  },
+                  {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State / Territory"
+                  },
+                  {
+                    "field": "species_count",
+                    "type": "quantitative",
+                    "title": "Species Tracked at Site"
+                  },
+                  {
+                    "field": "species_monitored",
+                    "type": "nominal",
+                    "title": "Species List"
+                  },
+                  {
+                    "field": "EPBCStatus",
+                    "type": "nominal",
+                    "title": "EPBC Status"
+                  },
+                  {
+                    "field": "latitude",
+                    "type": "quantitative",
+                    "title": "Latitude",
+                    "format": ".2f"
+                  },
+                  {
+                    "field": "longitude",
+                    "type": "quantitative",
+                    "title": "Longitude",
+                    "format": ".2f"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}
