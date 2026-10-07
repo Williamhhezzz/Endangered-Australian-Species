@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "title": {
+    "text": "Government Priority Action Plan Coverage Across Fauna Classes",
+    "subtitle": "Share of listed threatened species designated as national Action Plan priorities. Source: DCCEEW 2022–2032.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/c8_priority_coverage.csv"
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "species_count",
+          "as": "group_total"
+        }
+      ],
+      "groupby": [
+        "TaxonomicGroup"
+      ]
+    },
+    {
+      "calculate": "datum.species_count / datum.group_total",
+      "as": "proportion"
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "y": {
+      "field": "TaxonomicGroup",
+      "type": "nominal",
+      "title": "Fauna Class",
+      "sort": [
+        "Birds",
+        "Mammals",
+        "Reptiles",
+        "Amphibians"
+      ],
+      "axis": {
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "species_count",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "Proportion of Listed Species",
+      "axis": {
+        "format": "%",
+        "grid": true
+      }
+    },
+    "color": {
+      "field": "ActionStatus",
+      "type": "nominal",
+      "title": "Recovery Plan Status",
+      "sort": [
+        "Action Plan Priority",
+        "Other Listed Species"
+      ],
+      "scale": {
+        "domain": [
+          "Action Plan Priority",
+          "Other Listed Species"
+        ],
+        "range": [
+          "#059669",
+          "#cbd5e1"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "TaxonomicGroup",
+        "type": "nominal",
+        "title": "Fauna Group"
+      },
+      {
+        "field": "ActionStatus",
+        "type": "nominal",
+        "title": "Status"
+      },
+      {
+        "field": "species_count",
+        "type": "quantitative",
+        "title": "Species Count"
+      },
+      {
+        "field": "group_total",
+        "type": "quantitative",
+        "title": "Total Listed Species"
+      },
+      {
+        "field": "proportion",
+        "type": "quantitative",
+        "title": "Proportion",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

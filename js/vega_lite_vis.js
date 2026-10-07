@@ -16,3 +16,4 @@ embedSpec("#vis-c4", "charts/c4_heatmap.vg.json");
 embedSpec("#vis-c5", "charts/c5_stacked_bar.vg.json");
 embedSpec("#vis-c6", "charts/c6_slope.vg.json");
 embedSpec("#vis-c7", "charts/c7_multiline.vg.json");
+embedSpec("#vis-c8", "charts/c8_stacked_bar_priority_coverage.vg.json");
