@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The Deadliest Invaders",
+    "subtitle": "Number of nationally listed species impacted by the top 10 invasive threats. Source: DCCEEW EPBC Act Lists.",
+    "anchor": "start",
+    "fontSize": 14,
+    "subtitleFontSize": 11
+  },
+  "width": "container",
+  "height": 280,
+  "data": {
+    "url": "data/c11_invasive_species.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "Invasive_Species",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "Species_Affected",
+        "order": "descending"
+      },
+      "axis": {
+        "labelFontSize": 11,
+        "ticks": false,
+        "domain": false,
+        "labelLimit": 250
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "Layer 1: Lollipop Stem",
+      "mark": {
+        "type": "rule",
+        "color": "#cbd5e1",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "field": "Species_Affected",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "Layer 2: Lollipop Circle Endpoint",
+      "mark": {
+        "type": "circle",
+        "size": 100,
+        "color": "#ef4444",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Species_Affected",
+          "type": "quantitative",
+          "title": "Listed Species Affected",
+          "scale": {
+            "domain": [0, 360]
+          },
+          "axis": {
+            "grid": true
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Invasive_Species",
+            "type": "nominal",
+            "title": "Invasive Threat"
+          },
+          {
+            "field": "Species_Affected",
+            "type": "quantitative",
+            "title": "Listed Species Affected"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Layer 3: Direct Numeric Text Overlay",
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#334155"
+      },
+      "encoding": {
+        "x": {
+          "field": "Species_Affected",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Species_Affected",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

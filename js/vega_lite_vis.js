@@ -19,3 +19,4 @@ embedSpec("#vis-c7", "charts/c7_multiline.vg.json");
 embedSpec("#vis-c8", "charts/c8_stacked_bar_priority_coverage.vg.json");
 embedSpec("#vis-c9", "charts/c9_dumbbell_state_trends.vg.json");
 embedSpec("#vis-c10", "charts/c10_bar_threat_pressures.vg.json");
+embedSpec("#vis-c11", "charts/c11_lollipop_invasive_species.vg.json");
