@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "title": {
+    "text": "Top 10 Species with Greatest Absolute Habitat Area Lost",
+    "subtitle": "Total habitat area cleared since European settlement (Millions of Hectares). Source: SoE 2021.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/c12_habitat_loss.csv"
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "color": "#a4243b"
+  },
+  "encoding": {
+    "y": {
+      "field": "Species",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelFontSize": 11
+      }
+    },
+    "x": {
+      "field": "Area_Lost_Millions",
+      "type": "quantitative",
+      "title": "Habitat Area Lost (Millions of Hectares)",
+      "axis": {
+        "format": ".1f",
+        "grid": true
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Species",
+        "type": "nominal",
+        "title": "Species"
+      },
+      {
+        "field": "Area_Lost_Millions",
+        "type": "quantitative",
+        "title": "Area Lost (M ha)",
+        "format": ".2f"
+      },
+      {
+        "field": "Proportion_Lost",
+        "type": "quantitative",
+        "title": "Proportion Lost (%)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
