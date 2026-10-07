@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "title": {
+    "text": "Top Threat Pressures Affecting Listed Fauna Species",
+    "subtitle": "Percentage of nationally listed threatened species impacted by major threat drivers. Source: SoE 2021.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/c10_threat_pressures.csv"
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "y": {
+      "field": "Threat",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelFontSize": 11
+      }
+    },
+    "x": {
+      "field": "Proportion",
+      "type": "quantitative",
+      "title": "Percentage of Listed Species Impacted (%)",
+      "scale": {
+        "domain": [0, 100]
+      },
+      "axis": {
+        "format": "d",
+        "grid": true
+      }
+    },
+    "color": {
+      "condition": {
+        "test": "datum.Threat == 'Invasive species/genes'",
+        "value": "#ef4444"
+      },
+      "value": "#64748b",
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "Threat",
+        "type": "nominal",
+        "title": "Threat Pressure"
+      },
+      {
+        "field": "Proportion",
+        "type": "quantitative",
+        "title": "Species Affected (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
