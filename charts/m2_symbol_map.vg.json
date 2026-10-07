@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "title": {
+    "text": "State-Level Monitoring Density: Threatened Species Tracked",
+    "subtitle": "Circle size represents count of distinct threatened species monitored at state capital centroids. Source: TSX 2025.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "description": "Layer 1: Base Map Outline (Australia States & Territories)",
+      "data": {
+        "url": "data/ne_10m_admin_1_states_provinces.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_1_states_provinces"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e5e7eb",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "description": "Layer 2: Proportional Circle Symbols for State Centroids",
+      "data": {
+        "url": "data/m2_state_symbols.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "color": "#a4243b",
+        "opacity": 0.65,
+        "stroke": "#701a2b",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "taxa_count",
+          "type": "quantitative",
+          "title": "Species Monitored",
+          "scale": {
+            "type": "sqrt",
+            "domain": [0, 40],
+            "range": [40, 700]
+          },
+          "legend": {
+            "orient": "bottom-right",
+            "format": "d"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "taxa_count",
+            "type": "quantitative",
+            "title": "Species Monitored",
+            "format": ","
+          },
+          {
+            "field": "time_series_count",
+            "type": "quantitative",
+            "title": "Survey Datasets",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ]
+}
