@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "title": {
+    "text": "EPBC Threat Status Severity Profile Across Fauna Classes",
+    "subtitle": "Proportion of listed species in each statutory risk category. Source: DCCEEW EPBC Act Lists.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/c5_stacked_bar.csv"
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "species_count",
+          "as": "group_total"
+        }
+      ],
+      "groupby": [
+        "TaxonomicGroup"
+      ]
+    },
+    {
+      "calculate": "datum.species_count / datum.group_total",
+      "as": "proportion"
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "y": {
+      "field": "TaxonomicGroup",
+      "type": "nominal",
+      "title": "Fauna Class",
+      "sort": [
+        "Birds",
+        "Mammals",
+        "Reptiles",
+        "Amphibians"
+      ],
+      "axis": {
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "species_count",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "Proportion of Listed Species",
+      "axis": {
+        "format": "%",
+        "grid": true
+      }
+    },
+    "color": {
+      "field": "EPBCStatus",
+      "type": "ordinal",
+      "title": "EPBC Risk Category",
+      "sort": [
+        "Critically Endangered",
+        "Endangered",
+        "Vulnerable"
+      ],
+      "scale": {
+        "domain": [
+          "Critically Endangered",
+          "Endangered",
+          "Vulnerable"
+        ],
+        "range": [
+          "#991b1b",
+          "#ef4444",
+          "#f59e0b"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "TaxonomicGroup",
+        "type": "nominal",
+        "title": "Fauna Group"
+      },
+      {
+        "field": "EPBCStatus",
+        "type": "nominal",
+        "title": "EPBC Status"
+      },
+      {
+        "field": "species_count",
+        "type": "quantitative",
+        "title": "Species Count"
+      },
+      {
+        "field": "group_total",
+        "type": "quantitative",
+        "title": "Total Listed Species"
+      },
+      {
+        "field": "proportion",
+        "type": "quantitative",
+        "title": "Proportion",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+TaxonomicGroup,EPBCStatus,species_count
+Amphibians,Critically Endangered,18
+Amphibians,Endangered,15
+Amphibians,Vulnerable,16
+Birds,Critically Endangered,18
+Birds,Endangered,70
+Birds,Vulnerable,76
+Mammals,Critically Endangered,9
+Mammals,Endangered,47
+Mammals,Vulnerable,57
+Reptiles,Critically Endangered,27
+Reptiles,Endangered,42
+Reptiles,Vulnerable,34
