@@ -14,3 +14,4 @@ embedSpec("#vis-m2", "charts/m2_symbol_map.vg.json");
 embedSpec("#vis-m3", "charts/m3_dot_map.vg.json");
 embedSpec("#vis-c4", "charts/c4_heatmap.vg.json");
 embedSpec("#vis-c5", "charts/c5_stacked_bar.vg.json");
+embedSpec("#vis-c6", "charts/c6_slope.vg.json");

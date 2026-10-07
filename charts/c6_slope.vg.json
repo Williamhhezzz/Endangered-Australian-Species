@@ -1,0 +1,159 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "title": {
+    "text": "Escalation in Critically Endangered Species (2011 vs 2020)",
+    "subtitle": "Growth in highest-risk statutory listings under the EPBC Act. Source: SoE 2021 (Fig 05).",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "data/c6_slope_chart.csv"
+  },
+  "layer": [
+    {
+      "description": "Layer 1: Connecting Slope Lines",
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelFontSize": 12,
+            "labelFontWeight": "bold",
+            "domain": true,
+            "ticks": true
+          }
+        },
+        "y": {
+          "field": "Count",
+          "type": "quantitative",
+          "title": "Critically Endangered Count",
+          "scale": {
+            "zero": true,
+            "padding": 15
+          }
+        },
+        "color": {
+          "field": "Group",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Amphibians",
+              "Birds",
+              "Mammals & Reptiles"
+            ],
+            "range": [
+              "#991b1b",
+              "#0284c7",
+              "#64748b"
+            ]
+          },
+          "legend": null
+        },
+        "detail": {
+          "field": "Group"
+        }
+      }
+    },
+    {
+      "description": "Layer 2: Endpoint Points",
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Count",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Group",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Amphibians",
+              "Birds",
+              "Mammals & Reptiles"
+            ],
+            "range": [
+              "#991b1b",
+              "#0284c7",
+              "#64748b"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Group",
+            "type": "nominal",
+            "title": "Fauna Group"
+          },
+          {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Assessment Year"
+          },
+          {
+            "field": "Count",
+            "type": "quantitative",
+            "title": "Critically Endangered Count"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Layer 3: Direct Endpoint Text Labels (Both Sides)",
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Count",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label",
+          "type": "nominal"
+        },
+        "align": {
+          "field": "Align",
+          "type": "nominal"
+        },
+        "dx": {
+          "field": "dx",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Group == 'Amphibians'",
+            "value": "#991b1b"
+          },
+          "value": "#334155"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
