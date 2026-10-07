@@ -1,0 +1,9 @@
+state_code,postal,state_name,pct_change,index_2022,pct_remaining,taxa_count,time_series_count
+VIC,VI,Victoria,-62.3,0.377,37.70%,76,5791
+NT,NT,Northern Territory,-61.8,0.382,38.20%,34,652
+QLD,QL,Queensland,-59.3,0.407,40.70%,80,3849
+WA,WA,Western Australia,-55.7,0.443,44.30%,90,3176
+SA,SA,South Australia,-51.1,0.489,48.90%,87,3074
+NSW,NS,New South Wales,-46.7,0.533,53.30%,151,5791
+ACT,CT,Australian Capital Territory,-46.7,0.533,53.30%,151,5791
+TAS,TS,Tasmania,-32.5,0.675,67.50%,35,614

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "title": {
+    "text": "State-Level Wildlife Population Decline (2000–2022)",
+    "subtitle": "Average percentage change in monitored fauna relative to 2000 baseline. NSW & ACT reported jointly. Source: TSX 2025.",
+    "fontSize": 14,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [-134, 0, 0],
+    "parallels": [-18, -36]
+  },
+  "layer": [
+    {
+      "description": "Layer 1: Base Map Outline (Grey base map renders unconditionally)",
+      "data": {
+        "url": "data/ne_10m_admin_1_states_provinces.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m_admin_1_states_provinces"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f1f5f9",
+        "stroke": "#cbd5e1",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "description": "Layer 2: Choropleth Layer",
+      "data": {
+        "url": "data/tsx_state_summary.csv"
+      },
+      "transform": [
+        {
+          "lookup": "state_name",
+          "from": {
+            "data": {
+              "url": "data/ne_10m_admin_1_states_provinces.json",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_10m_admin_1_states_provinces"
+              }
+            },
+            "key": "properties.name"
+          },
+          "as": "geo"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "pct_change",
+          "type": "quantitative",
+          "title": "% Change (2000–2022)",
+          "scale": {
+            "type": "linear",
+            "scheme": "reds",
+            "domain": [-65, -30],
+            "reverse": true
+          },
+          "legend": {
+            "orient": "bottom-right",
+            "direction": "horizontal",
+            "format": ".1f",
+            "tickCount": 4
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state_name",
+            "type": "nominal",
+            "title": "State / Territory"
+          },
+          {
+            "field": "pct_change",
+            "type": "quantitative",
+            "title": "Net Change (2000–2022)",
+            "format": ".1f"
+          },
+          {
+            "field": "pct_remaining",
+            "type": "nominal",
+            "title": "2022 Population Level"
+          },
+          {
+            "field": "taxa_count",
+            "type": "quantitative",
+            "title": "Species Tracked"
+          },
+          {
+            "field": "time_series_count",
+            "type": "quantitative",
+            "title": "Monitoring Datasets",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ]
+}
