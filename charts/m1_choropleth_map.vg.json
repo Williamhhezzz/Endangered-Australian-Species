@@ -1,22 +1,37 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 420,
+  "width": 560,
+  "height": 400,
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
   "title": {
     "text": "State-Level Wildlife Population Decline (2000–2022)",
     "subtitle": "Average percentage change in monitored fauna relative to 2000 baseline. NSW & ACT reported jointly. Source: TSX 2025.",
     "fontSize": 14,
     "subtitleFontSize": 11,
-    "anchor": "start"
+    "anchor": "start",
+    "offset": 10
   },
+  "params": [
+    {
+      "name": "highlight_state",
+      "value": null
+    }
+  ],
   "projection": {
     "type": "conicEqualArea",
     "rotate": [-134, 0, 0],
-    "parallels": [-18, -36]
+    "parallels": [-18, -36],
+    "center": [0, -27],
+    "translate": [250, 200],
+    "scale": 640
   },
   "layer": [
     {
-      "description": "Layer 1: Base Map Outline (Grey base map renders unconditionally)",
+      "description": "Layer 1: Base Map Outline",
       "data": {
         "url": "data/ne_10m_admin_1_states_provinces.json",
         "format": {
@@ -34,7 +49,7 @@
     {
       "description": "Layer 2: Choropleth Layer",
       "data": {
-        "url": "data/tsx_state_summary.csv"
+        "url": "data/m1_chloropleth.csv"
       },
       "transform": [
         {
@@ -54,8 +69,7 @@
       ],
       "mark": {
         "type": "geoshape",
-        "stroke": "#ffffff",
-        "strokeWidth": 1.2
+        "cursor": "pointer"
       },
       "encoding": {
         "shape": {
@@ -68,16 +82,43 @@
           "title": "% Change (2000–2022)",
           "scale": {
             "type": "linear",
-            "scheme": "reds",
             "domain": [-65, -30],
-            "reverse": true
+            "range": [
+              "#7f1d1d",
+              "#fff7ed"
+            ]
           },
           "legend": {
             "orient": "bottom-right",
             "direction": "horizontal",
             "format": ".1f",
-            "tickCount": 4
+            "tickCount": 4,
+            "titleFontSize": 11,
+            "labelFontSize": 10,
+            "gradientLength": 115,
+            "offset": 8
           }
+        },
+        "opacity": {
+          "condition": {
+            "test": "highlight_state == null || datum.state_name == highlight_state",
+            "value": 1
+          },
+          "value": 0.2
+        },
+        "stroke": {
+          "condition": {
+            "test": "highlight_state != null && datum.state_name == highlight_state",
+            "value": "#0f172a"
+          },
+          "value": "#ffffff"
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "highlight_state != null && datum.state_name == highlight_state",
+            "value": 2.5
+          },
+          "value": 1.2
         },
         "tooltip": [
           {
@@ -110,5 +151,10 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
 }

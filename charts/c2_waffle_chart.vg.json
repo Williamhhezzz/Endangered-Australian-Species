@@ -3,12 +3,13 @@
   "title": {
     "text": "Overall Population Lost vs. Remaining",
     "subtitle": "100 squares per class (1 square = 1% of 1985 baseline level). Source: TSX 2025.",
-    "fontSize": 14,
+    "fontSize": 15,
     "subtitleFontSize": 11,
-    "anchor": "start"
+    "anchor": "start",
+    "offset": 12
   },
   "data": {
-    "url": "data/tsx_class_waffle.csv",
+    "url": "data/c2_waffle.csv",
     "format": {
       "type": "csv",
       "parse": {
@@ -17,25 +18,34 @@
       }
     }
   },
+  "params": [
+    {
+      "name": "highlight_class",
+      "value": null
+    }
+  ],
+  "spacing": 90,
   "facet": {
     "field": "class",
     "type": "nominal",
     "columns": 4,
+    "sort": ["Amphibians", "Reptiles", "Birds", "Mammals"],
     "header": {
       "title": null,
-      "labelFontSize": 12,
+      "labelFontSize": 13,
       "labelFontWeight": "bold",
-      "labelPadding": 6
+      "labelPadding": 8
     }
   },
   "spec": {
-    "width": 110,
-    "height": 110,
+    "width": 210,
+    "height": 210,
     "mark": {
       "type": "rect",
       "stroke": "#ffffff",
-      "strokeWidth": 1,
-      "cornerRadius": 1
+      "strokeWidth": 1.5,
+      "cornerRadius": 1.5,
+      "cursor": "pointer"
     },
     "encoding": {
       "x": {
@@ -59,14 +69,22 @@
         "type": "nominal",
         "scale": {
           "domain": ["Remaining", "Lost"],
-          "range": ["#b2182b", "#e2e8f0"]
+          "range": ["#1e293b", "#e2e8f0"]
         },
         "legend": {
           "orient": "bottom",
           "title": null,
           "labelFontSize": 11,
-          "symbolSize": 120
+          "symbolSize": 120,
+          "offset": 12
         }
+      },
+      "opacity": {
+        "condition": {
+          "test": "highlight_class == null || datum.class == highlight_class",
+          "value": 1
+        },
+        "value": 0.25
       },
       "tooltip": [
         {

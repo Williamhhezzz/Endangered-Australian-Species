@@ -10,7 +10,7 @@
   "width": "container",
   "height": 280,
   "data": {
-    "url": "data/c11_invasive_species.csv"
+    "url": "data/c7_invasive_species.csv"
   },
   "encoding": {
     "y": {
@@ -52,7 +52,7 @@
       "mark": {
         "type": "circle",
         "size": 100,
-        "color": "#ef4444",
+        "color": "#334155",
         "opacity": 1
       },
       "encoding": {

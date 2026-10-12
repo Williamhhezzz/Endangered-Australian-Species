@@ -4,14 +4,26 @@
   "height": 280,
   "title": {
     "text": "Government Priority Action Plan Coverage Across Fauna Classes",
-    "subtitle": "Share of listed threatened species designated as national Action Plan priorities. Source: DCCEEW 2022–2032.",
-    "fontSize": 14,
-    "subtitleFontSize": 11,
+    "subtitle": "Click a status tier or bar segment to isolate. Source: DCCEEW 2022–2032.",
+    "fontSize": 17,
+    "subtitleFontSize": 12.5,
+    "subtitlePadding": 6,
+    "offset": 14,
     "anchor": "start"
   },
   "data": {
-    "url": "data/c8_priority_coverage.csv"
+    "url": "data/c10_priority_coverage.csv"
   },
+  "params": [
+    {
+      "name": "action_select",
+      "select": {
+        "type": "point",
+        "fields": ["ActionStatus"]
+      },
+      "bind": "legend"
+    }
+  ],
   "transform": [
     {
       "joinaggregate": [
@@ -31,7 +43,8 @@
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cursor": "pointer"
   },
   "encoding": {
     "y": {
@@ -72,14 +85,27 @@
           "Other Listed Species"
         ],
         "range": [
-          "#059669",
+          "#DCBE2E",
           "#cbd5e1"
         ]
       },
       "legend": {
         "orient": "bottom",
-        "direction": "horizontal"
+        "direction": "horizontal",
+        "titleFontSize": 13,
+        "labelFontSize": 12,
+        "symbolSize": 180,
+        "columnPadding": 20,
+        "offset": 10,
+        "cursor": "pointer"
       }
+    },
+    "opacity": {
+      "condition": {
+        "param": "action_select",
+        "value": 1
+      },
+      "value": 0.2
     },
     "tooltip": [
       {

@@ -10,7 +10,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "data/c7_mammal_management.csv"
+    "url": "data/c9_mammal_management.csv"
   },
   "layer": [
     {
@@ -64,9 +64,9 @@
               "No Known Management"
             ],
             "range": [
-              "#059669",
-              "#0284c7",
-              "#dc2626"
+              "#A4006D",
+              "#A8A7FC",
+              "#f2e41d"
             ]
           },
           "legend": {

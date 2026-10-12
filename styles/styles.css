@@ -1,26 +1,30 @@
-/* =========================
+/* ============================================================
    Core Styling & Typography
-   ========================= */
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #f8fafc;
+  background-color: #ffffff;
   color: #1e293b;
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* =========================
+/* ============================================================
    Hero Header
-   ========================= */
+   ============================================================ */
 
 .hero {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   text-align: center;
-  border-bottom: none;
 }
 
 .hero-inner {
@@ -33,24 +37,24 @@ body {
   font-family: 'Merriweather', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
-  margin: 0;
   line-height: 1.3;
 }
 
-/* =========================
+/* ============================================================
    Main Container
-   ========================= */
+   ============================================================ */
 
 .container {
   width: 92%;
   max-width: 1600px;
   margin: 0 auto;
   padding: 2rem 0;
+  padding-bottom: 1rem;
 }
 
-/* =========================
+/* ============================================================
    KPI Stat Cards
-   ========================= */
+   ============================================================ */
 
 .stat-strip {
   display: flex;
@@ -83,9 +87,17 @@ body {
   margin-top: 0.5rem;
 }
 
-/* =========================
-   Section Headers
-   ========================= */
+/* ============================================================
+   Section Headers & Dividers
+   ============================================================ */
+
+.section-container {
+  margin-bottom: 2.5rem;
+}
+
+.section-header-block {
+  margin-bottom: 1.5rem;
+}
 
 .section-kicker {
   font-size: 0.8rem;
@@ -93,14 +105,13 @@ body {
   letter-spacing: 0.08em;
   font-weight: 700;
   color: #0284c7;
-  margin: 0 0 0.25rem 0;
+  margin-bottom: 0.25rem;
 }
 
 .section-header {
   font-family: 'Merriweather', serif;
   font-size: 1.5rem;
   color: #0f172a;
-  margin: 0 0 1.5rem 0;
 }
 
 .section-divider {
@@ -110,9 +121,9 @@ body {
   margin: 2.5rem 0;
 }
 
-/* =========================
-   Layout System
-   ========================= */
+/* ============================================================
+   Layout Architecture
+   ============================================================ */
 
 .chart-row {
   display: flex;
@@ -120,88 +131,171 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .chart-block {
   display: flex;
   flex-direction: column;
-
-  background: #ffffff;
-  padding: 1rem;
+  background: transparent;
+  padding: 1.25rem;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: none;
   box-sizing: border-box;
-}
-
-.chart-block--side-caption > div:first-child {
-    flex: 1;
-    min-width: 0;
+  min-width: 0;
 }
 
 .full-width {
-  flex: 1;
+  flex: 1 1 0%;
   width: 100%;
   min-width: 0;
 }
 
 .half-width {
-  flex: 1;
+  flex: 1 1 0%;
+  width: 50%;
   min-width: 0;
 }
 
-/* Optional height helpers */
+/* Height Helpers */
+.row-sm { min-height: 420px; }
+.row-md { min-height: 480px; }
+.row-xl { min-height: 640px; }
 
-.row-sm {
-  min-height: 420px;
+/* Remove artificial height floor on geography maps */
+#geography .chart-row {
+  min-height: auto;
 }
 
-.row-md {
-  min-height: 480px;
-}
-
-.row-xl {
-  min-height: 680px;
-}
-
-/* =========================
-   Side Caption Layout
-   ========================= */
+/* ============================================================
+   Side-Caption Layouts
+   ============================================================ */
 
 .chart-block--side-caption {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  align-items: stretch;
+  align-items: flex-start;
+  width: 100%;
 }
 
+.chart-block--side-caption > .full-width,
+.chart-block--side-caption > div:first-child {
+  flex: 1 1 0%;
+  width: 100%;
+  min-width: 0;
+}
 
 .chart-caption--side {
   flex: 0 0 240px;
-
   font-size: 0.88rem;
   color: #475569;
-
   padding-left: 0.75rem;
   margin: 0;
-  align-self: center;
   text-align: left;
+  align-self: center;
+}
+
+/* ============================================================
+   Map Cards & Bottom-Caption Formatting
+   ============================================================ */
+
+.chart-block.half-width {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#vis-m1, #vis-m2 {
+  flex: 1 1 auto;
+  width: 100%;
+  display: block;
+  min-height: 400px;
 }
 
 .chart-caption--bottom {
+  text-align: left;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: none;
   font-size: 0.88rem;
-  color: #475569;
-  margin-top: 0.75rem;
+  line-height: 1.55;
+  color: #334155;
 }
 
-/* =========================
+.caption-note {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ============================================================
+   Vega Visualization Sizing & Full-Width Stretches
+   ============================================================ */
+
+.vega-embed {
+  width: 100%;
+  display: block;
+}
+
+.vega-embed svg,
+.vega-embed canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+#vis-c1 .vega-embed,
+#vis-c2 .vega-embed,
+#vis-c3 .vega-embed,
+#vis-m3 .vega-embed {
+  width: 100%;
+}
+
+#vis-c1 .vega-embed svg,
+#vis-c2 .vega-embed svg,
+#vis-c3 .vega-embed svg,
+#vis-m3 .vega-embed svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+#vis-m1 .vega-embed,
+#vis-m2 .vega-embed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vis-m1 .vega-embed canvas,
+#vis-m2 .vega-embed canvas,
+#vis-m1 .vega-embed svg,
+#vis-m2 .vega-embed svg {
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+#states .chart-row {
+  min-height: auto;
+  margin-bottom: 0;
+}
+
+#states.section-container {
+  margin-bottom: 0;
+}
+
+/* ============================================================
    Footer
-   ========================= */
+   ============================================================ */
 
 .page-footer {
   background: #e2e8f0;
   color: #475569;
   padding: 2rem 1.5rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   font-size: 0.85rem;
 }
 
@@ -209,7 +303,6 @@ body {
   width: 92%;
   max-width: 1600px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -217,21 +310,18 @@ body {
 }
 
 .footer-link {
-  color: #334155
+  color: #334155;
 }
 
-/* =========================
-   Responsive
-   ========================= */
+/* ============================================================
+   Responsive Media Queries
+   ============================================================ */
 
-@media (max-width: 768px) {
-
-  .stat-card {
-    flex: 1 1 calc(50% - 0.5rem);
-  }
-
-  .chart-row {
+@media (max-width: 900px) {
+  .chart-row,
+  .chart-block--side-caption {
     flex-direction: column;
+    min-height: auto;
   }
 
   .half-width,
@@ -239,18 +329,11 @@ body {
     width: 100%;
   }
 
-  .chart-block--side-caption {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .chart-caption--side {
-    width: 100%;
     flex: auto;
-
+    width: 100%;
     border-left: none;
-    border-top: 3px solid #0284c7;
-
+    border-top: 2px solid #0284c7;
     padding-left: 0;
     padding-top: 1rem;
     margin-top: 1rem;
@@ -263,7 +346,10 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .stat-card {
+    flex: 1 1 100%;
+  }
 
   .hero-inner h1 {
     font-size: 1.8rem;
@@ -272,15 +358,4 @@ body {
   .section-header {
     font-size: 1.25rem;
   }
-
-  .stat-card {
-    flex: 1 1 100%;
-  }
 }
-
-.vega-embed canvas,
-.vega-embed svg {
-  max-width: 100%;
-  height: auto;
-}
-

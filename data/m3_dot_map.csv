@@ -51,7 +51,7 @@ Birds,New South Wales,-37.29257,149.913,1,Southern Eastern Bristlebird,Endangere
 Birds,New South Wales,-37.29256957,149.9129914,2,"Common Greenshank, Far Eastern Curlew","Critically Endangered, Endangered"
 Birds,New South Wales,-36.87267,149.0627,2,"Diamond Firetail, Gang-gang Cockatoo","Endangered, Vulnerable"
 Birds,New South Wales,-36.53324171,149.7389788,6,"Alaskan Bar-tailed Godwit, Common Greenshank + 4 more","Critically Endangered, Endangered, Vulnerable"
-Birds,New South Wales,-36.31853,144.9294,1,South-eastern Brown Treecreeper,Vulnerable
+Birds,Victoria,-36.31853,144.9294,1,South-eastern Brown Treecreeper,Vulnerable
 Birds,New South Wales,-36.28173,149.3928,2,"Gang-gang Cockatoo, South-eastern Hooded Robin",Endangered
 Birds,New South Wales,-36.25647,148.3773,2,"Diamond Firetail, Gang-gang Cockatoo","Endangered, Vulnerable"
 Birds,New South Wales,-36.19782,149.076,7,"Diamond Firetail, Gang-gang Cockatoo + 5 more","Endangered, Vulnerable"
@@ -159,7 +159,7 @@ Birds,New South Wales,-29.39232,149.9337,1,Painted Honeyeater,Vulnerable
 Birds,New South Wales,-29.36768,151.5534,2,"Diamond Firetail, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,New South Wales,-29.33929,144.5387,3,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater, South-east Southern Whiteface","Endangered, Vulnerable"
 Birds,New South Wales,-29.32282,150.436,2,"Painted Honeyeater, South-eastern Brown Treecreeper",Vulnerable
-Birds,New South Wales,-29.30146,140.2501,1,South-east Southern Whiteface,Vulnerable
+Birds,South Australia,-29.30146,140.2501,1,South-east Southern Whiteface,Vulnerable
 Birds,New South Wales,-29.29911,142.8057,1,Bulloo Grey Grasswren,Endangered
 Birds,New South Wales,-29.29864,153.1147,2,"Diamond Firetail, South-eastern Brown Treecreeper",Vulnerable
 Birds,New South Wales,-29.24588835,153.2593919,11,"Alaskan Bar-tailed Godwit, Black-tailed Godwit + 9 more","Critically Endangered, Endangered, Vulnerable"
@@ -170,14 +170,14 @@ Birds,New South Wales,-28.75595,151.4092,2,"Diamond Firetail, South-eastern Brow
 Birds,New South Wales,-28.72747,151.9798,3,"Diamond Firetail, South-eastern Brown Treecreeper, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,New South Wales,-28.59635,153.1884,2,"Northern Eastern Bristlebird, Northern Rufous Scrub-bird",Endangered
 Birds,New South Wales,-28.42102,153.0151,1,South-eastern Brown Treecreeper,Vulnerable
-Birds,New South Wales,-28.41968,149.1786,1,South-eastern Hooded Robin,Endangered
+Birds,Queensland,-28.41968,149.1786,1,South-eastern Hooded Robin,Endangered
 Birds,New South Wales,-28.41963259,153.6112396,8,"Alaskan Bar-tailed Godwit, Black-tailed Godwit + 6 more","Critically Endangered, Endangered, Vulnerable"
-Birds,New South Wales,-28.25897,146.4314,3,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
-Birds,New South Wales,-28.19549,146.0588,2,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface","Endangered, Vulnerable"
+Birds,Queensland,-28.25897,146.4314,3,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
+Birds,Queensland,-28.19549,146.0588,2,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface","Endangered, Vulnerable"
 Birds,New South Wales,-28.16951342,153.679722,8,"Alaskan Bar-tailed Godwit, Black-tailed Godwit + 6 more","Critically Endangered, Endangered, Vulnerable"
-Birds,New South Wales,-27.37654,144.8603,2,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface","Endangered, Vulnerable"
-Birds,New South Wales,-27.34183,152.9216,1,South-eastern Brown Treecreeper,Vulnerable
-Birds,New South Wales,-26.38401,140.4521,1,South-east Southern Whiteface,Vulnerable
+Birds,Queensland,-27.37654,144.8603,2,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface","Endangered, Vulnerable"
+Birds,Queensland,-27.34183,152.9216,1,South-eastern Brown Treecreeper,Vulnerable
+Birds,South Australia,-26.38401,140.4521,1,South-east Southern Whiteface,Vulnerable
 Birds,Northern Territory,-25.946,132.9265,1,South-east Southern Whiteface,Vulnerable
 Birds,Northern Territory,-25.31274,133.4838,1,South-east Southern Whiteface,Vulnerable
 Birds,Northern Territory,-24.84519,136.8757,1,South-east Southern Whiteface,Vulnerable
@@ -190,10 +190,10 @@ Birds,Northern Territory,-23.3677,132.7821,1,South-east Southern Whiteface,Vulne
 Birds,Northern Territory,-22.82267,131.546,1,South-east Southern Whiteface,Vulnerable
 Birds,Northern Territory,-22.67562014,134.1467858,10,"Alaskan Bar-tailed Godwit, Common Greenshank + 8 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Northern Territory,-22.67562,134.1468,1,South-east Southern Whiteface,Vulnerable
-Birds,Northern Territory,-22.33,127.1802,1,South-east Southern Whiteface,Vulnerable
+Birds,Western Australia,-22.33,127.1802,1,South-east Southern Whiteface,Vulnerable
 Birds,Northern Territory,-20.0523,130.8454,1,Gouldian Finch,Endangered
 Birds,Northern Territory,-17.89118,128.9476,1,Gouldian Finch,Endangered
-Birds,Northern Territory,-17.3236,128.6711,1,Gouldian Finch,Endangered
+Birds,Western Australia,-17.3236,128.6711,1,Gouldian Finch,Endangered
 Birds,Northern Territory,-16.91825,133.6136,1,Painted Honeyeater,Vulnerable
 Birds,Northern Territory,-16.17621,130.6823,1,Gouldian Finch,Endangered
 Birds,Northern Territory,-16.06105,135.4549,1,Gouldian Finch,Endangered
@@ -211,17 +211,17 @@ Birds,Northern Territory,-12.72421308,131.1774919,11,"Black-tailed Godwit, Commo
 Birds,Northern Territory,-12.72421,131.1775,1,Alligator Rivers Yellow Chat,Endangered
 Birds,Northern Territory,-12.6740252,136.4093172,6,"Common Greenshank, Far Eastern Curlew + 4 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Northern Territory,-11.98931535,134.5789613,10,"Black-tailed Godwit, Common Greenshank + 8 more","Critically Endangered, Endangered, Vulnerable"
-Birds,Queensland,-30.00654,148.6242,1,South-eastern Brown Treecreeper,Vulnerable
-Birds,Queensland,-29.33929,144.5387,3,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater, South-east Southern Whiteface","Endangered, Vulnerable"
-Birds,Queensland,-29.30146,140.2501,1,South-east Southern Whiteface,Vulnerable
-Birds,Queensland,-29.24329,147.3029,3,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater, South-eastern Hooded Robin","Endangered, Vulnerable"
-Birds,Queensland,-29.11901,151.9613,2,"Diamond Firetail, South-eastern Brown Treecreeper",Vulnerable
+Birds,New South Wales,-30.00654,148.6242,1,South-eastern Brown Treecreeper,Vulnerable
+Birds,New South Wales,-29.33929,144.5387,3,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater, South-east Southern Whiteface","Endangered, Vulnerable"
+Birds,South Australia,-29.30146,140.2501,1,South-east Southern Whiteface,Vulnerable
+Birds,New South Wales,-29.24329,147.3029,3,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater, South-eastern Hooded Robin","Endangered, Vulnerable"
+Birds,New South Wales,-29.11901,151.9613,2,"Diamond Firetail, South-eastern Brown Treecreeper",Vulnerable
 Birds,Queensland,-29.07162,143.7596,2,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface","Endangered, Vulnerable"
 Birds,Queensland,-29.01124,148.3529,3,"Eastern Major Mitchell's Cockatoo, South-eastern Brown Treecreeper, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,Queensland,-28.8996,142.8583,1,Eastern Major Mitchell's Cockatoo,Endangered
 Birds,Queensland,-28.75595,151.4092,5,"Diamond Firetail, Painted Honeyeater + 3 more","Endangered, Vulnerable"
-Birds,Queensland,-28.72747,151.9798,2,"Diamond Firetail, South-eastern Hooded Robin","Endangered, Vulnerable"
-Birds,Queensland,-28.42102,153.0151,1,South-eastern Brown Treecreeper,Vulnerable
+Birds,New South Wales,-28.72747,151.9798,2,"Diamond Firetail, South-eastern Hooded Robin","Endangered, Vulnerable"
+Birds,New South Wales,-28.42102,153.0151,1,South-eastern Brown Treecreeper,Vulnerable
 Birds,Queensland,-28.25897,146.4314,4,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater + 2 more","Endangered, Vulnerable"
 Birds,Queensland,-28.19549,146.0588,4,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater + 2 more","Endangered, Vulnerable"
 Birds,Queensland,-28.13894,152.7925,2,"Northern Eastern Bristlebird, Northern Rufous Scrub-bird",Endangered
@@ -230,7 +230,7 @@ Birds,Queensland,-27.77099,150.9081,3,"Painted Honeyeater, South-east Southern W
 Birds,Queensland,-27.77076785,150.9080372,2,"Black-tailed Godwit, Sharp-tailed Sandpiper","Endangered, Vulnerable"
 Birds,Queensland,-27.75995263,152.6081037,1,Sharp-tailed Sandpiper,Vulnerable
 Birds,Queensland,-27.75995,152.6081,2,"Diamond Firetail, South-eastern Brown Treecreeper",Vulnerable
-Birds,Queensland,-27.60995,140.1017,1,South-east Southern Whiteface,Vulnerable
+Birds,South Australia,-27.60995,140.1017,1,South-east Southern Whiteface,Vulnerable
 Birds,Queensland,-27.56474,149.2789,2,"South-eastern Brown Treecreeper, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,Queensland,-27.37654,144.8603,3,"Eastern Major Mitchell's Cockatoo, Painted Honeyeater, South-east Southern Whiteface","Endangered, Vulnerable"
 Birds,Queensland,-27.34183,152.9216,1,South-eastern Brown Treecreeper,Vulnerable
@@ -239,7 +239,7 @@ Birds,Queensland,-27.22812,147.4637,3,"Eastern Major Mitchell's Cockatoo, South-
 Birds,Queensland,-27.20516781,153.3374921,11,"Alaskan Bar-tailed Godwit, Black-tailed Godwit + 9 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Queensland,-27.1534329,152.8243086,1,Sharp-tailed Sandpiper,Vulnerable
 Birds,Queensland,-26.60651,143.5335,1,Eastern Major Mitchell's Cockatoo,Endangered
-Birds,Queensland,-26.38401,140.4521,1,South-east Southern Whiteface,Vulnerable
+Birds,South Australia,-26.38401,140.4521,1,South-east Southern Whiteface,Vulnerable
 Birds,Queensland,-26.13478,146.6501,1,South-eastern Brown Treecreeper,Vulnerable
 Birds,Queensland,-26.13337,148.1355,3,"Eastern Major Mitchell's Cockatoo, South-east Southern Whiteface, South-eastern Brown Treecreeper","Endangered, Vulnerable"
 Birds,Queensland,-25.94783,150.5969,1,Painted Honeyeater,Vulnerable
@@ -282,10 +282,10 @@ Birds,South Australia,-35.92920857,137.2437819,10,"Black-tailed Godwit, Common G
 Birds,South Australia,-35.77466,139.2178,2,"Australian Fairy Tern, Malleefowl",Vulnerable
 Birds,South Australia,-35.77465865,139.2177927,10,"Alaskan Bar-tailed Godwit, Black-tailed Godwit + 8 more","Critically Endangered, Endangered, Vulnerable"
 Birds,South Australia,-35.64006,140.61,2,"Malleefowl, Red-lored Whistler",Vulnerable
-Birds,South Australia,-35.62061,141.1817,3,"Diamond Firetail, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
+Birds,Victoria,-35.62061,141.1817,3,"Diamond Firetail, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-35.57535,139.2355,2,"Diamond Firetail, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-35.14955,138.813,3,"Diamond Firetail, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
-Birds,South Australia,-35.00518,141.3247,4,"Diamond Firetail, Eastern Regent Parrot + 2 more","Endangered, Vulnerable"
+Birds,Victoria,-35.00518,141.3247,4,"Diamond Firetail, Eastern Regent Parrot + 2 more","Endangered, Vulnerable"
 Birds,South Australia,-34.95749,137.4744,1,Malleefowl,Vulnerable
 Birds,South Australia,-34.95748829,137.4743807,9,"Common Greenshank, Curlew Sandpiper + 7 more","Critically Endangered, Endangered, Vulnerable"
 Birds,South Australia,-34.88766404,138.7623028,4,"Common Greenshank, Curlew Sandpiper + 2 more","Critically Endangered, Endangered, Vulnerable"
@@ -304,7 +304,7 @@ Birds,South Australia,-33.79845532,134.7934883,11,"Black-tailed Godwit, Common G
 Birds,South Australia,-33.743,136.2565,2,"Diamond Firetail, South-east Southern Whiteface",Vulnerable
 Birds,South Australia,-33.59853,138.7301,3,"Diamond Firetail, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-33.59324,140.4231,3,"Black-eared Miner, Malleefowl, Red-lored Whistler","Endangered, Vulnerable"
-Birds,South Australia,-33.56444,142.0721,6,"Black-eared Miner, Eastern Major Mitchell's Cockatoo + 4 more","Endangered, Vulnerable"
+Birds,New South Wales,-33.56444,142.0721,6,"Black-eared Miner, Eastern Major Mitchell's Cockatoo + 4 more","Endangered, Vulnerable"
 Birds,South Australia,-33.46132,135.0042,2,"Diamond Firetail, South-east Southern Whiteface",Vulnerable
 Birds,South Australia,-33.2133,140.0272,2,"South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-32.87996,135.0154,1,South-east Southern Whiteface,Vulnerable
@@ -316,17 +316,17 @@ Birds,South Australia,-32.62683,139.5562,2,"South-east Southern Whiteface, South
 Birds,South Australia,-32.48332,138.2654,3,"Diamond Firetail, South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-32.10982,135.7425,2,"Malleefowl, South-east Southern Whiteface",Vulnerable
 Birds,South Australia,-32.00671,140.1241,2,"South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
-Birds,South Australia,-31.78413,141.3751,1,South-eastern Hooded Robin,Endangered
+Birds,New South Wales,-31.78413,141.3751,1,South-eastern Hooded Robin,Endangered
 Birds,South Australia,-31.73027331,136.5454738,5,"Black-tailed Godwit, Common Greenshank + 3 more","Critically Endangered, Endangered, Vulnerable"
 Birds,South Australia,-31.72248,138.6832,2,"South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-31.72201,136.5346,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-31.31943,137.2355,1,South-east Southern Whiteface,Vulnerable
-Birds,South Australia,-31.08079,127.6853,1,South-east Southern Whiteface,Vulnerable
+Birds,Western Australia,-31.08079,127.6853,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-30.90032,133.0577,2,"Malleefowl, South-east Southern Whiteface",Vulnerable
 Birds,South Australia,-30.57785,134.6233,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-30.56704,138.798,2,"South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-30.47277,136.3084,1,South-east Southern Whiteface,Vulnerable
-Birds,South Australia,-29.74098,127.0538,1,South-east Southern Whiteface,Vulnerable
+Birds,Western Australia,-29.74098,127.0538,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-29.64617,138.7297,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-29.30146,140.2501,2,"South-east Southern Whiteface, South-eastern Hooded Robin","Endangered, Vulnerable"
 Birds,South Australia,-28.69962,130.8785,1,Malleefowl,Vulnerable
@@ -339,7 +339,7 @@ Birds,South Australia,-27.08079,130.485,1,South-east Southern Whiteface,Vulnerab
 Birds,South Australia,-26.77367,134.2834,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-26.36771,135.0789,1,South-east Southern Whiteface,Vulnerable
 Birds,South Australia,-25.946,132.9265,1,South-east Southern Whiteface,Vulnerable
-Birds,South Australia,-25.52252,129.1598,1,South-east Southern Whiteface,Vulnerable
+Birds,Northern Territory,-25.52252,129.1598,1,South-east Southern Whiteface,Vulnerable
 Birds,Tasmania,-43.13301,146.7429,1,Shy Albatross,Endangered
 Birds,Tasmania,-42.65599782,147.7519754,10,"Alaskan Bar-tailed Godwit, Black-tailed Godwit + 8 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Tasmania,-42.56615211,145.6211809,2,"Alaskan Bar-tailed Godwit, Curlew Sandpiper","Critically Endangered, Endangered"
@@ -370,7 +370,7 @@ Birds,Victoria,-37.25678,142.3823,6,"Diamond Firetail, Gang-gang Cockatoo + 4 mo
 Birds,Victoria,-37.21970708,144.8841341,2,"Common Greenshank, Sharp-tailed Sandpiper","Endangered, Vulnerable"
 Birds,Victoria,-37.20899,146.8453,1,Gang-gang Cockatoo,Endangered
 Birds,Victoria,-37.03961,145.8889,6,"Diamond Firetail, Gang-gang Cockatoo + 4 more","Endangered, Vulnerable"
-Birds,Victoria,-36.87267,149.0627,1,Gang-gang Cockatoo,Endangered
+Birds,New South Wales,-36.87267,149.0627,1,Gang-gang Cockatoo,Endangered
 Birds,Victoria,-36.85792,143.9087,7,"Diamond Firetail, Gang-gang Cockatoo + 5 more","Endangered, Vulnerable"
 Birds,Victoria,-36.85791566,143.9087018,2,"Alaskan Bar-tailed Godwit, Curlew Sandpiper","Critically Endangered, Endangered"
 Birds,Victoria,-36.55203,142.0868,6,"Diamond Firetail, Gang-gang Cockatoo + 4 more","Endangered, Vulnerable"
@@ -378,9 +378,9 @@ Birds,Victoria,-36.54346,142.1689,1,Malleefowl,Vulnerable
 Birds,Victoria,-36.5434572,142.1688746,2,"Common Greenshank, Curlew Sandpiper","Critically Endangered, Endangered"
 Birds,Victoria,-36.31880487,144.9278026,5,"Black-tailed Godwit, Common Greenshank + 3 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Victoria,-36.31853,144.9294,6,"Diamond Firetail, Gang-gang Cockatoo + 4 more","Endangered, Vulnerable"
-Birds,Victoria,-36.28173,149.3928,1,Gang-gang Cockatoo,Endangered
+Birds,New South Wales,-36.28173,149.3928,1,Gang-gang Cockatoo,Endangered
 Birds,Victoria,-36.26694844,146.8284097,1,Plains-wanderer,Critically Endangered
-Birds,Victoria,-36.19782,149.076,1,Gang-gang Cockatoo,Endangered
+Birds,New South Wales,-36.19782,149.076,1,Gang-gang Cockatoo,Endangered
 Birds,Victoria,-35.83762242,144.789927,3,"Common Greenshank, Curlew Sandpiper, Sharp-tailed Sandpiper","Critically Endangered, Endangered, Vulnerable"
 Birds,Victoria,-35.63771,144.8919,7,"Diamond Firetail, Eastern Regent Parrot + 5 more","Endangered, Vulnerable"
 Birds,Victoria,-35.62061,141.1817,7,"Diamond Firetail, Eastern Major Mitchell's Cockatoo + 5 more","Endangered, Vulnerable"
@@ -389,7 +389,7 @@ Birds,Victoria,-35.18625,142.3331,4,"Black-eared Miner, Mallee Emu-wren + 2 more
 Birds,Victoria,-35.18624638,142.3331151,4,"Black-tailed Godwit, Common Greenshank + 2 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Victoria,-35.00518,141.3247,8,"Black-eared Miner, Diamond Firetail + 6 more","Endangered, Vulnerable"
 Birds,Victoria,-34.55976,142.612,4,"Eastern Major Mitchell's Cockatoo, Eastern Regent Parrot + 2 more","Endangered, Vulnerable"
-Birds,Victoria,-34.40429,148.1829,6,"Diamond Firetail, Gang-gang Cockatoo + 4 more","Endangered, Vulnerable"
+Birds,New South Wales,-34.40429,148.1829,6,"Diamond Firetail, Gang-gang Cockatoo + 4 more","Endangered, Vulnerable"
 Birds,Victoria,-34.15531,141.0697,4,"Eastern Major Mitchell's Cockatoo, Eastern Regent Parrot + 2 more","Endangered, Vulnerable"
 Birds,Western Australia,-34.69551507,116.1574097,11,"Black-tailed Godwit, Common Greenshank + 9 more","Critically Endangered, Endangered, Vulnerable"
 Birds,Western Australia,-34.23074081,119.1504387,2,"Forest Red-tailed Black-Cockatoo, Western Ground Parrot","Critically Endangered, Vulnerable"
@@ -439,7 +439,7 @@ Birds,Western Australia,-15.71409992,120.8315306,7,"Common Greenshank, Curlew Sa
 Birds,Western Australia,-15.6122,128.4771,1,Gouldian Finch,Endangered
 Birds,Western Australia,-15.61219754,128.4771097,2,"Common Greenshank, Yakutian Bar-tailed Godwit",Endangered
 Birds,Western Australia,-15.53311,125.6337,1,Gouldian Finch,Endangered
-Birds,Western Australia,-15.4911,129.6829,1,Gouldian Finch,Endangered
+Birds,Northern Territory,-15.4911,129.6829,1,Gouldian Finch,Endangered
 Mammals,Australian Capital Territory,-35.43876199,148.8460307,1,Southern Greater Glider,Endangered
 Mammals,Australian Capital Territory,-35.43401712,149.060159,1,Grey-headed Flying-fox,Vulnerable
 Mammals,New South Wales,-36.53324171,149.7389788,5,"Grey-headed Flying-fox, Koala + 3 more","Endangered, Vulnerable"

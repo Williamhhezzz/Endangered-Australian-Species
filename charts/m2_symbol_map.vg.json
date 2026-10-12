@@ -1,20 +1,36 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 420,
+  "width": 560,
+  "height": 400,
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
   "title": {
     "text": "State-Level Monitoring Density: Threatened Species Tracked",
     "subtitle": "Circle size represents count of distinct threatened species monitored at state capital centroids. Source: TSX 2025.",
     "fontSize": 14,
     "subtitleFontSize": 11,
-    "anchor": "start"
+    "anchor": "start",
+    "offset": 10
   },
+  "params": [
+    {
+      "name": "highlight_state",
+      "value": null
+    }
+  ],
   "projection": {
-    "type": "mercator"
+    "type": "conicEqualArea",
+    "rotate": [-134, 0, 0],
+    "parallels": [-18, -36],
+    "center": [0, -27],
+    "translate": [240, 200],
+    "scale": 640
   },
   "layer": [
     {
-      "description": "Layer 1: Base Map Outline (Australia States & Territories)",
+      "description": "Layer 1: Base Map Outline",
       "data": {
         "url": "data/ne_10m_admin_1_states_provinces.json",
         "format": {
@@ -26,7 +42,8 @@
         "type": "geoshape",
         "fill": "#e5e7eb",
         "stroke": "#ffffff",
-        "strokeWidth": 1
+        "strokeWidth": 1,
+        "cursor": "pointer"
       }
     },
     {
@@ -36,10 +53,10 @@
       },
       "mark": {
         "type": "circle",
-        "color": "#a4243b",
-        "opacity": 0.65,
+        "color": "#1e293b",
         "stroke": "#701a2b",
-        "strokeWidth": 1.2
+        "strokeWidth": 1.2,
+        "cursor": "pointer"
       },
       "encoding": {
         "longitude": {
@@ -55,14 +72,33 @@
           "type": "quantitative",
           "title": "Species Monitored",
           "scale": {
-            "type": "sqrt",
-            "domain": [0, 40],
-            "range": [40, 700]
+            "type": "linear",
+            "domain": [0, 70],
+            "range": [120, 2600],
+            "zero": true
           },
           "legend": {
             "orient": "bottom-right",
-            "format": "d"
+            "format": "d",
+            "titleFontSize": 11,
+            "labelFontSize": 10,
+            "values": [15, 30, 45, 60],
+            "offset": 12
           }
+        },
+        "opacity": {
+          "condition": {
+            "test": "highlight_state == null || datum.State == highlight_state",
+            "value": 0.8
+          },
+          "value": 0.12
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "highlight_state != null && datum.State == highlight_state",
+            "value": 2.5
+          },
+          "value": 1.2
         },
         "tooltip": [
           {
@@ -85,5 +121,10 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
 }

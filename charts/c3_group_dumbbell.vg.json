@@ -1,20 +1,34 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Sub-Group Divergence Across Animal Classes",
-    "subtitle": "Index change in 2022 relative to 2000 baseline (100%). Crimson = decline, Teal = recovery. Source: TSX 2025.",
-    "fontSize": 14,
+    "subtitle": "Index change in 2022 relative to 2000 baseline (100%). Rust Orange = decline, Cerulean Blue = recovery. Source: TSX 2025.",
+    "fontSize": 15,
     "subtitleFontSize": 11,
-    "anchor": "start"
+    "anchor": "start",
+    "offset": 12
   },
   "data": {
-    "url": "data/tsx_subgroups_dumbbell.csv"
+    "url": "data/c3_dumbbell.csv"
   },
+  "params": [
+    {
+      "name": "highlight_class",
+      "value": null
+    }
+  ],
   "facet": {
     "row": {
       "field": "class",
       "type": "nominal",
       "title": null,
+      "sort": [
+        "Amphibians",
+        "Reptiles",
+        "Birds",
+        "Mammals"
+      ],
       "header": {
         "labelFontSize": 12,
         "labelFontWeight": "bold",
@@ -27,9 +41,18 @@
     }
   },
   "spec": {
-    "width": 850,
+    "width": 1050,
     "height": {
       "step": 26
+    },
+    "encoding": {
+      "opacity": {
+        "condition": {
+          "test": "highlight_class == null || datum.class == highlight_class",
+          "value": 1
+        },
+        "value": 0.15
+      }
     },
     "layer": [
       {
@@ -144,9 +167,9 @@
           "color": {
             "condition": {
               "test": "datum.current_2022 < 100",
-              "value": "#b2182b"
+              "value": "#f21d1d"
             },
-            "value": "#059669"
+            "value": "#007374"
           },
           "tooltip": [
             {
@@ -201,9 +224,9 @@
           "color": {
             "condition": {
               "test": "datum.current_2022 < 100",
-              "value": "#b2182b"
+              "value": "#f21d1d"
             },
-            "value": "#059669"
+            "value": "#007374"
           }
         }
       }
@@ -220,6 +243,9 @@
     },
     "header": {
       "title": null
+    },
+    "view": {
+      "stroke": null
     }
   }
 }

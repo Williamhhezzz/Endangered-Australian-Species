@@ -1,0 +1,133 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Land Clearing Impact: Absolute Habitat Area Lost vs. Proportional Range Destruction",
+    "subtitle": "Comparing total clearing footprint (Million Ha) against percentage of historical range destroyed. Source: SoE 2021 (BIO 043ab).",
+    "fontSize": 15,
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "offset": 12
+  },
+  "data": {
+    "url": "data/c8_habitat_loss.csv"
+  },
+  "spacing": 20,
+  "hconcat": [
+    {
+      "title": "Absolute Area Cleared (Million Hectares)",
+      "width": 650,
+      "height": 280,
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "Species",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "Area_Lost_Millions",
+            "order": "descending"
+          },
+          "axis": {
+            "labelFontSize": 11,
+            "labelLimit": 220
+          }
+        },
+        "x": {
+          "field": "Area_Lost_Millions",
+          "type": "quantitative",
+          "title": "Area Lost (Million Ha)",
+          "scale": {
+            "reverse": true
+          },
+          "axis": {
+            "format": ".1f",
+            "grid": true
+          }
+        },
+        "color": {
+          "value": "#1dc1f2"
+        },
+        "tooltip": [
+          {
+            "field": "Species",
+            "type": "nominal",
+            "title": "Species"
+          },
+          {
+            "field": "Area_Lost_Millions",
+            "type": "quantitative",
+            "title": "Area Lost (M ha)",
+            "format": ".2f"
+          },
+          {
+            "field": "Proportion_Lost",
+            "type": "quantitative",
+            "title": "Proportion Lost (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Proportional Range Destroyed (%)",
+      "width": 440,
+      "height": 280,
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "Species",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "Area_Lost_Millions",
+            "order": "descending"
+          },
+          "axis": null
+        },
+        "x": {
+          "field": "Proportion_Lost",
+          "type": "quantitative",
+          "title": "Proportion of Habitat Lost (%)",
+          "axis": {
+            "format": ".1f",
+            "grid": true
+          }
+        },
+        "color": {
+          "value": "#32f21d"
+        },
+        "tooltip": [
+          {
+            "field": "Species",
+            "type": "nominal",
+            "title": "Species"
+          },
+          {
+            "field": "Proportion_Lost",
+            "type": "quantitative",
+            "title": "Proportion Lost (%)",
+            "format": ".2f"
+          },
+          {
+            "field": "Area_Lost_Millions",
+            "type": "quantitative",
+            "title": "Area Lost (M ha)",
+            "format": ".2f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

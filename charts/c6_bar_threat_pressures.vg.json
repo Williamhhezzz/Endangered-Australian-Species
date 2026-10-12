@@ -10,7 +10,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "data/c10_threat_pressures.csv"
+    "url": "data/c6_threat_pressures.csv"
   },
   "mark": {
     "type": "bar",
@@ -41,9 +41,9 @@
     "color": {
       "condition": {
         "test": "datum.Threat == 'Invasive species/genes'",
-        "value": "#ef4444"
+        "value": "#0f172a"
       },
-      "value": "#64748b",
+      "value": "#94a3b8",
       "legend": null
     },
     "tooltip": [

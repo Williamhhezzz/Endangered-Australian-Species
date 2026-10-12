@@ -1,17 +1,28 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 280,
   "title": {
     "text": "Threatened Fauna Listings Across Australian Jurisdictions",
-    "subtitle": "Cross-tabulation of statutory EPBC Act threat listings by state/territory and fauna class. Source: DCCEEW EPBC Act Lists.",
-    "fontSize": 14,
-    "subtitleFontSize": 11,
+    "subtitle": "Cross-tabulation of statutory EPBC Act threat listings. Click a cell to isolate. Source: DCCEEW EPBC Act Lists.",
+    "fontSize": 17,
+    "subtitleFontSize": 12.5,
+    "subtitlePadding": 6,
+    "offset": 14,
     "anchor": "start"
   },
   "data": {
     "url": "data/c4_heatmap.csv"
   },
+  "params": [
+    {
+      "name": "cell_select",
+      "select": {
+        "type": "point"
+      }
+    }
+  ],
   "encoding": {
     "x": {
       "field": "State",
@@ -53,12 +64,11 @@
   },
   "layer": [
     {
-      "description": "Layer 1: Heatmap Rectangles with Clean White Grid Borders",
+      "description": "Layer 1: Heatmap Rectangles with Interactive Focus State",
       "mark": {
         "type": "rect",
         "cornerRadius": 2,
-        "stroke": "#ffffff",
-        "strokeWidth": 2
+        "cursor": "pointer"
       },
       "encoding": {
         "color": {
@@ -66,13 +76,46 @@
           "type": "quantitative",
           "title": "Listed Species",
           "scale": {
-            "scheme": "reds"
+            "type": "linear",
+            "range": [
+              "#f5f3ff",
+              "#c084fc",
+              "#7e22ce",
+              "#3b0764"
+            ]
           },
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
-            "gradientLength": 180
+            "titleFontSize": 13,
+            "labelFontSize": 12,
+            "gradientLength": 240,
+            "gradientThickness": 15,
+            "offset": 10
           }
+        },
+        "opacity": {
+          "condition": {
+            "param": "cell_select",
+            "value": 1
+          },
+          "value": 0.25
+        },
+        "stroke": {
+          "condition": {
+            "param": "cell_select",
+            "empty": false,
+            "value": "#0f172a"
+          },
+          "value": "#ffffff"
+        },
+        "strokeWidth": {
+          "condition": {
+            "param": "cell_select",
+            "empty": false,
+            "value": 2.5
+          },
+          "value": 2
         },
         "tooltip": [
           {
