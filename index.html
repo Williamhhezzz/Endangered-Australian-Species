@@ -5,112 +5,125 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Typography: Inter & Merriweather -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Vega & Vega-Lite Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
-  <title>Australia's Threatened Fauna: Trajectories, Protection & Recovery</title>
+  <title>Australia's Threatened Fauna: Trajectories, Protection &amp; Recovery</title>
 </head>
 
 <body>
 
   <header class="hero">
     <div class="hero-inner">
-      <h1>Australia's Threatened Fauna:<br>Trajectories, Protection & Recovery</h1>
+      <h1>Australia's Threatened Fauna:<br>Trajectories, Protection &amp; Recovery</h1>
     </div>
   </header>
 
   <main class="container">
 
+    <!-- ============================================================
+         THE BIG PICTURE: MACRO TRAJECTORY
+         ============================================================ -->
     <section class="section-container" id="macro-trend">
       <div class="section-header-block">
         <h2 class="section-header">The Big Picture: Current States of National Fauna</h2>
       </div>
 
-        <div class="stat-strip">
+      <!-- 4 Representative Narrative KPI Cards -->
+      <div class="stat-strip">
         <div class="stat-card">
-            <div class="stat-card__number">-62.6%</div>
-            <div class="stat-card__label">National Threatened Species Index Decline</div>
+          <div class="stat-card__number">-62.6%</div>
+          <div class="stat-card__title">Fauna Population Drop</div>
+          <div class="stat-card__sub">Monitored taxa collapse (2000–2020)</div>
         </div>
 
         <div class="stat-card">
-            <div class="stat-card__number">2,175</div>
-            <div class="stat-card__label">EPBC Listed Species<br>Statutory threatened taxa (2025)</div>
+          <div class="stat-card__number">429</div>
+          <div class="stat-card__title">Threatened Vertebrates</div>
+          <div class="stat-card__sub">Statutory EPBC listings (2025)</div>
         </div>
 
         <div class="stat-card">
-            <div class="stat-card__number">78%</div>
-            <div class="stat-card__label">Invasive Pressure<br>Species hit by cats, foxes &amp; weeds</div>
+          <div class="stat-card__number">78.4%</div>
+          <div class="stat-card__title">Invasive Species Threat</div>
+          <div class="stat-card__sub">Fauna impacted by feral pests</div>
         </div>
 
         <div class="stat-card">
-            <div class="stat-card__number" style="font-size: 1.55rem;">-59%</div>
-            <div class="stat-card__label">Decline in Unmanaged Threatened Mammals</div>
+          <div class="stat-card__number">+729%</div>
+          <div class="stat-card__title">Fenced Haven Recovery</div>
+          <div class="stat-card__sub">Population surge inside reserves</div>
         </div>
-        </div>
+      </div>
 
-    <div class="chart-block chart-block--side-caption">
+      <div class="chart-block chart-block--side-caption">
         <div id="vis-c1" class="full-width"></div>
-        <p class="chart-caption chart-caption--side">
-        National Fauna Trajectory: Since 2000, Australia's monitored vertebrate fauna populations have experienced a severe 62.6% 
-        collapse (relative index dropped from 1.0 to 0.264 in 2020). Note: The Y-axis measures relative abundance index change 
-        against the historical baseline (1.0 = 100%), not living animal headcounts.
-        </p>
-    </div>
-
-
+        <div class="chart-caption chart-caption--side">
+          <p>
+            <b>The Regulatory Delay &amp; Climate Compounding:</b> While the EPBC Act was enacted in 2000 to halt biodiversity loss, Australia's monitored vertebrate populations collapsed by <b>62.6%</b> over the subsequent two decades (relative index dropped from 1.0 to 0.374 in 2020). The sharpest early plunge (2001–2009) coincided with the historic Millennium Drought, which starved arid and wetland systems before statutory listings began catching up. The dramatic swelling of cumulative listings between 2014 and 2016 reflects an administrative review of statutory backlogs rather than sudden biological events—illustrating how legal recognition consistently lags biological reality.
+          </p>
+          <p class="caption-hint">
+            💡 <b>Interactive Brush:</b> Click and drag horizontally across the top line chart to filter and inspect statutory listings by year in the streamgraph below.
+          </p>
+        </div>
+      </div>
     </section>
 
     <hr class="section-divider">
 
+    <!-- ============================================================
+         SECTION 1: DIVERGENT TRENDS
+         ============================================================ -->
     <section class="section-container" id="taxonomic-breakdown">
       <div class="section-header-block">
         <p class="section-kicker">Section 1 of 5 — Divergent Trends</p>
-        <h2 class="section-header">Taxonomic & Functional Group Divergence</h2>
+        <h2 class="section-header">Taxonomic &amp; Functional Group Divergence</h2>
       </div>
 
-        <div class="chart-block chart-block--side-caption">
+      <div class="chart-block chart-block--side-caption">
         <div id="vis-c2" class="full-width"></div>
-
         <p class="chart-caption chart-caption--side">
-            Population trajectories vary drastically across animal groups.
-            Monitored amphibians have collapsed to under <strong>5%</strong>
-            of baseline levels.
+          <b>The "Silent Extinction" of Non-Avian Taxa:</b> While public conservation campaigns overwhelmingly spotlight charismatic birds and koalas, monitored amphibians (<b>3.0% remaining</b>) and reptiles (<b>6.0% remaining</b>) have suffered near-total population collapses since baseline. Because amphibians breathe and hydrate through permeable skin, they serve as Australia's frontline ecological bio-indicators, suffering catastrophic mortality from the fungal pathogen <i>Batrachochytrium dendrobatidis</i> (chytrid fungus).
         </p>
-        </div>
+      </div>
 
-        <div style="margin-top:2rem;"></div>
+      <div style="margin-top: 3.5rem;"></div>
 
-        <div class="chart-block chart-block--side-caption">
+      <div class="chart-block chart-block--side-caption">
         <div id="vis-c3" class="full-width"></div>
-
         <p class="chart-caption chart-caption--side">
-        Class-Level Divergence: While terrestrial birds have shown slight resilience, mammal populations have suffered the steepest collapse, plummitting over 60% since 2000. Invasive predator pressures (foxes and feral cats) remain the primary driver of this disparity.
+          <b>The Critical Weight Range (CWR) Paradox:</b> Australian mammals exhibit an evolutionary paradox: large land mammals (+25.7%) and marine mammals (+42.9%) expanded due to commercial whaling moratoria and dedicated megafauna reserves. In contrast, small and medium terrestrial mammals plunged by up to 47.9%—fitting Australia's "Critical Weight Range" (35g–5.5kg) targeted by feral cats and red foxes. Even "fungus-resilient" frogs collapsed by 72.8%, proving emerging wildlife diseases act in lethal synergy with wetland desiccation.
         </p>
-        </div>
+      </div>
     </section>
 
     <hr class="section-divider">
 
+    <!-- ============================================================
+         SECTION 2: SPATIAL CONTEXT
+         ============================================================ -->
     <section class="section-container" id="geography">
       <div class="section-header-block">
         <p class="section-kicker">Section 2 of 5 — Spatial Context</p>
-        <h2 class="section-header">Geographic Spread & Survey Distribution</h2>
+        <h2 class="section-header">Geographic Spread &amp; Survey Distribution</h2>
       </div>
 
       <div class="chart-row">
-        <!-- Map 1 Card -->
+        <!-- Map 1: Choropleth -->
         <div class="chart-block half-width">
           <div id="vis-m1" class="full-width"></div>
           <div class="chart-caption chart-caption--bottom">
             <p>
-              Victoria and Northern Territory suffered the steepest national<br>
-              wildlife population collapse, dropping over sixty percent since 2000.<br>
-              Queensland and Western Australia followed with severe vertebrate declines.<br>
-              Tasmania experienced the lowest relative wildlife loss overall,<br>
-              partially buffered by isolated island refugia and habitats.
+              <b>The Island Refugium Advantage:</b> Victoria (-62.3%) and the Northern Territory (-61.8%) suffered the steepest population declines. In contrast, Tasmania recorded the lowest relative loss (-32.5%), as the Bass Strait served as a natural marine barrier preventing the establishment of wild European red fox breeding populations. Victoria's loss stems from intensive agricultural fragmentation, while NT's collapse is driven by altered fire regimes and cane toad expansion.
             </p>
             <p class="caption-note">
               <em>Note: Shading encodes relative percentage abundance change across regions.</em>
@@ -118,15 +131,12 @@
           </div>
         </div>
 
-        <!-- Map 2 Card -->
+        <!-- Map 2: Proportional Symbol -->
         <div class="chart-block half-width">
           <div id="vis-m2" class="full-width"></div>
           <div class="chart-caption chart-caption--bottom">
             <p>
-              New South Wales with sixty-two species and Queensland<br>
-              with fifty-eight species maintain extensive wildlife monitoring networks.<br>
-              Conversely, Tasmania and Northern Territory track far fewer<br>
-              threatened animal taxa, revealing critical regional survey gaps.
+              <b>The Northern Surveillance Desert:</b> While New South Wales (62 species, 3,936 survey datasets) and Queensland (58 species, 3,131 datasets) support dense ecological survey infrastructure, the Northern Territory tracks only 29 species across 524 time-series despite experiencing the country's second-steepest biodiversity decline. Remote northern wildlife is vanishing with minimal empirical baseline detection.
             </p>
             <p class="caption-note">
               <em>Note: Symbol size encodes active ecological field survey effort.</em>
@@ -135,11 +145,12 @@
         </div>
       </div>
       
-      <div class="chart-row" style="margin-top: 2rem;">
+      <!-- Map 3: Dot Density across classes -->
+      <div class="chart-row" style="margin-top: 3.5rem; margin-bottom: 0;">
         <div class="chart-block chart-block--side-caption full-width">
           <div id="vis-m3" class="full-width"></div>
           <p class="chart-caption chart-caption--side">
-            Evaluating population decline across jurisdictions alongside survey effort density at regional IBRA centroids. The spatial distribution maps reveal where monitoring is concentrated and where data gaps persist.
+            <b>Surveillance Inequity Across Ecosystems:</b> Bird monitoring records form dense, continuous corridors along the eastern seaboard and temperate southwest, driven primarily by organized citizen science networks (BirdLife Australia). Conversely, reptile and amphibian monitoring exhibits vast spatial voids across northern pastoral savannahs and the arid interior. Because surveying cryptic nocturnal ectotherms requires specialized pitfall trapping, vast areas of remote biodiversity remain unmonitored.
           </p>
         </div>
       </div>
@@ -147,46 +158,76 @@
 
     <hr class="section-divider">
 
+    <!-- ============================================================
+         SECTION 3: LEGISLATION & PROTECTION CATEGORIES
+         ============================================================ -->
     <section class="section-container" id="protection">
       <div class="section-header-block">
         <p class="section-kicker">Section 3 of 5 — Legislation</p>
-        <h2 class="section-header">Statutory Protection Categories & Cross-Tabulation</h2>
+        <h2 class="section-header">Statutory Protection Categories &amp; Cross-Tabulation</h2>
       </div>    
-      <div class="chart-row row-xl">
+      <div class="chart-row">
+        <!-- Chart C4: Heatmap -->
         <div class="chart-block half-width">
           <div id="vis-c4" class="full-width"></div>
-          <p>Statutory Status vs. Active Field Monitoring: Commonwealth EPBC Act listings (C4/C5) federally protect 429 vertebrate taxa across Australia. However, TSX active survey coverage (C8/M2) currently tracks 365 species. Federal statutory listing does not automatically guarantee active field ecological monitoring.</p>
+          <div class="chart-caption chart-caption--bottom">
+            <p>
+              <b>The Eastern Drainage Hotspot:</b> NSW (91 birds, 57 mammals) and Queensland (73 birds, 64 mammals) dominate statutory listings because their bioregions overlap with Australia's highest human settlement densities and historic land clearing. Furthermore, 58 of Australia's 108 state amphibian listings are concentrated here, where Gondwanan rainforest fragments leave micro-endemic frogs stranded on isolated mountain summits.
+            </p>
+          </div>
         </div>
+
+        <!-- Chart C5: Stacked Bar -->
         <div class="chart-block half-width">
           <div id="vis-c5" class="full-width"></div>
+          <div class="chart-caption chart-caption--bottom">
+            <p>
+              <b>The Historical Extinction Filter:</b> 67.3% of listed amphibians and 67.0% of listed reptiles are classified in the two most severe threat tiers (<i>Critically Endangered</i> or <i>Endangered</i>). Mammals have a comparatively lower <i>Critically Endangered</i> proportion (8.0%), largely because Australia's most vulnerable mammals already went extinct during early pastoral expansion (~35% of all modern global mammal extinctions occurred in Australia).
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <hr class="section-divider">
 
-    <section class="section-container" id="interventions">
+    <!-- ============================================================
+         SECTION 4: PRIMARY THREAT DRIVERS & PRESSURES
+         ============================================================ -->
+    <section class="section-container" id="pressures">
       <div class="section-header-block">
-        <p class="section-kicker">Section 4 of 5 — Responses</p>
-        <h2 class="section-header">Risk Escalation & Intervention Outcomes</h2>
+        <p class="section-kicker">Section 4 of 5 — Pressures</p>
+        <h2 class="section-header">Primary Threat Drivers &amp; Invasive Species</h2>
       </div>
 
-      <div class="chart-row row-xl">
+      <div class="chart-row">
+        <!-- Chart C6: Threat Pressures -->
         <div class="chart-block half-width">
           <div id="vis-c6" class="full-width"></div>
+          <div class="chart-caption chart-caption--bottom">
+            <p>
+              <b>The Synergistic Fire-Predation Trap:</b> Invasive species (78.4%) and altered fire regimes (59.8%) interact lethally. Invasive weeds such as buffel grass dramatically increase fuel loads, creating catastrophic wildfires that incinerate protective ground cover. Feral cats and foxes actively hunt along fire perimeters, slaughtering native survivors stripped of protective vegetation.
+            </p>
+          </div>
         </div>
+
+        <!-- Chart C7: Deadliest Invaders -->
         <div class="chart-block half-width">
           <div id="vis-c7" class="full-width"></div>
+          <div class="chart-caption chart-caption--bottom">
+            <p>
+              <b>The Keystone Impact of European Rabbits:</b> While feral predators kill directly, the European rabbit impacts the highest number of threatened species (322). Rabbits destroy seedlings, ringbark native shrubs, and outcompete burrowing marsupials (such as bilbies and bettongs), driving landscape-level erosion. Additionally, <i>Phytophthora cinnamomi</i> (dieback fungus) affects 236 species by eliminating nectar-rich Banksia ecosystems.
+            </p>
+          </div>
         </div>
       </div>
 
+      <!-- Chart C8: Diverging Bar Land Clearing -->
       <div class="chart-row">
         <div class="chart-block chart-block--side-caption full-width">
           <div id="vis-c8" class="full-width"></div>
           <p class="chart-caption chart-caption--side">
-            <b>Land Clearing Impact:</b> Agricultural land clearing destroyed 3.02 million hectares of potential habitat for 
-            the Red Goshawk (highest physical area lost), while the Southern Black-throated Finch suffered the worst proportional 
-            destruction, losing 10.02% of its entire remaining historical range.
+            <b>Macro-Footprint vs. Endemic Range Destruction:</b> While wide-ranging apex predators like the Red Goshawk (3.02 million ha lost) lost the largest gross physical area to agricultural clearing in Queensland, micro-endemics suffer far greater existential damage. The Southern Black-throated Finch lost 0.70 million ha—representing <b>10.02% of its entire historical global range</b>—principally cleared for open-cut coal mines in the Brigalow Belt and Bowen Basin.
           </p>
         </div>
       </div>
@@ -194,22 +235,34 @@
 
     <hr class="section-divider">
 
-    <section class="section-container" id="threats">
+    <!-- ============================================================
+         SECTION 5: CONSERVATION RESPONSES & RECOVERY OUTCOMES
+         ============================================================ -->
+    <section class="section-container" id="responses">
       <div class="section-header-block">
-        <p class="section-kicker">Section 5 of 5 — Pressures</p>
-        <h2 class="section-header">Primary Threat Drivers & Invasive Species</h2>
+        <p class="section-kicker">Section 5 of 5 — Responses</p>
+        <h2 class="section-header">Risk Escalation &amp; Intervention Outcomes</h2>
       </div>
 
-      <div class="chart-row row-xl">
+      <div class="chart-row">
+        <!-- Chart C9: Mammal Sanctuary Trends -->
         <div class="chart-block half-width">
           <div id="vis-c9" class="full-width"></div>
+          <div class="chart-caption chart-caption--bottom">
+            <p>
+              <b>The Fenced Sanctuary Dividend:</b> Outside conservation enclosures, unmanaged threatened mammals declined by <b>59.3%</b> between 2000 and 2017. Inside predator-proof fenced havens and offshore islands, mammal populations <b>surged by +729%</b> (index jumped from 1.0 to 8.29). While fenced exclosures halt imminent extinction, they function as ecological "islands" requiring ongoing genetic management.
+            </p>
+          </div>
         </div>
+
+        <!-- Chart C10: Priority Action Plan Coverage -->
         <div class="chart-block half-width">
           <div id="vis-c10" class="full-width"></div>
-          <p>Spotlight Focus — Mammalian Critical Response: Mammals are Australia's primary fauna group with dedicated 3-tier sanctuary tracking data (SoE 2021), serving as a benchmark for invasive predator exclosures.</p>
-          <p>
-          <b>Sanctuary Intervention Outcomes:</b> Unmanaged mammal populations plummeted by 59 (index = 0.41), whereas populations inside fenced Predator-Free Havens surged by +729% (index = 8.29). Exclosure fence networks represent Australia's most effective immediate recovery tool against invasive predators.
-          </p>
+          <div class="chart-caption chart-caption--bottom">
+            <p>
+              <b>The 84% Federal Policy Desert:</b> Under the Commonwealth's 2022–2032 Threatened Species Action Plan, only <b>13.6% to 17.8%</b> of listed species across any fauna class receive dedicated "Priority Species" recovery funding. Over 82% of Australia's threatened fauna lack targeted recovery plans, relying on generic guidelines that frequently permit resource-development offsets.
+            </p>
+          </div>
         </div>
       </div>
     </section>

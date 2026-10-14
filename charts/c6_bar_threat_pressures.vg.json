@@ -4,26 +4,34 @@
   "height": 280,
   "title": {
     "text": "Top Threat Pressures Affecting Listed Fauna Species",
-    "subtitle": "Percentage of nationally listed threatened species impacted by major threat drivers. Source: SoE 2021.",
-    "fontSize": 14,
-    "subtitleFontSize": 11,
-    "anchor": "start"
+    "subtitle": "Percentage of nationally listed threatened species impacted by major threat drivers.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start",
+    "frame": "bounds"
   },
   "data": {
-    "url": "data/c6_threat_pressures.csv"
-  },
-  "mark": {
-    "type": "bar",
-    "cornerRadiusEnd": 3
+    "url": "data/c6_threat_pressures.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Proportion": "number"
+      }
+    }
   },
   "encoding": {
     "y": {
       "field": "Threat",
       "type": "nominal",
       "title": null,
-      "sort": "-x",
+      "sort": {
+        "field": "Proportion",
+        "op": "max",
+        "order": "descending"
+      },
       "axis": {
-        "labelFontSize": 11
+        "labelFontSize": 12.5,
+        "labelColor": "#0f172a"
       }
     },
     "x": {
@@ -35,31 +43,67 @@
       },
       "axis": {
         "format": "d",
-        "grid": true
+        "grid": true,
+        "titleFontSize": 13,
+        "labelFontSize": 12
       }
-    },
-    "color": {
-      "condition": {
-        "test": "datum.Threat == 'Invasive species/genes'",
-        "value": "#0f172a"
-      },
-      "value": "#94a3b8",
-      "legend": null
-    },
-    "tooltip": [
-      {
-        "field": "Threat",
-        "type": "nominal",
-        "title": "Threat Pressure"
-      },
-      {
-        "field": "Proportion",
-        "type": "quantitative",
-        "title": "Species Affected (%)",
-        "format": ".1f"
-      }
-    ]
+    }
   },
+  "layer": [
+    {
+      "description": "Layer 1: Horizontal Bars",
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.Threat === 'Invasive species/genes'",
+            "value": "#0f172a"
+          },
+          "value": "#94a3b8",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "Threat",
+            "type": "nominal",
+            "title": "Threat Pressure"
+          },
+          {
+            "field": "Proportion",
+            "type": "quantitative",
+            "title": "Species Affected (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Layer 2: Direct Numeric Percentage Text Label on Top Threat Only",
+      "transform": [
+        {
+          "filter": "datum.Threat === 'Invasive species/genes'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12.5,
+        "fontWeight": "bold",
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "text": {
+          "field": "Proportion",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
   "config": {
     "view": {
       "stroke": "transparent"

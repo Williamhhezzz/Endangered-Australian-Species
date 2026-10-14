@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 560,
+  "width": 600,
   "height": 400,
   "autosize": {
     "type": "pad",
@@ -8,10 +8,11 @@
   },
   "title": {
     "text": "State-Level Monitoring Density: Threatened Species Tracked",
-    "subtitle": "Circle size represents count of distinct threatened species monitored at state capital centroids. Source: TSX 2025.",
-    "fontSize": 14,
-    "subtitleFontSize": 11,
+    "subtitle": "Circle size represents count of distinct threatened species monitored at state capital centroids.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
     "anchor": "start",
+    "frame": "bounds",
     "offset": 10
   },
   "params": [
@@ -80,8 +81,8 @@
           "legend": {
             "orient": "bottom-right",
             "format": "d",
-            "titleFontSize": 11,
-            "labelFontSize": 10,
+            "titleFontSize": 12.5,
+            "labelFontSize": 11,
             "values": [15, 30, 45, 60],
             "offset": 12
           }

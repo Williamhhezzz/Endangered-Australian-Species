@@ -1,15 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 280,
+  "height": 295,
   "title": {
     "text": "Government Priority Action Plan Coverage Across Fauna Classes",
-    "subtitle": "Click a status tier or bar segment to isolate. Source: DCCEEW 2022–2032.",
-    "fontSize": 17,
-    "subtitleFontSize": 12.5,
+    "subtitle": "Click a status tier or bar segment to isolate.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
     "subtitlePadding": 6,
     "offset": 14,
-    "anchor": "start"
+    "anchor": "start",
+    "frame": "bounds"
   },
   "data": {
     "url": "data/c10_priority_coverage.csv"
@@ -58,7 +59,8 @@
         "Amphibians"
       ],
       "axis": {
-        "labelFontSize": 12
+        "titleFontSize": 13,
+        "labelFontSize": 12.5
       }
     },
     "x": {
@@ -68,7 +70,9 @@
       "title": "Proportion of Listed Species",
       "axis": {
         "format": "%",
-        "grid": true
+        "grid": true,
+        "titleFontSize": 13,
+        "labelFontSize": 12
       }
     },
     "color": {

@@ -75,16 +75,36 @@ body {
 }
 
 .stat-card__number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #b2182b;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #0f172a;
   line-height: 1.1;
 }
 
-.stat-card__label {
-  font-size: 0.85rem;
+.stat-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 0.35rem;
+  line-height: 1.25;
+}
+
+.stat-card__sub {
+  font-size: 0.8rem;
   color: #64748b;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
+  line-height: 1.35;
+}
+
+.caption-hint {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  background: #f0fdf4;
+  border-left: 3px solid #16a34a;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #166534;
 }
 
 /* ============================================================
@@ -127,18 +147,18 @@ body {
 
 .chart-row {
   display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: stretch;
+  gap: 3.5rem;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .chart-block {
   display: flex;
   flex-direction: column;
   background: transparent;
-  padding: 1.25rem;
+  padding: 0;
   border-radius: 8px;
   border: none;
   box-sizing: border-box;
@@ -160,7 +180,7 @@ body {
 /* Height Helpers */
 .row-sm { min-height: 420px; }
 .row-md { min-height: 480px; }
-.row-xl { min-height: 640px; }
+.row-xl { min-height: auto; }
 
 /* Remove artificial height floor on geography maps */
 #geography .chart-row {
@@ -187,13 +207,14 @@ body {
 }
 
 .chart-caption--side {
-  flex: 0 0 240px;
+  flex: 0 0 250px;
   font-size: 0.88rem;
   color: #475569;
   padding-left: 0.75rem;
   margin: 0;
   text-align: left;
   align-self: center;
+  line-height: 1.55;
 }
 
 /* ============================================================
@@ -201,30 +222,51 @@ body {
    ============================================================ */
 
 .chart-block.half-width {
+  flex: 1 1 calc(50% - 1.75rem);
+  width: calc(50% - 1.75rem);
+  max-width: calc(50% - 1.75rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 1rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
-#vis-m1, #vis-m2 {
-  flex: 1 1 auto;
+.chart-block.half-width > div[id^="vis-"] {
   width: 100%;
+  min-width: 0;
+}
+
+.chart-block.half-width .vega-embed,
+.chart-block.half-width .vega-embed svg {
+  width: 100% !important;
   display: block;
-  min-height: 400px;
 }
 
 .chart-caption--bottom {
   text-align: left;
-  margin-top: auto;
-  padding-top: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 0;
   border-top: none;
   font-size: 0.88rem;
   line-height: 1.55;
   color: #334155;
 }
 
+.chart-caption--bottom p {
+  text-align: left;
+  max-width: 50ch;
+  margin: 0;
+}
+
+.chart-caption--bottom b,
+.chart-caption--side b {
+  color: #0f172a;
+}
+
 .caption-note {
+  text-align: left;
+  max-width: 50ch;
   margin-top: 0.45rem;
   font-size: 0.8rem;
   color: #64748b;
@@ -264,9 +306,7 @@ body {
 #vis-m1 .vega-embed,
 #vis-m2 .vega-embed {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 
 #vis-m1 .vega-embed canvas,
@@ -275,17 +315,10 @@ body {
 #vis-m2 .vega-embed svg {
   max-width: 100%;
   height: auto !important;
-  margin: 0 auto;
+  margin: 0;
 }
 
-#states .chart-row {
-  min-height: auto;
-  margin-bottom: 0;
-}
 
-#states.section-container {
-  margin-bottom: 0;
-}
 
 /* ============================================================
    Footer
@@ -320,8 +353,17 @@ body {
 @media (max-width: 900px) {
   .chart-row,
   .chart-block--side-caption {
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
     min-height: auto;
+  }
+
+  .chart-block.half-width {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
   }
 
   .half-width,

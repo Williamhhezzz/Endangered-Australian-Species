@@ -2,30 +2,48 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "The Deadliest Invaders",
-    "subtitle": "Number of nationally listed species impacted by the top 10 invasive threats. Source: DCCEEW EPBC Act Lists.",
+    "subtitle": "Number of nationally listed species impacted by the top 10 invasive threats.",
     "anchor": "start",
-    "fontSize": 14,
-    "subtitleFontSize": 11
+    "frame": "bounds",
+    "fontSize": 18,
+    "subtitleFontSize": 13
   },
   "width": "container",
   "height": 280,
   "data": {
-    "url": "data/c7_invasive_species.csv"
+    "url": "data/c7_invasive_species.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Species_Affected": "number"
+      }
+    }
   },
   "encoding": {
     "y": {
       "field": "Invasive_Species",
       "type": "nominal",
       "title": null,
-      "sort": {
-        "field": "Species_Affected",
-        "order": "descending"
-      },
+      "sort": "-x",
       "axis": {
-        "labelFontSize": 11,
+        "labelFontSize": 12.5,
+        "labelColor": "#0f172a",
         "ticks": false,
         "domain": false,
         "labelLimit": 250
+      }
+    },
+    "x": {
+      "field": "Species_Affected",
+      "type": "quantitative",
+      "title": "Listed Species Affected",
+      "scale": {
+        "domain": [0, 360]
+      },
+      "axis": {
+        "grid": true,
+        "titleFontSize": 13,
+        "labelFontSize": 12
       }
     }
   },
@@ -42,8 +60,7 @@
           "datum": 0
         },
         "x2": {
-          "field": "Species_Affected",
-          "type": "quantitative"
+          "field": "Species_Affected"
         }
       }
     },
@@ -51,22 +68,11 @@
       "description": "Layer 2: Lollipop Circle Endpoint",
       "mark": {
         "type": "circle",
-        "size": 100,
+        "size": 110,
         "color": "#334155",
         "opacity": 1
       },
       "encoding": {
-        "x": {
-          "field": "Species_Affected",
-          "type": "quantitative",
-          "title": "Listed Species Affected",
-          "scale": {
-            "domain": [0, 360]
-          },
-          "axis": {
-            "grid": true
-          }
-        },
         "tooltip": [
           {
             "field": "Invasive_Species",
@@ -82,21 +88,22 @@
       }
     },
     {
-      "description": "Layer 3: Direct Numeric Text Overlay",
+      "description": "Layer 3: Direct Numeric Text Overlay on Top Outliers Only",
+      "transform": [
+        {
+          "filter": "datum.Species_Affected == 322"
+        }
+      ],
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "middle",
         "dx": 8,
-        "fontSize": 11,
+        "fontSize": 12.5,
         "fontWeight": "bold",
         "color": "#334155"
       },
       "encoding": {
-        "x": {
-          "field": "Species_Affected",
-          "type": "quantitative"
-        },
         "text": {
           "field": "Species_Affected",
           "type": "quantitative"

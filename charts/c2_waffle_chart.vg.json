@@ -2,10 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Overall Population Lost vs. Remaining",
-    "subtitle": "100 squares per class (1 square = 1% of 1985 baseline level). Source: TSX 2025.",
-    "fontSize": 15,
-    "subtitleFontSize": 11,
+    "subtitle": "100 squares per class (1 square = 1% baseline). Amphibians (3.0%) & Reptiles (6.0%) suffered near-total loss.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
     "anchor": "start",
+    "frame": "bounds",
     "offset": 12
   },
   "data": {
@@ -32,7 +33,7 @@
     "sort": ["Amphibians", "Reptiles", "Birds", "Mammals"],
     "header": {
       "title": null,
-      "labelFontSize": 13,
+      "labelFontSize": 15,
       "labelFontWeight": "bold",
       "labelPadding": 8
     }
@@ -74,8 +75,8 @@
         "legend": {
           "orient": "bottom",
           "title": null,
-          "labelFontSize": 11,
-          "symbolSize": 120,
+          "labelFontSize": 13,
+          "symbolSize": 150,
           "offset": 12
         }
       },

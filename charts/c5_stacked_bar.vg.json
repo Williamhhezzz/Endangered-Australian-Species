@@ -1,15 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 280,
+  "height": 294,
   "title": {
     "text": "EPBC Threat Status Severity Profile Across Fauna Classes",
-    "subtitle": "Proportion of listed species in each statutory risk category. Click a tier to isolate. Source: DCCEEW EPBC Act Lists.",
-    "fontSize": 17,
-    "subtitleFontSize": 12.5,
+    "subtitle": "Proportion of listed species in each statutory risk category. Click a tier to isolate.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
     "subtitlePadding": 6,
     "offset": 14,
-    "anchor": "start"
+    "anchor": "start",
+    "frame": "bounds"
   },
   "data": {
     "url": "data/c5_stacked_bar.csv"
@@ -58,7 +59,8 @@
         "Amphibians"
       ],
       "axis": {
-        "labelFontSize": 12
+        "titleFontSize": 13,
+        "labelFontSize": 12.5
       }
     },
     "x": {
@@ -68,7 +70,9 @@
       "title": "Proportion of Listed Species",
       "axis": {
         "format": "%",
-        "grid": true
+        "grid": true,
+        "titleFontSize": 13,
+        "labelFontSize": 12
       }
     },
     "color": {

@@ -1,13 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 300,
+  "height": 260,
   "title": {
-    "text": "Threatened Mammal Abundance Trends by Conservation Management (2000–2017)",
-    "subtitle": "Relative population index (2000 baseline = 1.0). Source: TSX 2025.",
-    "fontSize": 14,
-    "subtitleFontSize": 11,
-    "anchor": "start"
+    "text": "Threatened Mammal Abundance Trends by Conservation Management",
+    "subtitle": "Relative population index (2000 baseline = 1.0).",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start",
+    "frame": "bounds"
   },
   "data": {
     "url": "data/c9_mammal_management.csv"
@@ -19,7 +20,7 @@
         "type": "rule",
         "strokeDash": [4, 4],
         "color": "#94a3b8",
-        "strokeWidth": 1
+        "strokeWidth": 1.2
       },
       "encoding": {
         "y": {
@@ -31,7 +32,7 @@
       "description": "Trend Lines",
       "mark": {
         "type": "line",
-        "strokeWidth": 3,
+        "strokeWidth": 3.5,
         "interpolate": "monotone"
       },
       "encoding": {
@@ -41,7 +42,9 @@
           "title": "Year",
           "axis": {
             "format": "d",
-            "grid": false
+            "grid": false,
+            "titleFontSize": 13,
+            "labelFontSize": 12
           }
         },
         "y": {
@@ -51,6 +54,10 @@
           "scale": {
             "type": "linear",
             "zero": true
+          },
+          "axis": {
+            "titleFontSize": 13,
+            "labelFontSize": 12
           }
         },
         "color": {
@@ -71,7 +78,10 @@
           },
           "legend": {
             "orient": "bottom",
-            "direction": "horizontal"
+            "direction": "horizontal",
+            "titleFontSize": 13,
+            "labelFontSize": 12,
+            "symbolSize": 120
           }
         }
       }
@@ -102,9 +112,9 @@
               "No Known Management"
             ],
             "range": [
-              "#059669",
-              "#0284c7",
-              "#dc2626"
+              "#A4006D",
+              "#A8A7FC",
+              "#f2e41d"
             ]
           }
         },

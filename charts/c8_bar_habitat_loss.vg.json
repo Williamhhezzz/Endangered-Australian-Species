@@ -1,12 +1,12 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Land Clearing Impact: Absolute Habitat Area Lost vs. Proportional Range Destruction",
-    "subtitle": "Comparing total clearing footprint (Million Ha) against percentage of historical range destroyed. Source: SoE 2021 (BIO 043ab).",
-    "fontSize": 15,
-    "subtitleFontSize": 11,
+    "subtitle": "Comparing total clearing footprint (Million Ha) against percentage of historical range destroyed.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
     "anchor": "start",
+    "frame": "bounds",
     "offset": 12
   },
   "data": {
@@ -15,9 +15,14 @@
   "spacing": 20,
   "hconcat": [
     {
-      "title": "Absolute Area Cleared (Million Hectares)",
-      "width": 650,
-      "height": 280,
+      "title": {
+        "text": "Absolute Area Cleared (Million Hectares)",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "anchor": "middle"
+      },
+      "width": 440,
+      "height": 300,
       "mark": {
         "type": "bar",
         "cornerRadiusEnd": 3
@@ -32,8 +37,10 @@
             "order": "descending"
           },
           "axis": {
-            "labelFontSize": 11,
-            "labelLimit": 220
+            "labelFontSize": 12.5,
+            "labelFontWeight": "bold",
+            "labelColor": "#0f172a",
+            "labelLimit": 260
           }
         },
         "x": {
@@ -45,7 +52,9 @@
           },
           "axis": {
             "format": ".1f",
-            "grid": true
+            "grid": true,
+            "titleFontSize": 13,
+            "labelFontSize": 12
           }
         },
         "color": {
@@ -73,9 +82,14 @@
       }
     },
     {
-      "title": "Proportional Range Destroyed (%)",
+      "title": {
+        "text": "Proportional Range Destroyed (%)",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "anchor": "middle"
+      },
       "width": 440,
-      "height": 280,
+      "height": 300,
       "mark": {
         "type": "bar",
         "cornerRadiusEnd": 3
@@ -97,7 +111,9 @@
           "title": "Proportion of Habitat Lost (%)",
           "axis": {
             "format": ".1f",
-            "grid": true
+            "grid": true,
+            "titleFontSize": 13,
+            "labelFontSize": 12
           }
         },
         "color": {

@@ -6,11 +6,12 @@
     "contains": "padding"
   },
   "title": {
-    "text": "National Fauna Abundance Collapse & Cumulative Statutory Listings (2000–2020)",
-    "subtitle": "Drag an interval brush on Chart A (top) to dynamically filter Chart B (bottom). Sources: TSX 2025, SoE 2021.",
-    "fontSize": 15,
-    "subtitleFontSize": 11,
-    "anchor": "start"
+    "text": "National Fauna Abundance Collapse & Cumulative Statutory Listings",
+    "subtitle": "Trajectory of monitored vertebrate abundance indexed against cumulative statutory listings.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start",
+    "frame": "bounds"
   },
   "data": {
     "url": "data/c1_indexline_streamgraph.csv",
@@ -28,9 +29,15 @@
   },
   "vconcat": [
     {
-      "title": "A. National Abundance Trajectory (2000 Baseline = 1.0)",
-      "width": 1300,
-      "height": 220,
+      "title": {
+        "text": "A. National Abundance Trajectory (Baseline = 1.0)",
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "anchor": "start",
+        "frame": "bounds"
+      },
+      "width": 1180,
+      "height": 200,
       "layer": [
         {
           "description": "1.0 Baseline Reference Line",
@@ -74,6 +81,8 @@
               "axis": {
                 "format": "d",
                 "title": "Year",
+                "titleFontSize": 13,
+                "labelFontSize": 12,
                 "grid": false,
                 "values": [
                   2000, 2001, 2002, 2003, 2004,
@@ -93,6 +102,8 @@
               },
               "axis": {
                 "title": "Abundance Index (2000 = 1.0)",
+                "titleFontSize": 13,
+                "labelFontSize": 12,
                 "format": ".1f"
               }
             }
@@ -133,13 +144,127 @@
               }
             ]
           }
+        },
+        {
+          "description": "Annotation 1: EPBC Act enacted at baseline",
+          "transform": [
+            {
+              "filter": "datum.year === 2000"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 8,
+            "dy": -14,
+            "fontSize": 12.5,
+            "fontWeight": "bold",
+            "color": "#0f172a",
+            "text": "2000: EPBC Act Enacted (Baseline = 1.0)"
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "description": "Annotation 2: Millennium Drought",
+          "transform": [
+            {
+              "filter": "datum.year === 2005"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 8,
+            "dy": -14,
+            "fontSize": 12,
+            "fontStyle": "italic",
+            "color": "#475569",
+            "text": "2001–09: Millennium Drought accelerates decline"
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "description": "Endpoint Highlight Point",
+          "transform": [
+            {
+              "filter": "datum.year === 2020"
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 130,
+            "color": "#b91c1c"
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "description": "Annotation 3: 2020 Net Collapse Callout",
+          "transform": [
+            {
+              "filter": "datum.year === 2020"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -8,
+            "dy": -30,
+            "fontSize": 12.5,
+            "fontWeight": "bold",
+            "color": "#b91c1c",
+            "text": "2020: Net -62.6% Collapse (Index = 0.374)"
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative"
+            }
+          }
         }
       ]
     },
     {
-      "title": "B. Cumulative EPBC Act Statutory Listings by Fauna Class (2000–2020)",
-      "width": 1300,
-      "height": 200,
+      "title": {
+        "text": "B. Cumulative EPBC Act Statutory Listings by Fauna Class",
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "anchor": "start",
+        "frame": "bounds"
+      },
+      "width": 1180,
+      "height": 190,
       "transform": [
         {
           "filter": "datum.year <= 2020"
@@ -177,6 +302,8 @@
           "axis": {
             "format": "d",
             "title": "Filtered Year Window",
+            "titleFontSize": 13,
+            "labelFontSize": 12,
             "grid": false,
             "values": [
               2000, 2001, 2002, 2003, 2004,
@@ -193,6 +320,7 @@
           "stack": "center",
           "axis": {
             "title": "Cumulative Listings (Centered Flow)",
+            "titleFontSize": 13,
             "labels": false,
             "ticks": false,
             "domain": false,
@@ -219,7 +347,10 @@
           },
           "legend": {
             "orient": "bottom",
-            "direction": "horizontal"
+            "direction": "horizontal",
+            "titleFontSize": 13,
+            "labelFontSize": 12,
+            "symbolSize": 150
           }
         },
         "tooltip": [

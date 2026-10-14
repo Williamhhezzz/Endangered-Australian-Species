@@ -3,10 +3,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Conservation Surveillance Networks Across Fauna Classes",
-    "subtitle": "Each point represents an active ecological monitoring site. Source: TSX 2025.",
-    "fontSize": 15,
-    "subtitleFontSize": 11,
+    "subtitle": "Each point represents an active ecological monitoring site.",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
     "anchor": "start",
+    "frame": "bounds",
     "offset": 12
   },
   "params": [
@@ -15,20 +16,21 @@
       "value": null
     }
   ],
-  "spacing": -200,
+  "spacing": 15,
   "vconcat": [
     {
-      "spacing": 50,
+      "spacing": 160,
       "hconcat": [
         {
           "title": {
             "text": "Birds",
-            "fontSize": 13,
+            "fontSize": 16,
             "fontWeight": "bold",
+            "color": "#0f172a",
             "anchor": "start"
           },
-          "width": 620,
-          "height": 440,
+          "width": 440,
+          "height": 270,
           "projection": {
             "type": "equirectangular"
           },
@@ -41,6 +43,11 @@
                   "feature": "ne_10m_admin_1_states_provinces"
                 }
               },
+              "transform": [
+                {
+                  "filter": "datum.properties.name != 'Macquarie Island'"
+                }
+              ],
               "mark": {
                 "type": "geoshape",
                 "fill": "#f1f5f9",
@@ -144,12 +151,13 @@
         {
           "title": {
             "text": "Mammals",
-            "fontSize": 13,
+            "fontSize": 16,
             "fontWeight": "bold",
+            "color": "#0f172a",
             "anchor": "start"
           },
-          "width": 620,
-          "height": 440,
+          "width": 440,
+          "height": 270,
           "projection": {
             "type": "equirectangular"
           },
@@ -162,6 +170,11 @@
                   "feature": "ne_10m_admin_1_states_provinces"
                 }
               },
+              "transform": [
+                {
+                  "filter": "datum.properties.name != 'Macquarie Island'"
+                }
+              ],
               "mark": {
                 "type": "geoshape",
                 "fill": "#f1f5f9",
@@ -265,17 +278,18 @@
       ]
     },
     {
-      "spacing": 50,
+      "spacing": 160,
       "hconcat": [
         {
           "title": {
             "text": "Reptiles",
-            "fontSize": 13,
+            "fontSize": 16,
             "fontWeight": "bold",
+            "color": "#0f172a",
             "anchor": "start"
           },
-          "width": 620,
-          "height": 440,
+          "width": 440,
+          "height": 270,
           "projection": {
             "type": "equirectangular"
           },
@@ -288,6 +302,11 @@
                   "feature": "ne_10m_admin_1_states_provinces"
                 }
               },
+              "transform": [
+                {
+                  "filter": "datum.properties.name != 'Macquarie Island'"
+                }
+              ],
               "mark": {
                 "type": "geoshape",
                 "fill": "#f1f5f9",
@@ -322,7 +341,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#fc03db"
+                  "value": "#059669"
                 },
                 "opacity": {
                   "condition": {
@@ -391,12 +410,13 @@
         {
           "title": {
             "text": "Amphibians",
-            "fontSize": 13,
+            "fontSize": 16,
             "fontWeight": "bold",
+            "color": "#0f172a",
             "anchor": "start"
           },
-          "width": 620,
-          "height": 440,
+          "width": 440,
+          "height": 270,
           "projection": {
             "type": "equirectangular"
           },
@@ -409,6 +429,11 @@
                   "feature": "ne_10m_admin_1_states_provinces"
                 }
               },
+              "transform": [
+                {
+                  "filter": "datum.properties.name != 'Macquarie Island'"
+                }
+              ],
               "mark": {
                 "type": "geoshape",
                 "fill": "#f1f5f9",
@@ -443,7 +468,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#059669"
+                  "value": "#fc03db"
                 },
                 "opacity": {
                   "condition": {
