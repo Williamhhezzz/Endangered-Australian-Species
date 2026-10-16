@@ -28,8 +28,8 @@ body {
 }
 
 .hero-inner {
-  width: 92%;
-  max-width: 1600px;
+  width: 94%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -45,8 +45,8 @@ body {
    ============================================================ */
 
 .container {
-  width: 92%;
-  max-width: 1600px;
+  width: 94%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem 0;
   padding-bottom: 1rem;
@@ -58,14 +58,16 @@ body {
 
 .stat-strip {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 2rem;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .stat-card {
-  flex: 1 1 180px;
+  flex: 1 1 220px;
+  min-width: 180px;
   background: #ffffff;
   border-radius: 8px;
   padding: 1.25rem;
@@ -102,8 +104,8 @@ body {
   background: #f0fdf4;
   border-left: 3px solid #16a34a;
   border-radius: 4px;
-  font-size: 0.82rem;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  line-height: 1.5;
   color: #166534;
 }
 
@@ -147,8 +149,8 @@ body {
 
 .chart-row {
   display: flex;
-  gap: 3.5rem;
-  flex-wrap: nowrap;
+  gap: 2.5rem;
+  flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
   margin-bottom: 3.5rem;
@@ -194,6 +196,7 @@ body {
 .chart-block--side-caption {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.5rem;
   align-items: flex-start;
   width: 100%;
@@ -202,19 +205,22 @@ body {
 .chart-block--side-caption > .full-width,
 .chart-block--side-caption > div:first-child {
   flex: 1 1 0%;
+  min-width: min(100%, 350px);
   width: 100%;
-  min-width: 0;
 }
 
 .chart-caption--side {
-  flex: 0 0 250px;
-  font-size: 0.88rem;
+  flex: 0 0 240px;
+  width: 240px;
+  max-width: 250px;
+  font-size: 0.94rem;
   color: #475569;
-  padding-left: 0.75rem;
+  padding-left: 0.5rem;
   margin: 0;
   text-align: left;
   align-self: center;
   line-height: 1.55;
+  box-sizing: border-box;
 }
 
 /* ============================================================
@@ -222,13 +228,13 @@ body {
    ============================================================ */
 
 .chart-block.half-width {
-  flex: 1 1 calc(50% - 1.75rem);
-  width: calc(50% - 1.75rem);
-  max-width: calc(50% - 1.75rem);
+  flex: 1 1 450px;
+  width: calc(50% - 1.25rem);
+  min-width: min(100%, 350px);
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -237,26 +243,41 @@ body {
   min-width: 0;
 }
 
-.chart-block.half-width .vega-embed,
+.chart-block.half-width .vega-embed {
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
 .chart-block.half-width .vega-embed svg {
   width: 100% !important;
-  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
 }
 
 .chart-caption--bottom {
+  align-self: center;
   text-align: left;
   margin-top: 1.25rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 52ch;
+  width: 100%;
   padding-top: 0;
   border-top: none;
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: 0.96rem;
+  line-height: 1.6;
   color: #334155;
+  box-sizing: border-box;
 }
 
 .chart-caption--bottom p {
   text-align: left;
-  max-width: 50ch;
+  max-width: 52ch;
   margin: 0;
+  width: 100%;
 }
 
 .chart-caption--bottom b,
@@ -266,9 +287,11 @@ body {
 
 .caption-note {
   text-align: left;
-  max-width: 50ch;
+  max-width: 52ch;
   margin-top: 0.45rem;
-  font-size: 0.8rem;
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 0.85rem;
   color: #64748b;
 }
 
@@ -276,46 +299,35 @@ body {
    Vega Visualization Sizing & Full-Width Stretches
    ============================================================ */
 
-.vega-embed {
+div[id^="vis-"] {
   width: 100%;
-  display: block;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.vega-embed {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.vega-embed .chart-wrapper {
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .vega-embed svg,
-.vega-embed canvas {
-  max-width: 100%;
-  height: auto;
-}
-
-#vis-c1 .vega-embed,
-#vis-c2 .vega-embed,
-#vis-c3 .vega-embed,
-#vis-m3 .vega-embed {
-  width: 100%;
-}
-
-#vis-c1 .vega-embed svg,
-#vis-c2 .vega-embed svg,
-#vis-c3 .vega-embed svg,
-#vis-m3 .vega-embed svg {
+.vega-embed canvas,
+div[id^="vis-"] .vega-embed svg {
   width: 100% !important;
+  max-width: 100% !important;
   height: auto !important;
-  display: block;
-}
-
-#vis-m1 .vega-embed,
-#vis-m2 .vega-embed {
-  width: 100%;
-  display: block;
-}
-
-#vis-m1 .vega-embed canvas,
-#vis-m2 .vega-embed canvas,
-#vis-m1 .vega-embed svg,
-#vis-m2 .vega-embed svg {
-  max-width: 100%;
-  height: auto !important;
-  margin: 0;
+  display: block !important;
+  box-sizing: border-box !important;
 }
 
 
@@ -333,8 +345,8 @@ body {
 }
 
 .page-footer__inner {
-  width: 92%;
-  max-width: 1600px;
+  width: 94%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -350,35 +362,52 @@ body {
    Responsive Media Queries
    ============================================================ */
 
-@media (max-width: 900px) {
-  .chart-row,
-  .chart-block--side-caption {
+/* Intermediate Screen Resize (50% window split on Desktop, Tablets, Laptops) */
+@media (max-width: 1350px) {
+  .chart-row {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     min-height: auto;
   }
 
   .chart-block.half-width {
     width: 100%;
     max-width: 100%;
-    flex: 1 1 100%;
+    flex: 0 0 auto;
   }
 
-  .half-width,
-  .full-width {
+  .chart-block--side-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .chart-block--side-caption > .full-width,
+  .chart-block--side-caption > div:first-child {
+    flex: 0 0 auto;
     width: 100%;
+    min-width: 0;
   }
 
   .chart-caption--side {
-    flex: auto;
+    flex: 0 0 auto;
     width: 100%;
-    border-left: none;
-    border-top: 2px solid #0284c7;
+    max-width: 52ch;
+    margin: 1.25rem auto 0 auto;
+    align-self: center;
+    text-align: left;
     padding-left: 0;
-    padding-top: 1rem;
-    margin-top: 1rem;
+    border-left: none;
+  }
+
+  .chart-caption--bottom {
+    max-width: 52ch;
+    width: 100%;
+  }
+
+  .stat-card {
+    flex: 1 1 calc(50% - 0.75rem);
   }
 
   .row-sm,
@@ -388,16 +417,56 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+/* Tablet & Mobile Screens */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.25rem 0;
+  }
+
+  .hero {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .section-header {
+    font-size: 1.3rem;
+  }
+
+  .chart-row {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-divider {
+    margin: 2rem 0;
+  }
+
+  .chart-caption--side,
+  .chart-caption--bottom {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 520px) {
   .stat-card {
     flex: 1 1 100%;
   }
 
   .hero-inner h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .section-header {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+  }
+
+  .stat-card__number {
+    font-size: 1.8rem;
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "The Deadliest Invaders",
-    "subtitle": "Number of nationally listed species impacted by the top 10 invasive threats.",
+    "subtitle": "Number of nationally listed species (animals and plants) impacted by top invasive threats.",
     "anchor": "start",
     "frame": "bounds",
     "fontSize": 18,
@@ -30,7 +30,7 @@
         "labelColor": "#0f172a",
         "ticks": false,
         "domain": false,
-        "labelLimit": 250
+        "labelLimit": 260
       }
     },
     "x": {
@@ -69,10 +69,16 @@
       "mark": {
         "type": "circle",
         "size": 110,
-        "color": "#334155",
         "opacity": 1
       },
       "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.Species_Affected >= 322",
+            "value": "#0f172a"
+          },
+          "value": "#94a3b8"
+        },
         "tooltip": [
           {
             "field": "Invasive_Species",
@@ -88,10 +94,10 @@
       }
     },
     {
-      "description": "Layer 3: Direct Numeric Text Overlay on Top Outliers Only",
+      "description": "Layer 3: Direct Numeric Count on Top Outlier Only",
       "transform": [
         {
-          "filter": "datum.Species_Affected == 322"
+          "filter": "datum.Species_Affected >= 322"
         }
       ],
       "mark": {
@@ -99,11 +105,15 @@
         "align": "left",
         "baseline": "middle",
         "dx": 8,
-        "fontSize": 12.5,
+        "fontSize": 11.5,
         "fontWeight": "bold",
-        "color": "#334155"
+        "color": "#0f172a"
       },
       "encoding": {
+        "x": {
+          "field": "Species_Affected",
+          "type": "quantitative"
+        },
         "text": {
           "field": "Species_Affected",
           "type": "quantitative"

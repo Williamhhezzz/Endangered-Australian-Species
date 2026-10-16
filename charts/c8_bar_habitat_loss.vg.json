@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Land Clearing Impact: Absolute Habitat Area Lost vs. Proportional Range Destruction",
-    "subtitle": "Comparing total clearing footprint (Million Ha) against percentage of historical range destroyed.",
+    "subtitle": [
+      "Comparing total habitat cleared (Million Hectares, left) against the percentage",
+      "of the species' entire historical range destroyed (%, right)."
+    ],
     "fontSize": 18,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -12,7 +15,7 @@
   "data": {
     "url": "data/c8_habitat_loss.csv"
   },
-  "spacing": 20,
+  "spacing": 15,
   "hconcat": [
     {
       "title": {
@@ -23,19 +26,23 @@
       },
       "width": 440,
       "height": 300,
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 3
-      },
       "encoding": {
         "y": {
           "field": "Species",
           "type": "nominal",
           "title": null,
-          "sort": {
-            "field": "Area_Lost_Millions",
-            "order": "descending"
-          },
+          "sort": [
+            "Red goshawk",
+            "Ghost bat",
+            "Star finch",
+            "Northern quoll",
+            "Bluegrass",
+            "Painted honeyeater",
+            "Squatter pigeon",
+            "Malleefowl",
+            "Koala",
+            "Southern black-throated finch"
+          ],
           "axis": {
             "labelFontSize": 12.5,
             "labelFontWeight": "bold",
@@ -48,7 +55,8 @@
           "type": "quantitative",
           "title": "Area Lost (Million Ha)",
           "scale": {
-            "reverse": true
+            "reverse": true,
+            "domain": [0, 4.0]
           },
           "axis": {
             "format": ".1f",
@@ -56,30 +64,58 @@
             "titleFontSize": 13,
             "labelFontSize": 12
           }
-        },
-        "color": {
-          "value": "#1dc1f2"
-        },
-        "tooltip": [
-          {
-            "field": "Species",
-            "type": "nominal",
-            "title": "Species"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": 3
           },
-          {
-            "field": "Area_Lost_Millions",
-            "type": "quantitative",
-            "title": "Area Lost (M ha)",
-            "format": ".2f"
-          },
-          {
-            "field": "Proportion_Lost",
-            "type": "quantitative",
-            "title": "Proportion Lost (%)",
-            "format": ".2f"
+          "encoding": {
+            "color": {
+              "value": "#3b6998"
+            },
+            "tooltip": [
+              {
+                "field": "Species",
+                "type": "nominal",
+                "title": "Species"
+              },
+              {
+                "field": "Area_Lost_Millions",
+                "type": "quantitative",
+                "title": "Area Lost (M ha)",
+                "format": ".2f"
+              },
+              {
+                "field": "Proportion_Lost",
+                "type": "quantitative",
+                "title": "Proportion Lost (%)",
+                "format": ".2f"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "description": "Numeric Label on Red goshawk tip",
+          "transform": [
+            {
+              "filter": "datum.Species === 'Red goshawk'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": -6,
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "fill": "#3b6998",
+            "text": "3.02M"
+          }
+        }
+      ]
     },
     {
       "title": {
@@ -90,55 +126,90 @@
       },
       "width": 440,
       "height": 300,
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 3
-      },
       "encoding": {
         "y": {
           "field": "Species",
           "type": "nominal",
           "title": null,
-          "sort": {
-            "field": "Area_Lost_Millions",
-            "order": "descending"
-          },
+          "sort": [
+            "Red goshawk",
+            "Ghost bat",
+            "Star finch",
+            "Northern quoll",
+            "Bluegrass",
+            "Painted honeyeater",
+            "Squatter pigeon",
+            "Malleefowl",
+            "Koala",
+            "Southern black-throated finch"
+          ],
           "axis": null
         },
         "x": {
           "field": "Proportion_Lost",
           "type": "quantitative",
           "title": "Proportion of Habitat Lost (%)",
+          "scale": {
+            "domain": [0, 14]
+          },
           "axis": {
             "format": ".1f",
             "grid": true,
             "titleFontSize": 13,
             "labelFontSize": 12
           }
-        },
-        "color": {
-          "value": "#32f21d"
-        },
-        "tooltip": [
-          {
-            "field": "Species",
-            "type": "nominal",
-            "title": "Species"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": 3
           },
-          {
-            "field": "Proportion_Lost",
-            "type": "quantitative",
-            "title": "Proportion Lost (%)",
-            "format": ".2f"
-          },
-          {
-            "field": "Area_Lost_Millions",
-            "type": "quantitative",
-            "title": "Area Lost (M ha)",
-            "format": ".2f"
+          "encoding": {
+            "color": {
+              "value": "#5a9ab0"
+            },
+            "tooltip": [
+              {
+                "field": "Species",
+                "type": "nominal",
+                "title": "Species"
+              },
+              {
+                "field": "Proportion_Lost",
+                "type": "quantitative",
+                "title": "Proportion Lost (%)",
+                "format": ".2f"
+              },
+              {
+                "field": "Area_Lost_Millions",
+                "type": "quantitative",
+                "title": "Area Lost (M ha)",
+                "format": ".2f"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "description": "Numeric Label on Southern black-throated finch tip",
+          "transform": [
+            {
+              "filter": "datum.Species === 'Southern black-throated finch'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 6,
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "fill": "#5a9ab0",
+            "text": "10.0%"
+          }
+        }
+      ]
     }
   ],
   "config": {

@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Overall Population Lost vs. Remaining",
-    "subtitle": "100 squares per class (1 square = 1% baseline). Amphibians (3.0%) & Reptiles (6.0%) suffered near-total loss.",
+    "text": "Overall Population Lost vs. Remaining (2000–2020)",
+    "subtitle": "100 squares per class (1 square = 1% of 1985 baseline level remaining in 2022).",
     "fontSize": 18,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -25,22 +25,33 @@
       "value": null
     }
   ],
-  "spacing": 90,
+  "transform": [
+    {
+      "calculate": "datum.class === 'Amphibians' ? 'Amphibians (3%)' : datum.class === 'Reptiles' ? 'Reptiles (6%)' : datum.class === 'Birds' ? 'Birds (44%)' : 'Mammals (62%)'",
+      "as": "panel_title"
+    }
+  ],
+  "spacing": 25,
   "facet": {
-    "field": "class",
+    "field": "panel_title",
     "type": "nominal",
     "columns": 4,
-    "sort": ["Amphibians", "Reptiles", "Birds", "Mammals"],
+    "sort": [
+      "Amphibians (3%)",
+      "Reptiles (6%)",
+      "Birds (44%)",
+      "Mammals (62%)"
+    ],
     "header": {
       "title": null,
-      "labelFontSize": 15,
+      "labelFontSize": 14,
       "labelFontWeight": "bold",
-      "labelPadding": 8
+      "labelPadding": 10
     }
   },
   "spec": {
-    "width": 210,
-    "height": 210,
+    "width": 140,
+    "height": 140,
     "mark": {
       "type": "rect",
       "stroke": "#ffffff",

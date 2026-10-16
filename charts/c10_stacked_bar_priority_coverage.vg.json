@@ -4,7 +4,10 @@
   "height": 295,
   "title": {
     "text": "Government Priority Action Plan Coverage Across Fauna Classes",
-    "subtitle": "Click a status tier or bar segment to isolate.",
+    "subtitle": [
+      "Proportion of legally listed threatened species selected as one of the 110 Priority Species",
+      "under the 2022–2032 Federal Action Plan (14.0% overall coverage)."
+    ],
     "fontSize": 18,
     "subtitleFontSize": 13,
     "subtitlePadding": 6,
@@ -15,16 +18,6 @@
   "data": {
     "url": "data/c10_priority_coverage.csv"
   },
-  "params": [
-    {
-      "name": "action_select",
-      "select": {
-        "type": "point",
-        "fields": ["ActionStatus"]
-      },
-      "bind": "legend"
-    }
-  ],
   "transform": [
     {
       "joinaggregate": [
@@ -43,10 +36,6 @@
       "as": "proportion"
     }
   ],
-  "mark": {
-    "type": "bar",
-    "cursor": "pointer"
-  },
   "encoding": {
     "y": {
       "field": "TaxonomicGroup",
@@ -62,84 +51,134 @@
         "titleFontSize": 13,
         "labelFontSize": 12.5
       }
-    },
-    "x": {
-      "field": "species_count",
-      "type": "quantitative",
-      "stack": "normalize",
-      "title": "Proportion of Listed Species",
-      "axis": {
-        "format": "%",
-        "grid": true,
-        "titleFontSize": 13,
-        "labelFontSize": 12
-      }
-    },
-    "color": {
-      "field": "ActionStatus",
-      "type": "nominal",
-      "title": "Recovery Plan Status",
-      "sort": [
-        "Action Plan Priority",
-        "Other Listed Species"
-      ],
-      "scale": {
-        "domain": [
-          "Action Plan Priority",
-          "Other Listed Species"
-        ],
-        "range": [
-          "#DCBE2E",
-          "#cbd5e1"
-        ]
-      },
-      "legend": {
-        "orient": "bottom",
-        "direction": "horizontal",
-        "titleFontSize": 13,
-        "labelFontSize": 12,
-        "symbolSize": 180,
-        "columnPadding": 20,
-        "offset": 10,
-        "cursor": "pointer"
-      }
-    },
-    "opacity": {
-      "condition": {
-        "param": "action_select",
-        "value": 1
-      },
-      "value": 0.2
-    },
-    "tooltip": [
-      {
-        "field": "TaxonomicGroup",
-        "type": "nominal",
-        "title": "Fauna Group"
-      },
-      {
-        "field": "ActionStatus",
-        "type": "nominal",
-        "title": "Status"
-      },
-      {
-        "field": "species_count",
-        "type": "quantitative",
-        "title": "Species Count"
-      },
-      {
-        "field": "group_total",
-        "type": "quantitative",
-        "title": "Total Listed Species"
-      },
-      {
-        "field": "proportion",
-        "type": "quantitative",
-        "title": "Proportion",
-        "format": ".1%"
-      }
-    ]
+    }
   },
+  "layer": [
+    {
+      "description": "Layer 1: 100% Stacked Horizontal Bars",
+      "params": [
+        {
+          "name": "action_select",
+          "select": {
+            "type": "point",
+            "fields": [
+              "ActionStatus"
+            ]
+          },
+          "bind": "legend"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "field": "species_count",
+          "type": "quantitative",
+          "stack": "normalize",
+          "title": "Proportion of Listed Species",
+          "axis": {
+            "format": "%",
+            "grid": true,
+            "titleFontSize": 13,
+            "labelFontSize": 12
+          }
+        },
+        "color": {
+          "field": "ActionStatus",
+          "type": "nominal",
+          "title": "Recovery Plan Status",
+          "sort": [
+            "Action Plan Priority",
+            "Other Listed Species"
+          ],
+          "scale": {
+            "domain": [
+              "Action Plan Priority",
+              "Other Listed Species"
+            ],
+            "range": [
+              "#DCBE2E",
+              "#cbd5e1"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFontSize": 13,
+            "labelFontSize": 12,
+            "symbolSize": 180,
+            "columnPadding": 20,
+            "offset": 10,
+            "cursor": "pointer"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "action_select",
+            "value": 1
+          },
+          "value": 0.2
+        },
+        "tooltip": [
+          {
+            "field": "TaxonomicGroup",
+            "type": "nominal",
+            "title": "Fauna Group"
+          },
+          {
+            "field": "ActionStatus",
+            "type": "nominal",
+            "title": "Status"
+          },
+          {
+            "field": "species_count",
+            "type": "quantitative",
+            "title": "Species Count"
+          },
+          {
+            "field": "group_total",
+            "type": "quantitative",
+            "title": "Total Listed Species"
+          },
+          {
+            "field": "proportion",
+            "type": "quantitative",
+            "title": "Proportion",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Layer 2: Clean Priority percentage labels on Priority bars",
+      "transform": [
+        {
+          "filter": "datum.ActionStatus === 'Action Plan Priority'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "text": {
+          "field": "proportion",
+          "type": "quantitative",
+          "format": ".1%"
+        }
+      }
+    }
+  ],
   "config": {
     "view": {
       "stroke": "transparent"

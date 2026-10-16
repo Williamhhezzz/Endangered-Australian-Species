@@ -4,7 +4,7 @@
   "height": 294,
   "title": {
     "text": "EPBC Threat Status Severity Profile Across Fauna Classes",
-    "subtitle": "Proportion of listed species in each statutory risk category. Click a tier to isolate.",
+    "subtitle": "Proportion of listed species in each legal risk tier. Click a risk tier in the legend to isolate.",
     "fontSize": 18,
     "subtitleFontSize": 13,
     "subtitlePadding": 6,
@@ -15,16 +15,6 @@
   "data": {
     "url": "data/c5_stacked_bar.csv"
   },
-  "params": [
-    {
-      "name": "status_select",
-      "select": {
-        "type": "point",
-        "fields": ["EPBCStatus"]
-      },
-      "bind": "legend"
-    }
-  ],
   "transform": [
     {
       "joinaggregate": [
@@ -43,105 +33,157 @@
       "as": "proportion"
     }
   ],
-  "mark": {
-    "type": "bar",
-    "cursor": "pointer"
-  },
-  "encoding": {
-    "y": {
-      "field": "TaxonomicGroup",
-      "type": "nominal",
-      "title": "Fauna Class",
-      "sort": [
-        "Birds",
-        "Mammals",
-        "Reptiles",
-        "Amphibians"
+  "layer": [
+    {
+      "description": "Layer 1: 100% Stacked Horizontal Bars",
+      "params": [
+        {
+          "name": "status_select",
+          "select": {
+            "type": "point",
+            "fields": ["EPBCStatus"]
+          },
+          "bind": "legend"
+        }
       ],
-      "axis": {
-        "titleFontSize": 13,
-        "labelFontSize": 12.5
-      }
-    },
-    "x": {
-      "field": "species_count",
-      "type": "quantitative",
-      "stack": "normalize",
-      "title": "Proportion of Listed Species",
-      "axis": {
-        "format": "%",
-        "grid": true,
-        "titleFontSize": 13,
-        "labelFontSize": 12
-      }
-    },
-    "color": {
-      "field": "EPBCStatus",
-      "type": "ordinal",
-      "title": "EPBC Risk Category",
-      "sort": [
-        "Critically Endangered",
-        "Endangered",
-        "Vulnerable"
-      ],
-      "scale": {
-        "domain": [
-          "Critically Endangered",
-          "Endangered",
-          "Vulnerable"
-        ],
-        "range": [
-          "#991b1b",
-          "#ef4444",
-          "#f59e0b"
+      "mark": {
+        "type": "bar",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "y": {
+          "field": "TaxonomicGroup",
+          "type": "nominal",
+          "title": "Fauna Class",
+          "sort": [
+            "Birds",
+            "Mammals",
+            "Reptiles",
+            "Amphibians"
+          ],
+          "axis": {
+            "titleFontSize": 13,
+            "labelFontSize": 12.5
+          }
+        },
+        "x": {
+          "field": "species_count",
+          "type": "quantitative",
+          "stack": "normalize",
+          "title": "Proportion of Listed Species",
+          "axis": {
+            "format": "%",
+            "grid": true,
+            "titleFontSize": 13,
+            "labelFontSize": 12
+          }
+        },
+        "color": {
+          "field": "EPBCStatus",
+          "type": "ordinal",
+          "title": "EPBC Risk Category",
+          "sort": [
+            "Critically Endangered",
+            "Endangered",
+            "Vulnerable"
+          ],
+          "scale": {
+            "domain": [
+              "Critically Endangered",
+              "Endangered",
+              "Vulnerable"
+            ],
+            "range": [
+              "#991b1b",
+              "#ef4444",
+              "#f59e0b"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFontSize": 13,
+            "labelFontSize": 12,
+            "symbolSize": 180,
+            "columnPadding": 20,
+            "offset": 10
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "status_select",
+            "value": 1
+          },
+          "value": 0.2
+        },
+        "tooltip": [
+          {
+            "field": "TaxonomicGroup",
+            "type": "nominal",
+            "title": "Fauna Group"
+          },
+          {
+            "field": "EPBCStatus",
+            "type": "nominal",
+            "title": "EPBC Status"
+          },
+          {
+            "field": "species_count",
+            "type": "quantitative",
+            "title": "Species Count"
+          },
+          {
+            "field": "group_total",
+            "type": "quantitative",
+            "title": "Total Listed Species"
+          },
+          {
+            "field": "proportion",
+            "type": "quantitative",
+            "title": "Proportion",
+            "format": ".1%"
+          }
         ]
-      },
-      "legend": {
-        "orient": "bottom",
-        "direction": "horizontal",
-        "titleFontSize": 13,
-        "labelFontSize": 12,
-        "symbolSize": 180,
-        "columnPadding": 20,
-        "offset": 10
       }
     },
-    "opacity": {
-      "condition": {
-        "param": "status_select",
-        "value": 1
+    {
+      "description": "Layer 2: Clean percentage labels on Critically Endangered bars",
+      "transform": [
+        {
+          "filter": "datum.EPBCStatus === 'Critically Endangered'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#ffffff"
       },
-      "value": 0.2
-    },
-    "tooltip": [
-      {
-        "field": "TaxonomicGroup",
-        "type": "nominal",
-        "title": "Fauna Group"
-      },
-      {
-        "field": "EPBCStatus",
-        "type": "nominal",
-        "title": "EPBC Status"
-      },
-      {
-        "field": "species_count",
-        "type": "quantitative",
-        "title": "Species Count"
-      },
-      {
-        "field": "group_total",
-        "type": "quantitative",
-        "title": "Total Listed Species"
-      },
-      {
-        "field": "proportion",
-        "type": "quantitative",
-        "title": "Proportion",
-        "format": ".1%"
+      "encoding": {
+        "y": {
+          "field": "TaxonomicGroup",
+          "type": "nominal",
+          "sort": [
+            "Birds",
+            "Mammals",
+            "Reptiles",
+            "Amphibians"
+          ]
+        },
+        "x": {
+          "datum": 0
+        },
+        "text": {
+          "field": "proportion",
+          "type": "quantitative",
+          "format": ".1%"
+        }
       }
-    ]
-  },
+    }
+  ],
   "config": {
     "view": {
       "stroke": "transparent"

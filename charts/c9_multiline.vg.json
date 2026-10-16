@@ -3,9 +3,12 @@
   "width": "container",
   "height": 260,
   "title": {
-    "text": "Threatened Mammal Abundance Trends by Conservation Management",
-    "subtitle": "Relative population index (2000 baseline = 1.0).",
-    "fontSize": 18,
+    "text": "Threatened Mammal Abundance by Management Status (2000–2017)",
+    "subtitle": [
+      "Relative population index (2000 baseline = 1.0) comparing fenced sanctuaries,",
+      "general management, and unmanaged wild populations."
+    ],
+    "fontSize": 17,
     "subtitleFontSize": 13,
     "anchor": "start",
     "frame": "bounds"
@@ -40,8 +43,12 @@
           "field": "Year",
           "type": "quantitative",
           "title": "Year",
+          "scale": {
+            "domain": [2000, 2019.5]
+          },
           "axis": {
             "format": "d",
+            "values": [2000, 2004, 2008, 2012, 2016],
             "grid": false,
             "titleFontSize": 13,
             "labelFontSize": 12
@@ -53,7 +60,8 @@
           "title": "Relative Abundance Index (2000 = 1.0)",
           "scale": {
             "type": "linear",
-            "zero": true
+            "zero": true,
+            "domainMax": 9.5
           },
           "axis": {
             "titleFontSize": 13,
@@ -71,9 +79,9 @@
               "No Known Management"
             ],
             "range": [
-              "#A4006D",
-              "#A8A7FC",
-              "#f2e41d"
+              "#15803d",
+              "#6366f1",
+              "#334155"
             ]
           },
           "legend": {
@@ -96,11 +104,19 @@
       "encoding": {
         "x": {
           "field": "Year",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {
+            "domain": [2000, 2019.5]
+          }
         },
         "y": {
           "field": "Index",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "zero": true,
+            "domainMax": 9.5
+          }
         },
         "color": {
           "field": "Management",
@@ -112,9 +128,9 @@
               "No Known Management"
             ],
             "range": [
-              "#A4006D",
-              "#A8A7FC",
-              "#f2e41d"
+              "#15803d",
+              "#6366f1",
+              "#334155"
             ]
           }
         },
@@ -136,6 +152,72 @@
             "format": ".2f"
           }
         ]
+      }
+    },
+    {
+      "description": "Right End Label: Predator-Free Havens",
+      "data": {
+        "values": [
+          {"Year": 2017, "Index": 8.29, "text": "+729% (8.3x)"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#15803d"
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "y": {"field": "Index", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"}
+      }
+    },
+    {
+      "description": "Right End Label: Any Known Management",
+      "data": {
+        "values": [
+          {"Year": 2017, "Index": 1.28, "text": "+28% (1.3x)"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#6366f1"
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "y": {"field": "Index", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"}
+      }
+    },
+    {
+      "description": "Right End Label: No Known Management",
+      "data": {
+        "values": [
+          {"Year": 2017, "Index": 0.41, "text": "-59% (0.4x)"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#334155"
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "y": {"field": "Index", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"}
       }
     }
   ],

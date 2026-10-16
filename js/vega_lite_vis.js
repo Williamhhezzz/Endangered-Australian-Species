@@ -1,8 +1,19 @@
+const activeViews = [];
+
+const registerView = (res) => {
+  if (res && res.view) {
+    activeViews.push(res.view);
+  }
+  return res;
+};
+
 const embedSpec = (elementId, specPath) => {
   return vegaEmbed(elementId, specPath, { 
     renderer: "svg", 
     actions: false 
-  }).catch(console.error);
+  })
+  .then(registerView)
+  .catch(console.error);
 };
 
 // 1. Standalone Visualizations
@@ -17,8 +28,8 @@ embedSpec("#vis-c10", "charts/c10_stacked_bar_priority_coverage.vg.json");
 
 // 2. Coordinated Group Link: C2 (Waffle) <-> C3 (Dumbbell)
 Promise.all([
-  vegaEmbed("#vis-c2", "charts/c2_waffle_chart.vg.json", { renderer: "svg", actions: false }),
-  vegaEmbed("#vis-c3", "charts/c3_group_dumbbell.vg.json", { renderer: "svg", actions: false })
+  vegaEmbed("#vis-c2", "charts/c2_waffle_chart.vg.json", { renderer: "svg", actions: false }).then(registerView),
+  vegaEmbed("#vis-c3", "charts/c3_group_dumbbell.vg.json", { renderer: "svg", actions: false }).then(registerView)
 ]).then(([resC2, resC3]) => {
   const viewC2 = resC2.view;
   const viewC3 = resC3.view;
@@ -38,9 +49,9 @@ Promise.all([
 
 // 3. Coordinated Spatial Display: M1 (Choropleth) <-> M2 (Symbol) <-> M3 (Dot Density)
 Promise.all([
-  vegaEmbed("#vis-m1", "charts/m1_choropleth_map.vg.json", { renderer: "svg", actions: false }),
-  vegaEmbed("#vis-m2", "charts/m2_symbol_map.vg.json", { renderer: "svg", actions: false }),
-  vegaEmbed("#vis-m3", "charts/m3_dot_map.vg.json", { renderer: "svg", actions: false })
+  vegaEmbed("#vis-m1", "charts/m1_choropleth_map.vg.json", { renderer: "svg", actions: false }).then(registerView),
+  vegaEmbed("#vis-m2", "charts/m2_symbol_map.vg.json", { renderer: "svg", actions: false }).then(registerView),
+  vegaEmbed("#vis-m3", "charts/m3_dot_map.vg.json", { renderer: "svg", actions: false }).then(registerView)
 ]).then(([resM1, resM2, resM3]) => {
   const mapViews = [resM1.view, resM2.view, resM3.view];
   let currentActiveState = null;
@@ -76,3 +87,32 @@ Promise.all([
     });
   });
 }).catch(console.error);
+
+// 4. Global Responsive Resize Handler
+let resizeTimer = null;
+const handleGlobalResize = () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    activeViews.forEach((v) => {
+      try {
+        if (v && typeof v.resize === "function") {
+          v.resize().runAsync();
+        }
+      } catch (err) {
+        console.warn("Resize warning:", err);
+      }
+    });
+  }, 120);
+};
+
+window.addEventListener("resize", handleGlobalResize);
+
+if (typeof ResizeObserver !== "undefined") {
+  const observer = new ResizeObserver(() => {
+    handleGlobalResize();
+  });
+  const container = document.querySelector(".container");
+  if (container) {
+    observer.observe(container);
+  }
+}

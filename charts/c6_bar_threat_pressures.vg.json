@@ -4,7 +4,10 @@
   "height": 280,
   "title": {
     "text": "Top Threat Pressures Affecting Listed Fauna Species",
-    "subtitle": "Percentage of nationally listed threatened species impacted by major threat drivers.",
+    "subtitle": [
+      "Percentage of nationally listed threatened species impacted by each major threat category",
+      "(a species can face multiple threats)."
+    ],
     "fontSize": 18,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -19,6 +22,12 @@
       }
     }
   },
+  "transform": [
+    {
+      "calculate": "format(datum.Proportion, '.1f') + '%'",
+      "as": "pct_label"
+    }
+  ],
   "encoding": {
     "y": {
       "field": "Threat",
@@ -31,7 +40,8 @@
       },
       "axis": {
         "labelFontSize": 12.5,
-        "labelColor": "#0f172a"
+        "labelColor": "#0f172a",
+        "labelLimit": 260
       }
     },
     "x": {
@@ -81,7 +91,7 @@
       }
     },
     {
-      "description": "Layer 2: Direct Numeric Percentage Text Label on Top Threat Only",
+      "description": "Layer 2: Direct Numeric Percentage Text Label on Top Bar Only",
       "transform": [
         {
           "filter": "datum.Threat === 'Invasive species/genes'"
@@ -91,15 +101,14 @@
         "type": "text",
         "align": "left",
         "dx": 6,
-        "fontSize": 12.5,
+        "fontSize": 11.5,
         "fontWeight": "bold",
         "color": "#0f172a"
       },
       "encoding": {
         "text": {
-          "field": "Proportion",
-          "type": "quantitative",
-          "format": ".1f"
+          "field": "pct_label",
+          "type": "nominal"
         }
       }
     }

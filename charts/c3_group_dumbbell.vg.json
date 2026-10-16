@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Sub-Group Divergence Across Animal Classes",
-    "subtitle": "Index change relative to baseline (100%). Rust Orange = decline, Turquoise = recovery.",
+    "subtitle": [
+      "Population level relative to 2000 baseline (100% = no change).",
+      "Rust Orange = decline (<100%); Turquoise = recovery (>100%)."
+    ],
     "fontSize": 18,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -41,7 +44,7 @@
     }
   },
   "spec": {
-    "width": 900,
+    "width": "container",
     "height": {
       "step": 32
     },
@@ -142,10 +145,11 @@
               ]
             },
             "legend": {
-              "title": null,
+              "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
               "labelFontSize": 12.5,
+              "titleFontSize": 13,
               "symbolSize": 110,
               "offset": 14
             }
@@ -175,7 +179,7 @@
         "transform": [
           {
             "calculate": "datum.current_2022 < 100 ? 'Decline (< 100%)' : 'Recovery (>= 100%)'",
-            "as": "TrendStatus"
+            "as": "Trend Status"
           }
         ],
         "mark": {
@@ -196,8 +200,9 @@
             "type": "quantitative"
           },
           "color": {
-            "field": "TrendStatus",
+            "field": "Trend Status",
             "type": "nominal",
+            "title": "Trend Status",
             "scale": {
               "domain": [
                 "Baseline (100%)",
@@ -209,6 +214,15 @@
                 "#d95f02",
                 "#1ae8c6"
               ]
+            },
+            "legend": {
+              "title": "Trend Status",
+              "orient": "bottom",
+              "direction": "horizontal",
+              "labelFontSize": 12.5,
+              "titleFontSize": 13,
+              "symbolSize": 110,
+              "offset": 14
             }
           },
           "tooltip": [
@@ -237,18 +251,18 @@
         }
       },
       {
-        "description": "Percentage Change Text Label for Prominent Declines (Centered Below Point)",
+        "description": "Percentage Change Text Label for Prominent Declines (Beside Dot)",
         "transform": [
           {
-            "filter": "datum.current_2022 < 100 && (datum.subgroup === 'Land-breeding frogs' || datum.subgroup === 'Freshwater reptiles' || datum.subgroup === 'Migratory shorebirds' || datum.subgroup === 'Medium land mammals')"
+            "filter": "datum.current_2022 < 100 && (datum.subgroup === 'Land-breeding frogs' || datum.subgroup === 'Frogs not hit by chytrid fungus' || datum.subgroup === 'Migratory shorebirds' || datum.subgroup === 'Mid-sized mammals (35g–5.5kg)')"
           }
         ],
         "mark": {
           "type": "text",
-          "align": "center",
-          "baseline": "top",
-          "dy": 7,
-          "fontSize": 11.5,
+          "align": "left",
+          "baseline": "middle",
+          "dx": 8,
+          "fontSize": 11,
           "fontWeight": "bold",
           "color": "#d95f02"
         },
@@ -271,7 +285,7 @@
         }
       },
       {
-        "description": "Percentage Change Text Label for Prominent Recovery (Centered Below Point)",
+        "description": "Percentage Change Text Label for Prominent Recovery (Beside Dot)",
         "transform": [
           {
             "filter": "datum.current_2022 >= 100 && datum.subgroup === 'Marine mammals'"
@@ -279,10 +293,10 @@
         ],
         "mark": {
           "type": "text",
-          "align": "center",
-          "baseline": "top",
-          "dy": 7,
-          "fontSize": 11.5,
+          "align": "left",
+          "baseline": "middle",
+          "dx": 8,
+          "fontSize": 11,
           "fontWeight": "bold",
           "color": "#0f766e"
         },

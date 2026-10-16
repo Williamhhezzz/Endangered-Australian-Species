@@ -5,7 +5,7 @@
   "height": 280,
   "title": {
     "text": "Threatened Fauna Listings Across Australian Jurisdictions",
-    "subtitle": "Cross-tabulation of statutory EPBC Act threat listings. Click a cell to isolate.",
+    "subtitle": "Number of legally listed threatened species by state and animal group. Click any cell to isolate.",
     "fontSize": 18,
     "subtitleFontSize": 13,
     "subtitlePadding": 6,
@@ -16,14 +16,6 @@
   "data": {
     "url": "data/c4_heatmap.csv"
   },
-  "params": [
-    {
-      "name": "cell_select",
-      "select": {
-        "type": "point"
-      }
-    }
-  ],
   "encoding": {
     "x": {
       "field": "State",
@@ -69,6 +61,14 @@
   "layer": [
     {
       "description": "Layer 1: Heatmap Rectangles with Interactive Focus State",
+      "params": [
+        {
+          "name": "cell_select",
+          "select": {
+            "type": "point"
+          }
+        }
+      ],
       "mark": {
         "type": "rect",
         "cornerRadius": 2,
@@ -138,6 +138,36 @@
             "title": "Threatened Species"
           }
         ]
+      }
+    },
+    {
+      "description": "Layer 2: Cell Value Text Annotations",
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "baseline": "middle",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "text": {
+          "field": "species_count",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.species_count > 50",
+            "value": "#ffffff"
+          },
+          "value": "#1e293b"
+        },
+        "opacity": {
+          "condition": {
+            "param": "cell_select",
+            "value": 1
+          },
+          "value": 0.25
+        }
       }
     }
   ],

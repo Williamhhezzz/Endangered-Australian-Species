@@ -8,8 +8,8 @@
     "contains": "padding"
   },
   "title": {
-    "text": "State-Level Wildlife Population Decline",
-    "subtitle": "Average percentage change in monitored fauna relative to 2000 baseline. NSW & ACT reported jointly.",
+    "text": "State-Level Wildlife Population Decline (2000–2022)",
+    "subtitle": "Average percentage change in monitored fauna relative to 2000 baseline (NSW & ACT combined).",
     "fontSize": 18,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -150,6 +150,132 @@
             "format": ","
           }
         ]
+      }
+    },
+    {
+      "description": "Annotation: Over Northern Territory",
+      "data": {
+        "values": [
+          {
+            "longitude": 133.5,
+            "latitude": -20.0,
+            "text": "NT (-61.8%)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#ffffff"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Annotation: Over Victoria",
+      "data": {
+        "values": [
+          {
+            "longitude": 144.5,
+            "latitude": -36.8,
+            "text": "VIC (-62.3%)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#ffffff"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Pointer line to Tasmania",
+      "data": {
+        "values": [
+          { "lon": 147.2, "lat": -42.2 },
+          { "lon": 149.2, "lat": -42.2 }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "color": "#1e293b",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "Annotation: Pointer to Tasmania text",
+      "data": {
+        "values": [
+          {
+            "longitude": 149.5,
+            "latitude": -42.2,
+            "text": "TAS (-32.5%)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1e293b"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        }
       }
     }
   ],

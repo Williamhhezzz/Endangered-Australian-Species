@@ -1,9 +1,8 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Conservation Surveillance Networks Across Fauna Classes",
-    "subtitle": "Each point represents an active ecological monitoring site.",
+    "subtitle": "Each point represents an active ecological monitoring site across Australia.",
     "fontSize": 18,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -16,14 +15,14 @@
       "value": null
     }
   ],
-  "spacing": 15,
+  "spacing": 20,
   "vconcat": [
     {
-      "spacing": 160,
+      "spacing": 40,
       "hconcat": [
         {
           "title": {
-            "text": "Birds",
+            "text": "Birds (n = 397)",
             "fontSize": 16,
             "fontWeight": "bold",
             "color": "#0f172a",
@@ -32,7 +31,10 @@
           "width": 440,
           "height": 270,
           "projection": {
-            "type": "equirectangular"
+            "type": "conicEqualArea",
+            "rotate": [-134, 0, 0],
+            "parallels": [-18, -36],
+            "center": [0, -27]
           },
           "layer": [
             {
@@ -82,7 +84,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#0284c7"
+                  "value": "#2b5c8f"
                 },
                 "opacity": {
                   "condition": {
@@ -150,7 +152,7 @@
         },
         {
           "title": {
-            "text": "Mammals",
+            "text": "Mammals (n = 154)",
             "fontSize": 16,
             "fontWeight": "bold",
             "color": "#0f172a",
@@ -159,7 +161,10 @@
           "width": 440,
           "height": 270,
           "projection": {
-            "type": "equirectangular"
+            "type": "conicEqualArea",
+            "rotate": [-134, 0, 0],
+            "parallels": [-18, -36],
+            "center": [0, -27]
           },
           "layer": [
             {
@@ -209,7 +214,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#C1C400"
+                  "value": "#9fc280"
                 },
                 "opacity": {
                   "condition": {
@@ -278,11 +283,11 @@
       ]
     },
     {
-      "spacing": 160,
+      "spacing": 40,
       "hconcat": [
         {
           "title": {
-            "text": "Reptiles",
+            "text": "Reptiles (n = 35)",
             "fontSize": 16,
             "fontWeight": "bold",
             "color": "#0f172a",
@@ -291,7 +296,10 @@
           "width": 440,
           "height": 270,
           "projection": {
-            "type": "equirectangular"
+            "type": "conicEqualArea",
+            "rotate": [-134, 0, 0],
+            "parallels": [-18, -36],
+            "center": [0, -27]
           },
           "layer": [
             {
@@ -341,7 +349,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#059669"
+                  "value": "#4a8c6f"
                 },
                 "opacity": {
                   "condition": {
@@ -409,7 +417,7 @@
         },
         {
           "title": {
-            "text": "Amphibians",
+            "text": "Amphibians (n = 44)",
             "fontSize": 16,
             "fontWeight": "bold",
             "color": "#0f172a",
@@ -418,7 +426,10 @@
           "width": 440,
           "height": 270,
           "projection": {
-            "type": "equirectangular"
+            "type": "conicEqualArea",
+            "rotate": [-134, 0, 0],
+            "parallels": [-18, -36],
+            "center": [0, -27]
           },
           "layer": [
             {
@@ -468,7 +479,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#fc03db"
+                  "value": "#9e3d64"
                 },
                 "opacity": {
                   "condition": {
