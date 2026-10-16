@@ -170,8 +170,8 @@ body {
 
 .chart-row {
   display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  gap: 2rem;
+  flex-wrap: nowrap;
   align-items: flex-start;
   width: 100%;
   margin-bottom: 3.5rem;
@@ -196,7 +196,8 @@ body {
 
 .half-width {
   flex: 1 1 0%;
-  width: 50%;
+  width: calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
   min-width: 0;
 }
 
@@ -217,24 +218,25 @@ body {
 .chart-block--side-caption {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
 .chart-block--side-caption > .full-width,
 .chart-block--side-caption > div:first-child {
   flex: 1 1 0%;
-  min-width: min(100%, 350px);
-  width: 100%;
+  min-width: 0;
+  width: auto;
 }
 
 .chart-caption--side {
-  flex: 0 0 240px;
-  width: 240px;
-  max-width: 250px;
-  font-size: 0.94rem;
+  flex: 0 0 clamp(200px, 18vw, 240px);
+  width: clamp(200px, 18vw, 240px);
+  max-width: 240px;
+  min-width: 180px;
+  font-size: 0.92rem;
   color: #475569;
   padding-left: 0.5rem;
   margin: 0;
@@ -249,10 +251,10 @@ body {
    ============================================================ */
 
 .chart-block.half-width {
-  flex: 1 1 450px;
-  width: calc(50% - 1.25rem);
-  min-width: min(100%, 350px);
-  max-width: 100%;
+  flex: 1 1 0%;
+  width: calc(50% - 1rem);
+  min-width: 0;
+  max-width: calc(50% - 1rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -278,25 +280,25 @@ body {
 }
 
 .chart-caption--bottom {
-  align-self: center;
+  align-self: stretch;
   text-align: left;
   margin-top: 1.25rem;
   margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 52ch;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
   width: 100%;
   padding-top: 0;
   border-top: none;
-  font-size: 0.96rem;
-  line-height: 1.6;
+  font-size: 0.94rem;
+  line-height: 1.55;
   color: #334155;
   box-sizing: border-box;
 }
 
 .chart-caption--bottom p {
   text-align: left;
-  max-width: 52ch;
+  max-width: 100%;
   margin: 0;
   width: 100%;
 }
@@ -308,7 +310,7 @@ body {
 
 .caption-note {
   text-align: left;
-  max-width: 52ch;
+  max-width: 100%;
   margin-top: 0.45rem;
   margin-bottom: 0;
   width: 100%;
@@ -495,67 +497,7 @@ div[id^="vis-"] .vega-embed svg {
    Responsive Media Queries
    ============================================================ */
 
-/* Intermediate Screen Resize (50% window split on Desktop, Tablets, Laptops) */
-@media (max-width: 1350px) {
-  .chart-row {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    min-height: auto;
-  }
-
-  .chart-block.half-width {
-    width: 100%;
-    max-width: 100%;
-    flex: 0 0 auto;
-  }
-
-  .chart-block--side-caption {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .chart-block--side-caption > .full-width,
-  .chart-block--side-caption > div:first-child {
-    flex: 0 0 auto;
-    width: 100%;
-    min-width: 0;
-  }
-
-  .chart-caption--side {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 52ch;
-    margin: 1.25rem auto 0 auto;
-    align-self: center;
-    text-align: left;
-    padding-left: 0;
-    border-left: none;
-  }
-
-  .chart-caption--bottom {
-    max-width: 52ch;
-    width: 100%;
-  }
-
-  .stat-card {
-    flex: 1 1 calc(50% - 0.75rem);
-  }
-
-  .takeaways-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .row-sm,
-  .row-md,
-  .row-xl {
-    min-height: auto;
-  }
-}
-
-/* Tablet & Mobile Screens */
+/* Tablet & Mobile Screens (Only stacks on small screens <= 768px) */
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -575,18 +517,49 @@ div[id^="vis-"] .vega-embed svg {
   }
 
   .chart-row {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .chart-block.half-width {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .chart-block--side-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .chart-caption--side {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.75rem;
+    padding-left: 0;
+  }
+
+  .chart-caption--bottom {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .stat-card {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+
+  .takeaways-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .section-divider {
     margin: 2rem 0;
-  }
-
-  .chart-caption--side,
-  .chart-caption--bottom {
-    max-width: 100%;
-    width: 100%;
   }
 
   .page-footer__inner {
