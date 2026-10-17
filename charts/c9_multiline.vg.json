@@ -8,10 +8,16 @@
       "Relative population index (2000 baseline = 1.0) comparing fenced sanctuaries,",
       "general management, and unmanaged wild populations."
     ],
+    "font": "Inter, sans-serif",
     "fontSize": 17,
-    "subtitleFontSize": 13,
+    "fontWeight": "bold",
+    "color": "#0f172a",
+    "subtitleFont": "Inter, sans-serif",
+    "subtitleFontSize": 12.5,
+    "subtitleColor": "#475569",
     "anchor": "start",
-    "frame": "bounds"
+    "frame": "bounds",
+    "offset": 12
   },
   "data": {
     "url": "data/c9_mammal_management.csv"
@@ -249,6 +255,34 @@
     }
   ],
   "config": {
+    "font": "Inter, sans-serif",
+    "title": {
+      "font": "Inter, sans-serif",
+      "fontSize": 17,
+      "fontWeight": "bold",
+      "color": "#0f172a",
+      "subtitleFont": "Inter, sans-serif",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#475569"
+    },
+    "axis": {
+      "titleFont": "Inter, sans-serif",
+      "titleFontSize": 12,
+      "titleFontWeight": "bold",
+      "titleColor": "#334155",
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 11,
+      "labelColor": "#475569"
+    },
+    "legend": {
+      "titleFont": "Inter, sans-serif",
+      "titleFontSize": 12,
+      "titleFontWeight": "bold",
+      "titleColor": "#1e293b",
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 11,
+      "labelColor": "#334155"
+    },
     "view": {
       "stroke": "transparent"
     }

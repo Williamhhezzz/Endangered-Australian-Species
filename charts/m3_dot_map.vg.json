@@ -3,8 +3,13 @@
   "title": {
     "text": "Field Survey Geography Across Animal Groups",
     "subtitle": "Each point represents an active ecological monitoring site across Australia.",
-    "fontSize": 18,
-    "subtitleFontSize": 13,
+    "font": "Inter, sans-serif",
+    "fontSize": 17,
+    "fontWeight": "bold",
+    "color": "#0f172a",
+    "subtitleFont": "Inter, sans-serif",
+    "subtitleFontSize": 12.5,
+    "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
     "offset": 12
@@ -23,9 +28,10 @@
         {
           "title": {
             "text": "Birds (n = 397)",
-            "fontSize": 16,
+            "font": "Inter, sans-serif",
+            "fontSize": 13.5,
             "fontWeight": "bold",
-            "color": "#0f172a",
+            "color": "#1e293b",
             "anchor": "start"
           },
           "width": 440,
@@ -153,9 +159,10 @@
         {
           "title": {
             "text": "Mammals (n = 154)",
-            "fontSize": 16,
+            "font": "Inter, sans-serif",
+            "fontSize": 13.5,
             "fontWeight": "bold",
-            "color": "#0f172a",
+            "color": "#1e293b",
             "anchor": "start"
           },
           "width": 440,
@@ -288,9 +295,10 @@
         {
           "title": {
             "text": "Reptiles (n = 35)",
-            "fontSize": 16,
+            "font": "Inter, sans-serif",
+            "fontSize": 13.5,
             "fontWeight": "bold",
-            "color": "#0f172a",
+            "color": "#1e293b",
             "anchor": "start"
           },
           "width": 440,
@@ -418,9 +426,10 @@
         {
           "title": {
             "text": "Amphibians (n = 44)",
-            "fontSize": 16,
+            "font": "Inter, sans-serif",
+            "fontSize": 13.5,
             "fontWeight": "bold",
-            "color": "#0f172a",
+            "color": "#1e293b",
             "anchor": "start"
           },
           "width": 440,
@@ -549,6 +558,34 @@
     }
   ],
   "config": {
+    "font": "Inter, sans-serif",
+    "title": {
+      "font": "Inter, sans-serif",
+      "fontSize": 17,
+      "fontWeight": "bold",
+      "color": "#0f172a",
+      "subtitleFont": "Inter, sans-serif",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#475569"
+    },
+    "axis": {
+      "titleFont": "Inter, sans-serif",
+      "titleFontSize": 12,
+      "titleFontWeight": "bold",
+      "titleColor": "#334155",
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 11,
+      "labelColor": "#475569"
+    },
+    "legend": {
+      "titleFont": "Inter, sans-serif",
+      "titleFontSize": 12,
+      "titleFontWeight": "bold",
+      "titleColor": "#1e293b",
+      "labelFont": "Inter, sans-serif",
+      "labelFontSize": 11,
+      "labelColor": "#334155"
+    },
     "view": {
       "stroke": null
     }

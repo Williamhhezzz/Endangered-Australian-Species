@@ -169,8 +169,11 @@ body {
 
 .section-header {
   font-family: 'Merriweather', serif;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
   color: #0f172a;
+  letter-spacing: -0.015em;
 }
 
 .section-lead {
@@ -541,7 +544,7 @@ div[id^="vis-"] .vega-embed svg {
   }
 
   .section-header {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
   }
 
   .chart-row {

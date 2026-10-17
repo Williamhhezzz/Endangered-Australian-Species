@@ -7,11 +7,16 @@ const registerView = (res) => {
   return res;
 };
 
+const embedOptions = { 
+  renderer: "svg", 
+  actions: false,
+  config: {
+    font: "Inter, sans-serif"
+  }
+};
+
 const embedSpec = (elementId, specPath) => {
-  return vegaEmbed(elementId, specPath, { 
-    renderer: "svg", 
-    actions: false 
-  })
+  return vegaEmbed(elementId, specPath, embedOptions)
   .then(registerView)
   .catch(console.error);
 };
@@ -28,8 +33,8 @@ embedSpec("#vis-c10", "charts/c10_stacked_bar_priority_coverage.vg.json");
 
 // 2. Coordinated Group Link: C2 (Waffle) <-> C3 (Dumbbell)
 Promise.all([
-  vegaEmbed("#vis-c2", "charts/c2_waffle_chart.vg.json", { renderer: "svg", actions: false }).then(registerView),
-  vegaEmbed("#vis-c3", "charts/c3_group_dumbbell.vg.json", { renderer: "svg", actions: false }).then(registerView)
+  vegaEmbed("#vis-c2", "charts/c2_waffle_chart.vg.json", embedOptions).then(registerView),
+  vegaEmbed("#vis-c3", "charts/c3_group_dumbbell.vg.json", embedOptions).then(registerView)
 ]).then(([resC2, resC3]) => {
   const viewC2 = resC2.view;
   const viewC3 = resC3.view;
@@ -49,9 +54,9 @@ Promise.all([
 
 // 3. Coordinated Spatial Display: M1 (Choropleth) <-> M2 (Symbol) <-> M3 (Dot Density)
 Promise.all([
-  vegaEmbed("#vis-m1", "charts/m1_choropleth_map.vg.json", { renderer: "svg", actions: false }).then(registerView),
-  vegaEmbed("#vis-m2", "charts/m2_symbol_map.vg.json", { renderer: "svg", actions: false }).then(registerView),
-  vegaEmbed("#vis-m3", "charts/m3_dot_map.vg.json", { renderer: "svg", actions: false }).then(registerView)
+  vegaEmbed("#vis-m1", "charts/m1_choropleth_map.vg.json", embedOptions).then(registerView),
+  vegaEmbed("#vis-m2", "charts/m2_symbol_map.vg.json", embedOptions).then(registerView),
+  vegaEmbed("#vis-m3", "charts/m3_dot_map.vg.json", embedOptions).then(registerView)
 ]).then(([resM1, resM2, resM3]) => {
   const mapViews = [resM1.view, resM2.view, resM3.view];
   let currentActiveState = null;
