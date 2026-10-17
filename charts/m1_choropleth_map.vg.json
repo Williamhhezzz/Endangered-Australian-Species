@@ -11,11 +11,11 @@
     "text": "State-Level Wildlife Population Decline (2000–2022)",
     "subtitle": "Average percentage change in monitored fauna relative to 2000 baseline (NSW & ACT combined).",
     "font": "Inter, sans-serif",
-    "fontSize": 17,
+    "fontSize": 18,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 12.5,
+    "subtitleFontSize": 13,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -225,11 +225,11 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 17,
+      "fontSize": 18,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 12.5,
+      "subtitleFontSize": 13,
       "subtitleColor": "#475569"
     },
     "axis": {

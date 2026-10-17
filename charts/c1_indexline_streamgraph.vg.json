@@ -12,11 +12,11 @@
       "against cumulative species added to national protection law (2000–2020)."
     ],
     "font": "Inter, sans-serif",
-    "fontSize": 17,
+    "fontSize": 18,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 12.5,
+    "subtitleFontSize": 13,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds"
@@ -40,14 +40,14 @@
       "title": {
         "text": "A. National Abundance Trajectory (Baseline = 1.0)",
         "font": "Inter, sans-serif",
-        "fontSize": 13.5,
+        "fontSize": 15,
         "fontWeight": "bold",
         "color": "#1e293b",
         "anchor": "start",
         "frame": "bounds"
       },
       "width": "container",
-      "height": 200,
+      "height": 270,
       "layer": [
         {
           "description": "Background Band 1: 2000–2010 (Millennium Drought & Initial Decline)",
@@ -129,8 +129,9 @@
               "axis": {
                 "format": "d",
                 "title": "Year",
-                "titleFontSize": 13,
-                "labelFontSize": 12,
+                "titleFontSize": 13.5,
+                "titleFontWeight": "bold",
+                "labelFontSize": 12.5,
                 "grid": false,
                 "values": [
                   2000, 2001, 2002, 2003, 2004,
@@ -150,8 +151,9 @@
               },
               "axis": {
                 "title": "Abundance Index (2000 = 1.0)",
-                "titleFontSize": 13,
-                "labelFontSize": 12,
+                "titleFontSize": 13.5,
+                "titleFontWeight": "bold",
+                "labelFontSize": 12.5,
                 "format": ".1f",
                 "values": [0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
               }
@@ -206,7 +208,7 @@
             "align": "left",
             "dx": 8,
             "dy": -10,
-            "fontSize": 12,
+            "fontSize": 13,
             "fontWeight": "bold",
             "color": "#0f172a",
             "text": "2000: EPBC Act Baseline (Index = 1.0)"
@@ -230,7 +232,7 @@
           "mark": {
             "type": "text",
             "align": "center",
-            "fontSize": 12,
+            "fontSize": 13,
             "fontWeight": "bold",
             "color": "#334155",
             "text": "2000–2010: Millennium Drought (Early Rapid Collapse)"
@@ -252,7 +254,7 @@
           "mark": {
             "type": "text",
             "align": "center",
-            "fontSize": 12,
+            "fontSize": 13,
             "fontWeight": "bold",
             "color": "#b91c1c",
             "text": "2010–2020: Net -62.6% Collapse (Index = 0.374)"
@@ -296,14 +298,14 @@
       "title": {
         "text": "B. New Vertebrate Species Added to EPBC Law Since 2000",
         "font": "Inter, sans-serif",
-        "fontSize": 13.5,
+        "fontSize": 15,
         "fontWeight": "bold",
         "color": "#1e293b",
         "anchor": "start",
         "frame": "bounds"
       },
       "width": "container",
-      "height": 190,
+      "height": 260,
       "layer": [
         {
           "description": "Streamgraph Area Flow",
@@ -344,8 +346,9 @@
               "axis": {
                 "format": "d",
                 "title": "Filtered Year Window",
-                "titleFontSize": 13,
-                "labelFontSize": 12,
+                "titleFontSize": 13.5,
+                "titleFontWeight": "bold",
+                "labelFontSize": 12.5,
                 "grid": false,
                 "values": [
                   2000, 2001, 2002, 2003, 2004,
@@ -362,8 +365,9 @@
               "stack": "center",
               "axis": {
                 "title": "New Listings Since 2000",
-                "titleFontSize": 13,
-                "labelFontSize": 12,
+                "titleFontSize": 13.5,
+                "titleFontWeight": "bold",
+                "labelFontSize": 12.5,
                 "domain": true,
                 "ticks": true,
                 "grid": true,
@@ -392,7 +396,8 @@
                 "orient": "bottom",
                 "direction": "horizontal",
                 "titleFontSize": 13,
-                "labelFontSize": 12,
+                "titleFontWeight": "bold",
+                "labelFontSize": 12.5,
                 "symbolSize": 150
               }
             },
@@ -457,8 +462,8 @@
             "type": "text",
             "align": "right",
             "dx": -8,
-            "dy": -65,
-            "fontSize": 11,
+            "dy": -75,
+            "fontSize": 12.5,
             "fontWeight": "bold",
             "color": "#0f172a",
             "text": [
@@ -481,34 +486,34 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 17,
+      "fontSize": 18,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 12.5,
+      "subtitleFontSize": 13,
       "subtitleColor": "#475569"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 12,
+      "titleFontSize": 13.5,
       "titleFontWeight": "bold",
       "titleColor": "#334155",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 11,
+      "labelFontSize": 12.5,
       "labelColor": "#475569"
     },
     "legend": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 12,
+      "titleFontSize": 13,
       "titleFontWeight": "bold",
       "titleColor": "#1e293b",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 11,
+      "labelFontSize": 12.5,
       "labelColor": "#334155"
     },
     "header": {
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 13.5,
+      "labelFontSize": 15,
       "labelFontWeight": "bold",
       "labelColor": "#1e293b"
     },
