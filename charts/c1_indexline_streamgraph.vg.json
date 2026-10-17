@@ -356,9 +356,9 @@
             "y": {
               "field": "ListingsCount",
               "type": "quantitative",
-              "stack": "zero",
+              "stack": "center",
               "scale": {
-                "domain": [0, 118]
+                "domain": [-58, 58]
               },
               "axis": {
                 "title": "New Species Listed",
@@ -367,7 +367,8 @@
                 "labelFontSize": 12.5,
                 "domain": true,
                 "ticks": true,
-                "grid": true
+                "grid": true,
+                "labelExpr": "abs(datum.value)"
               }
             },
             "color": {
@@ -455,7 +456,7 @@
               "datum": 2014.6
             },
             "y": {
-              "datum": 98
+              "datum": 48
             }
           }
         }
