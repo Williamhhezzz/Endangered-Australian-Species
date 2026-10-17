@@ -219,6 +219,33 @@
         "y": {"field": "Index", "type": "quantitative"},
         "text": {"field": "text", "type": "nominal"}
       }
+    },
+    {
+      "description": "Callout Annotation for Predator-Free Havens",
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 10.5,
+        "fontWeight": "bold",
+        "color": "#1f6f5c",
+        "text": [
+          "Predator-Free Havens (+729%):",
+          "Removing feral cats and foxes",
+          "triggers rapid population recovery."
+        ]
+      },
+      "encoding": {
+        "x": {
+          "datum": 2005
+        },
+        "y": {
+          "datum": 6.8
+        }
+      }
     }
   ],
   "config": {

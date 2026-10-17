@@ -168,7 +168,7 @@
           },
           "encoding": {
             "color": {
-              "value": "#5a9ab0"
+              "value": "#c2571a"
             },
             "tooltip": [
               {
@@ -205,7 +205,7 @@
             "dx": 6,
             "fontSize": 11,
             "fontWeight": "bold",
-            "fill": "#5a9ab0",
+            "fill": "#c2571a",
             "text": "10.0%"
           }
         }

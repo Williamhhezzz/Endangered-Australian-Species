@@ -111,6 +111,33 @@
           "type": "nominal"
         }
       }
+    },
+    {
+      "description": "Layer 3: Callout Annotation for Fire & Predator Synergy",
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 10.5,
+        "color": "#475569",
+        "text": [
+          "Fire & Predator Synergy:",
+          "Invasive weeds fuel hot wildfires",
+          "(59.8%) that strip ground cover,",
+          "exposing survivors to predators."
+        ]
+      },
+      "encoding": {
+        "x": {
+          "datum": 48
+        },
+        "y": {
+          "datum": "Biological resource use"
+        }
+      }
     }
   ],
   "config": {

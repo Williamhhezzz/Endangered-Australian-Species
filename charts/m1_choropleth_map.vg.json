@@ -97,7 +97,8 @@
             "titleFontSize": 12.5,
             "labelFontSize": 11,
             "gradientLength": 130,
-            "offset": 8
+            "offset": 8,
+            "padding": 12
           }
         },
         "opacity": {
@@ -153,74 +154,6 @@
       }
     },
     {
-      "description": "Annotation: Over Northern Territory",
-      "data": {
-        "values": [
-          {
-            "longitude": 133.5,
-            "latitude": -20.0,
-            "text": "Northern Territory (-61.8%)"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "fill": "#ffffff"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "text",
-          "type": "nominal"
-        }
-      }
-    },
-    {
-      "description": "Annotation: Over Victoria",
-      "data": {
-        "values": [
-          {
-            "longitude": 144.5,
-            "latitude": -36.8,
-            "text": "Victoria (-62.3%)"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "fill": "#ffffff"
-      },
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "text",
-          "type": "nominal"
-        }
-      }
-    },
-    {
       "description": "Pointer line to Tasmania",
       "data": {
         "values": [
@@ -251,7 +184,11 @@
           {
             "longitude": 149.5,
             "latitude": -42.2,
-            "text": "Tasmania (-32.5%)"
+            "text": [
+              "Tasmania (-32.5%):",
+              "Lowest loss — Bass Strait",
+              "blocked red fox invasion"
+            ]
           }
         ]
       },
@@ -259,9 +196,10 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 11,
+        "fontSize": 10.5,
         "fontWeight": "bold",
-        "fill": "#1e293b"
+        "fill": "#1e293b",
+        "lineBreak": "\n"
       },
       "encoding": {
         "longitude": {
@@ -273,8 +211,7 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "text",
-          "type": "nominal"
+          "field": "text"
         }
       }
     }

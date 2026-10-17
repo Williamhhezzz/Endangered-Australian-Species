@@ -119,6 +119,33 @@
           "type": "quantitative"
         }
       }
+    },
+    {
+      "description": "Layer 4: Callout Annotation for Habitat Engineers Outrank Predators",
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 10.5,
+        "color": "#475569",
+        "text": [
+          "Habitat Engineers Outrank Predators:",
+          "Rabbits (322) and root-rot fungus (236)",
+          "harm more species than cats (123)",
+          "by destroying native food & shelter."
+        ]
+      },
+      "encoding": {
+        "x": {
+          "datum": 180
+        },
+        "y": {
+          "datum": "Lantana (Weed)"
+        }
+      }
     }
   ],
   "config": {
