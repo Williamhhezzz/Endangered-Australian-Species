@@ -290,7 +290,7 @@
     },
     {
       "title": {
-        "text": "B. New Animal Species Added to National Protection Law Since 2000",
+        "text": "B. New Vertebrate Species Added to EPBC Law Since 2000",
         "font": "Inter, sans-serif",
         "fontSize": 15,
         "fontWeight": "bold",
@@ -299,7 +299,7 @@
         "frame": "bounds"
       },
       "width": "container",
-      "height": 260,
+      "height": 190,
       "layer": [
         {
           "description": "Streamgraph Area Flow",
@@ -340,9 +340,9 @@
               "axis": {
                 "format": "d",
                 "title": "Filtered Year Window",
-                "titleFontSize": 13.5,
+                "titleFontSize": 13,
                 "titleFontWeight": "bold",
-                "labelFontSize": 12.5,
+                "labelFontSize": 12,
                 "grid": false,
                 "values": [
                   2000, 2001, 2002, 2003, 2004,
@@ -357,24 +357,20 @@
               "field": "ListingsCount",
               "type": "quantitative",
               "stack": "center",
-              "scale": {
-                "domain": [-58, 58]
-              },
               "axis": {
-                "title": "New Species Listed",
-                "titleFontSize": 13.5,
+                "title": "New Listings Since 2000",
+                "titleFontSize": 13,
                 "titleFontWeight": "bold",
-                "labelFontSize": 12.5,
+                "labelFontSize": 12,
                 "domain": true,
                 "ticks": true,
-                "grid": true,
-                "labelExpr": "abs(datum.value)"
+                "grid": true
               }
             },
             "color": {
               "field": "FaunaClass",
               "type": "nominal",
-              "title": "Animal Group",
+              "title": "Fauna Class",
               "scale": {
                 "domain": [
                   "Birds",
@@ -394,7 +390,7 @@
                 "direction": "horizontal",
                 "titleFontSize": 13,
                 "titleFontWeight": "bold",
-                "labelFontSize": 12.5,
+                "labelFontSize": 12,
                 "symbolSize": 150
               }
             },
@@ -407,7 +403,7 @@
               {
                 "field": "FaunaClass",
                 "type": "nominal",
-                "title": "Animal Group"
+                "title": "Fauna Class"
               },
               {
                 "field": "ListingsCount",
@@ -421,42 +417,60 @@
         {
           "description": "Annotation 4: 2014-2016 Catch-up vertical rule",
           "data": {
-            "values": [{}]
+            "values": [{ "year": 2015 }]
           },
+          "transform": [
+            {
+              "filter": {
+                "param": "time_brush"
+              }
+            }
+          ],
           "mark": {
             "type": "rule",
             "strokeDash": [3, 3],
             "strokeWidth": 1.5,
-            "color": "#94a3b8"
+            "color": "#64748b"
           },
           "encoding": {
             "x": {
-              "datum": 2015
+              "field": "year",
+              "type": "quantitative"
             }
           }
         },
         {
           "description": "Annotation 4: 2014-2016 Administrative Catch-Up callout",
           "data": {
-            "values": [{}]
+            "values": [{ "year": 2014.8, "yVal": 80 }]
           },
+          "transform": [
+            {
+              "filter": {
+                "param": "time_brush"
+              }
+            }
+          ],
           "mark": {
             "type": "text",
             "align": "right",
-            "fontSize": 12,
+            "fontSize": 11,
             "fontWeight": "bold",
-            "color": "#1e293b",
+            "color": "#0f172a",
             "text": [
-              "2014–2016: Regulators clear",
-              "overdue assessment backlog"
+              "2014–2016:",
+              "Backlog review adds",
+              "overdue bird listings"
             ]
           },
           "encoding": {
             "x": {
-              "datum": 2014.6
+              "field": "year",
+              "type": "quantitative"
             },
             "y": {
-              "datum": 48
+              "field": "yVal",
+              "type": "quantitative"
             }
           }
         }
