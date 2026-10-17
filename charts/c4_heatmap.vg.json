@@ -4,7 +4,7 @@
   "width": "container",
   "height": 280,
   "title": {
-    "text": "Threatened Fauna Listings Across Australian Jurisdictions",
+    "text": "Threatened Wildlife Listed Across Australian States",
     "subtitle": "Number of legally listed threatened species by state and animal group. Click any cell to isolate.",
     "font": "Inter, sans-serif",
     "fontSize": 18,
@@ -51,7 +51,7 @@
     "y": {
       "field": "TaxonomicGroup",
       "type": "nominal",
-      "title": "Fauna Class",
+      "title": "Animal Group",
       "sort": [
         "Birds",
         "Mammals",

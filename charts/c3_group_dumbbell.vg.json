@@ -76,7 +76,8 @@
             "field": "subgroup",
             "type": "nominal",
             "sort": {
-              "field": "order"
+              "field": "current_2022",
+              "order": "ascending"
             },
             "axis": {
               "title": null,
@@ -129,7 +130,8 @@
             "field": "subgroup",
             "type": "nominal",
             "sort": {
-              "field": "order"
+              "field": "current_2022",
+              "order": "ascending"
             }
           },
           "x": {
@@ -198,7 +200,8 @@
             "field": "subgroup",
             "type": "nominal",
             "sort": {
-              "field": "order"
+              "field": "current_2022",
+              "order": "ascending"
             }
           },
           "x": {
@@ -277,7 +280,8 @@
             "field": "subgroup",
             "type": "nominal",
             "sort": {
-              "field": "order"
+              "field": "current_2022",
+              "order": "ascending"
             }
           },
           "x": {
@@ -311,7 +315,8 @@
             "field": "subgroup",
             "type": "nominal",
             "sort": {
-              "field": "order"
+              "field": "current_2022",
+              "order": "ascending"
             }
           },
           "x": {
@@ -335,8 +340,9 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 10.5,
-          "color": "#475569",
+          "fontSize": 11.5,
+          "fontWeight": 500,
+          "fill": "#334155",
           "text": [
             "Even chytrid-free frogs fell 72.8%,",
             "showing wetland drying and heat",
@@ -346,10 +352,14 @@
         "encoding": {
           "y": {
             "field": "subgroup",
-            "type": "nominal"
+            "type": "nominal",
+            "sort": {
+              "field": "current_2022",
+              "order": "ascending"
+            }
           },
           "x": {
-            "datum": 108
+            "datum": 106
           }
         }
       },
@@ -364,8 +374,9 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 10.5,
-          "color": "#475569",
+          "fontSize": 11.5,
+          "fontWeight": 500,
+          "fill": "#334155",
           "text": [
             "Migratory shorebirds fell 56.4%",
             "as overseas coastal stopover",
@@ -375,10 +386,14 @@
         "encoding": {
           "y": {
             "field": "subgroup",
-            "type": "nominal"
+            "type": "nominal",
+            "sort": {
+              "field": "current_2022",
+              "order": "ascending"
+            }
           },
           "x": {
-            "datum": 108
+            "datum": 106
           }
         }
       }

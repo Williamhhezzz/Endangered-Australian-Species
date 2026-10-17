@@ -1,4 +1,3 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {
@@ -6,7 +5,7 @@
     "contains": "padding"
   },
   "title": {
-    "text": "National Fauna Abundance Collapse & Cumulative Statutory Listings",
+    "text": "Wild Population Collapse vs. New Species Added to National Law (2000–2020)",
     "subtitle": [
       "Comparing real-world wildlife population levels (Threatened Species Index, 2000 = 1.0 baseline)",
       "against cumulative species added to national protection law (2000–2020)."
@@ -38,7 +37,7 @@
   "vconcat": [
     {
       "title": {
-        "text": "A. National Abundance Trajectory (Baseline = 1.0)",
+        "text": "A. Average Wildlife Population Level (Year 2000 = 1.0 Baseline)",
         "font": "Inter, sans-serif",
         "fontSize": 15,
         "fontWeight": "bold",
@@ -50,44 +49,6 @@
       "height": 270,
       "layer": [
         {
-          "description": "Background Band 1: 2000–2010 (Millennium Drought & Initial Decline)",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "rect",
-            "color": "#b91c1c",
-            "opacity": 0.06
-          },
-          "encoding": {
-            "x": {
-              "datum": 2000
-            },
-            "x2": {
-              "datum": 2010
-            }
-          }
-        },
-        {
-          "description": "Background Band 2: 2010–2020 (Persistent Collapse & Backlog Cleared)",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "rect",
-            "color": "#1e293b",
-            "opacity": 0.06
-          },
-          "encoding": {
-            "x": {
-              "datum": 2010
-            },
-            "x2": {
-              "datum": 2020
-            }
-          }
-        },
-        {
           "description": "1.0 Baseline Reference Line",
           "mark": {
             "type": "rule",
@@ -98,6 +59,83 @@
           "encoding": {
             "y": {
               "datum": 1.0
+            }
+          }
+        },
+        {
+          "description": "Millennium Drought Start Reference Line (2001)",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "rule",
+            "strokeDash": [4, 4],
+            "color": "#94a3b8",
+            "strokeWidth": 1.5
+          },
+          "encoding": {
+            "x": {
+              "datum": 2001
+            }
+          }
+        },
+        {
+          "description": "Millennium Drought End Reference Line (2009)",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "rule",
+            "strokeDash": [4, 4],
+            "color": "#94a3b8",
+            "strokeWidth": 1.5
+          },
+          "encoding": {
+            "x": {
+              "datum": 2009
+            }
+          }
+        },
+        {
+          "description": "Millennium Drought Floating Annotation",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "fontSize": 12.5,
+            "color": "#475569",
+            "text": "2001–2009: Millennium Drought dries inland rivers, accelerating early decline"
+          },
+          "encoding": {
+            "x": {
+              "datum": 2005
+            },
+            "y": {
+              "datum": 0.92
+            }
+          }
+        },
+        {
+          "description": "By 2020 Net Drop Floating Annotation",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "fontSize": 12.5,
+            "fontWeight": "bold",
+            "color": "#991b1b",
+            "text": "By 2020: -62.6% net drop (Index = 0.374)"
+          },
+          "encoding": {
+            "x": {
+              "datum": 2016
+            },
+            "y": {
+              "datum": 0.56
             }
           }
         },
@@ -150,7 +188,7 @@
                 "domain": [0.2, 1.3]
               },
               "axis": {
-                "title": "Abundance Index (2000 = 1.0)",
+                "title": "Population Index (2000 = 1.0)",
                 "titleFontSize": 13.5,
                 "titleFontWeight": "bold",
                 "labelFontSize": 12.5,
@@ -225,50 +263,6 @@
           }
         },
         {
-          "description": "Band 1 Top Annotation: Millennium Drought",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "text",
-            "align": "center",
-            "fontSize": 13,
-            "fontWeight": "bold",
-            "color": "#334155",
-            "text": "2000–2010: Millennium Drought (Early Rapid Collapse)"
-          },
-          "encoding": {
-            "x": {
-              "datum": 2005
-            },
-            "y": {
-              "datum": 1.25
-            }
-          }
-        },
-        {
-          "description": "Band 2 Top Annotation: Net Collapse Callout",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "text",
-            "align": "center",
-            "fontSize": 13,
-            "fontWeight": "bold",
-            "color": "#b91c1c",
-            "text": "2010–2020: Net -62.6% Collapse (Index = 0.374)"
-          },
-          "encoding": {
-            "x": {
-              "datum": 2015
-            },
-            "y": {
-              "datum": 1.25
-            }
-          }
-        },
-        {
           "description": "Endpoint Highlight Point",
           "transform": [
             {
@@ -279,7 +273,7 @@
             "type": "point",
             "filled": true,
             "size": 130,
-            "color": "#b91c1c"
+            "color": "#991b1b"
           },
           "encoding": {
             "x": {
@@ -296,7 +290,7 @@
     },
     {
       "title": {
-        "text": "B. New Vertebrate Species Added to EPBC Law Since 2000",
+        "text": "B. New Animal Species Added to National Protection Law Since 2000",
         "font": "Inter, sans-serif",
         "fontSize": 15,
         "fontWeight": "bold",
@@ -362,22 +356,24 @@
             "y": {
               "field": "ListingsCount",
               "type": "quantitative",
-              "stack": "center",
+              "stack": "zero",
+              "scale": {
+                "domain": [0, 118]
+              },
               "axis": {
-                "title": "New Listings Since 2000",
+                "title": "New Species Listed",
                 "titleFontSize": 13.5,
                 "titleFontWeight": "bold",
                 "labelFontSize": 12.5,
                 "domain": true,
                 "ticks": true,
-                "grid": true,
-                "labelExpr": "abs(datum.value)"
+                "grid": true
               }
             },
             "color": {
               "field": "FaunaClass",
               "type": "nominal",
-              "title": "Fauna Class",
+              "title": "Animal Group",
               "scale": {
                 "domain": [
                   "Birds",
@@ -410,7 +406,7 @@
               {
                 "field": "FaunaClass",
                 "type": "nominal",
-                "title": "Fauna Class"
+                "title": "Animal Group"
               },
               {
                 "field": "ListingsCount",
@@ -423,59 +419,43 @@
         },
         {
           "description": "Annotation 4: 2014-2016 Catch-up vertical rule",
-          "transform": [
-            {
-              "filter": "datum.year === 2015"
-            },
-            {
-              "filter": {
-                "param": "time_brush"
-              }
-            }
-          ],
+          "data": {
+            "values": [{}]
+          },
           "mark": {
             "type": "rule",
             "strokeDash": [3, 3],
             "strokeWidth": 1.5,
-            "color": "#64748b"
+            "color": "#94a3b8"
           },
           "encoding": {
             "x": {
-              "field": "year",
-              "type": "quantitative"
+              "datum": 2015
             }
           }
         },
         {
           "description": "Annotation 4: 2014-2016 Administrative Catch-Up callout",
-          "transform": [
-            {
-              "filter": "datum.year === 2015"
-            },
-            {
-              "filter": {
-                "param": "time_brush"
-              }
-            }
-          ],
+          "data": {
+            "values": [{}]
+          },
           "mark": {
             "type": "text",
             "align": "right",
-            "dx": -8,
-            "dy": -75,
-            "fontSize": 12.5,
+            "fontSize": 12,
             "fontWeight": "bold",
-            "color": "#0f172a",
+            "color": "#1e293b",
             "text": [
-              "2014–2016:",
-              "Backlog review adds",
-              "overdue bird listings"
+              "2014–2016: Regulators clear",
+              "overdue assessment backlog"
             ]
           },
           "encoding": {
             "x": {
-              "field": "year",
-              "type": "quantitative"
+              "datum": 2014.6
+            },
+            "y": {
+              "datum": 98
             }
           }
         }

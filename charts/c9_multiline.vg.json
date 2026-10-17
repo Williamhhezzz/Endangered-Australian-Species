@@ -63,7 +63,7 @@
         "y": {
           "field": "Index",
           "type": "quantitative",
-          "title": "Relative Abundance Index (2000 = 1.0)",
+          "title": "Population Index (Year 2000 = 1.0)",
           "scale": {
             "type": "linear",
             "zero": true,

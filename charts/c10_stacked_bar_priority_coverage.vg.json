@@ -3,7 +3,7 @@
   "width": "container",
   "height": 295,
   "title": {
-    "text": "Government Priority Action Plan Coverage Across Fauna Classes",
+    "text": "Government Priority Funding Coverage Across Animal Groups",
     "subtitle": [
       "Proportion of legally listed threatened species selected as one of the 110 Priority Species",
       "under the 2022–2032 Federal Action Plan (14.0% overall coverage)."
@@ -45,7 +45,7 @@
     "y": {
       "field": "TaxonomicGroup",
       "type": "nominal",
-      "title": "Fauna Class",
+      "title": "Animal Group",
       "sort": [
         "Birds",
         "Mammals",

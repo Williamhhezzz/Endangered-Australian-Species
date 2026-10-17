@@ -95,7 +95,7 @@
             ]
           },
           "legend": {
-            "orient": "bottom-right",
+            "orient": "bottom-left",
             "direction": "horizontal",
             "format": ".1f",
             "tickCount": 4,
@@ -163,7 +163,7 @@
       "data": {
         "values": [
           { "lon": 147.2, "lat": -42.2 },
-          { "lon": 149.2, "lat": -42.2 }
+          { "lon": 148.2, "lat": -42.2 }
         ]
       },
       "mark": {
@@ -183,16 +183,52 @@
       }
     },
     {
-      "description": "Annotation: Pointer to Tasmania text",
+      "description": "Annotation: Ocean labels for NT and Victoria",
       "data": {
         "values": [
           {
-            "longitude": 149.5,
-            "latitude": -42.2,
+            "lon": 133,
+            "lat": -10.2,
+            "text": "Northern Territory: -61.8%"
+          },
+          {
+            "lon": 143,
+            "lat": -39.6,
+            "text": "Victoria: -62.3% (steepest drop)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1e293b"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "description": "Annotation: Ocean label for Tasmania",
+      "data": {
+        "values": [
+          {
+            "lon": 148.5,
+            "lat": -42.2,
             "text": [
-              "Tasmania (-32.5%):",
-              "Lowest loss — Bass Strait",
-              "blocked red fox invasion"
+              "Tasmania: -32.5% (lowest loss,",
+              "Bass Strait blocked red foxes)"
             ]
           }
         ]
@@ -201,18 +237,17 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 10.5,
+        "fontSize": 11,
         "fontWeight": "bold",
-        "fill": "#1e293b",
-        "lineBreak": "\n"
+        "fill": "#1e293b"
       },
       "encoding": {
         "longitude": {
-          "field": "longitude",
+          "field": "lon",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "latitude",
+          "field": "lat",
           "type": "quantitative"
         },
         "text": {

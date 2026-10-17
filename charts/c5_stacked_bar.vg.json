@@ -59,7 +59,7 @@
         "y": {
           "field": "TaxonomicGroup",
           "type": "nominal",
-          "title": "Fauna Class",
+          "title": "Animal Group",
           "sort": [
             "Birds",
             "Mammals",

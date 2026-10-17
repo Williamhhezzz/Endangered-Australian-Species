@@ -126,6 +126,78 @@
           }
         ]
       }
+    },
+    {
+      "description": "Annotation: Ocean label for Northern Territory",
+      "data": {
+        "values": [
+          {
+            "lon": 133,
+            "lat": -10.2,
+            "text": [
+              "Northern Territory: Only 29",
+              "species tracked despite -61.8% drop"
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1e293b"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "description": "Annotation: Ocean label for New South Wales",
+      "data": {
+        "values": [
+          {
+            "lon": 154,
+            "lat": -33.0,
+            "text": [
+              "New South Wales: 62 species",
+              "tracked (highest in Australia)"
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1e293b"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
     }
   ],
   "config": {

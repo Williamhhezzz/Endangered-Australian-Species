@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Long-Term Population Lost vs. Remaining (1985–2022)",
-    "subtitle": "100 squares per class (1 square = 1% of 1985 baseline level remaining in 2022).",
+    "subtitle": "100 squares per group (1 square = 1% of 1985 population level remaining in 2022).",
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",
@@ -32,7 +32,7 @@
   ],
   "transform": [
     {
-      "calculate": "datum.class === 'Amphibians' ? 'Amphibians (3%)' : datum.class === 'Reptiles' ? 'Reptiles (6%)' : datum.class === 'Birds' ? 'Birds (44%)' : 'Mammals (62%)'",
+      "calculate": "datum.class === 'Amphibians' ? 'Frogs & Amphibians (3%)' : datum.class === 'Reptiles' ? 'Reptiles (6%)' : datum.class === 'Birds' ? 'Birds (44%)' : 'Mammals (62%)'",
       "as": "panel_title"
     }
   ],
@@ -42,7 +42,7 @@
     "type": "nominal",
     "columns": 4,
     "sort": [
-      "Amphibians (3%)",
+      "Frogs & Amphibians (3%)",
       "Reptiles (6%)",
       "Birds (44%)",
       "Mammals (62%)"

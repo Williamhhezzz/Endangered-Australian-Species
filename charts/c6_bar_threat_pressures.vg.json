@@ -3,7 +3,7 @@
   "width": "container",
   "height": 280,
   "title": {
-    "text": "Top Threat Pressures Affecting Listed Fauna Species",
+    "text": "Top Threat Pressures Affecting Listed Species",
     "subtitle": [
       "Percentage of nationally listed threatened species impacted by each major threat category",
       "(a species can face multiple threats)."
@@ -119,7 +119,7 @@
       }
     },
     {
-      "description": "Layer 3: Callout Annotation for Fire & Predator Synergy",
+      "description": "Layer 3: Callout Annotation for Fire & Predator Trap",
       "data": {
         "values": [{}]
       },
@@ -127,21 +127,21 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 10.5,
-        "color": "#475569",
+        "fontSize": 11,
+        "fill": "#334155",
         "text": [
-          "Fire & Predator Synergy:",
-          "Invasive weeds fuel hot wildfires",
-          "(59.8%) that strip ground cover,",
-          "exposing survivors to predators."
+          "Fire & Predator Trap:",
+          "Weeds fuel hot fires (59.8%)",
+          "that strip ground cover, leaving",
+          "animals exposed to predators."
         ]
       },
       "encoding": {
         "x": {
-          "datum": 48
+          "datum": 45
         },
         "y": {
-          "datum": "Biological resource use"
+          "datum": "Transportation and service corridors"
         }
       }
     }
