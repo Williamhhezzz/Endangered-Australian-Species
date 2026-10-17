@@ -84,12 +84,12 @@
             "zero": true
           },
           "legend": {
-            "orient": "bottom-right",
+            "orient": "bottom-left",
             "format": "d",
             "titleFontSize": 12.5,
             "labelFontSize": 11,
             "values": [15, 30, 45, 60],
-            "offset": 12
+            "offset": 8
           }
         },
         "opacity": {

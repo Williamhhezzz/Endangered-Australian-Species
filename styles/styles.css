@@ -29,7 +29,7 @@ body {
 
 .hero-inner {
   width: 92%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -71,7 +71,7 @@ body {
 
 .container {
   width: 92%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
   padding-bottom: 1rem;
@@ -186,7 +186,6 @@ body {
 .chart-row {
   display: flex;
   gap: 4.5rem;
-  justify-content: center;
   flex-wrap: nowrap;
   align-items: flex-start;
   width: 100%;
@@ -211,9 +210,9 @@ body {
 }
 
 .half-width {
-  flex: 0 1 490px;
+  flex: 1 1 0%;
   width: calc(50% - 2.25rem);
-  max-width: 490px;
+  max-width: calc(50% - 2.25rem);
   min-width: 0;
 }
 
@@ -272,10 +271,10 @@ body {
    ============================================================ */
 
 .chart-block.half-width {
-  flex: 0 1 490px;
+  flex: 1 1 0%;
   width: calc(50% - 2.25rem);
   min-width: 0;
-  max-width: 490px;
+  max-width: calc(50% - 2.25rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -311,8 +310,8 @@ body {
   width: 100%;
   padding-top: 0;
   border-top: none;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 15.5px;
+  line-height: 1.65;
   color: #334155;
   box-sizing: border-box;
 }
@@ -476,7 +475,7 @@ div[id^="vis-"] .vega-embed svg {
 
 .page-footer__inner {
   width: 92%;
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -504,12 +503,9 @@ div[id^="vis-"] .vega-embed svg {
   color: #38bdf8;
 }
 
-/* Medium Screens (Laptops & Small Desktops) */
-@media (max-width: 1024px) {
-  .chart-row {
-    gap: 2.5rem;
-  }
-}
+/* ============================================================
+   Responsive Media Queries
+   ============================================================ */
 
 /* Tablet & Mobile Screens (Only stacks on small screens <= 768px) */
 @media (max-width: 768px) {
