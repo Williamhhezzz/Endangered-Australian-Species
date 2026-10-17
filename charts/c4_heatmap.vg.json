@@ -16,28 +16,31 @@
   "data": {
     "url": "data/c4_heatmap.csv"
   },
+  "transform": [
+    {"calculate": "datum.State == 'NSW' ? 'New South Wales' : datum.State == 'QLD' ? 'Queensland' : datum.State == 'VIC' ? 'Victoria' : datum.State == 'WA' ? 'Western Australia' : datum.State == 'SA' ? 'South Australia' : datum.State == 'NT' ? 'Northern Territory' : datum.State == 'TAS' ? 'Tasmania' : 'Aust. Capital Territory'", "as": "FullState"}
+  ],
   "encoding": {
     "x": {
-      "field": "State",
+      "field": "FullState",
       "type": "nominal",
       "title": "State / Territory",
       "axis": {
-        "labelAngle": 0,
+        "labelAngle": -30,
         "titleFontSize": 13,
-        "labelFontSize": 12,
+        "labelFontSize": 11,
         "titlePadding": 10,
         "domain": false,
         "ticks": false
       },
       "sort": [
-        "ACT",
-        "NSW",
-        "NT",
-        "QLD",
-        "SA",
-        "TAS",
-        "VIC",
-        "WA"
+        "Aust. Capital Territory",
+        "New South Wales",
+        "Northern Territory",
+        "Queensland",
+        "South Australia",
+        "Tasmania",
+        "Victoria",
+        "Western Australia"
       ]
     },
     "y": {
@@ -128,7 +131,7 @@
             "title": "Fauna Group"
           },
           {
-            "field": "State",
+            "field": "FullState",
             "type": "nominal",
             "title": "State / Territory"
           },

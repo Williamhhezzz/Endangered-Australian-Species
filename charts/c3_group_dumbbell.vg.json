@@ -254,7 +254,7 @@
         "description": "Percentage Change Text Label for Prominent Declines (Beside Dot)",
         "transform": [
           {
-            "filter": "datum.current_2022 < 100 && (datum.subgroup === 'Land-breeding frogs' || datum.subgroup === 'Frogs not hit by chytrid fungus' || datum.subgroup === 'Migratory shorebirds' || datum.subgroup === 'Mid-sized mammals (35g–5.5kg)')"
+            "filter": "datum.current_2022 < 100 && (datum.subgroup === 'Land-breeding frogs' || indexof(datum.subgroup, 'Mid-sized mammals') >= 0)"
           }
         ],
         "mark": {

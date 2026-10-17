@@ -53,6 +53,18 @@ body {
   color: #ffffff;
 }
 
+.intro-lead {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.6;
+  max-width: 90ch;
+  margin: 0 0 1.5rem 0;
+}
+
+.intro-lead b {
+  color: #0f172a;
+}
+
 /* ============================================================
    Main Container
    ============================================================ */
