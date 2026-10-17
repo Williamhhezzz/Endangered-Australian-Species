@@ -7,15 +7,15 @@
       "Rust Orange = decline (<100%); Turquoise = recovery (>100%)."
     ],
     "font": "Inter, sans-serif",
-    "fontSize": 18,
+    "fontSize": 20,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 13,
+    "subtitleFontSize": 14,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
-    "offset": 12
+    "offset": 14
   },
   "data": {
     "url": "data/c3_dumbbell.csv"
@@ -39,7 +39,7 @@
       ],
       "header": {
         "labelFont": "Inter, sans-serif",
-        "labelFontSize": 13.5,
+        "labelFontSize": 15.5,
         "labelFontWeight": "bold",
         "labelColor": "#0f172a",
         "labelOrient": "left",
@@ -52,7 +52,7 @@
   "spec": {
     "width": "container",
     "height": {
-      "step": 32
+      "step": 38
     },
     "encoding": {
       "opacity": {
@@ -69,7 +69,7 @@
         "mark": {
           "type": "rule",
           "color": "#cbd5e1",
-          "size": 2.5
+          "size": 3
         },
         "encoding": {
           "y": {
@@ -81,9 +81,9 @@
             },
             "axis": {
               "title": null,
-              "labelFontSize": 12.5,
+              "labelFontSize": 14,
               "labelColor": "#1e293b",
-              "labelLimit": 280
+              "labelLimit": 380
             }
           },
           "x": {
@@ -94,8 +94,9 @@
             },
             "axis": {
               "title": "Population Level (% of 2000 Baseline)",
-              "titleFontSize": 13,
-              "labelFontSize": 12,
+              "titleFontSize": 14.5,
+              "titleFontWeight": "bold",
+              "labelFontSize": 13.5,
               "format": ".0f"
             }
           },
@@ -123,7 +124,7 @@
         "mark": {
           "type": "point",
           "filled": true,
-          "size": 75
+          "size": 90
         },
         "encoding": {
           "y": {
@@ -156,9 +157,9 @@
               "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
-              "labelFontSize": 12.5,
-              "titleFontSize": 13,
-              "symbolSize": 110,
+              "labelFontSize": 13.5,
+              "titleFontSize": 14,
+              "symbolSize": 140,
               "offset": 14
             }
           },
@@ -193,7 +194,7 @@
         "mark": {
           "type": "point",
           "filled": true,
-          "size": 110
+          "size": 130
         },
         "encoding": {
           "y": {
@@ -228,9 +229,9 @@
               "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
-              "labelFontSize": 12.5,
-              "titleFontSize": 13,
-              "symbolSize": 110,
+              "labelFontSize": 13.5,
+              "titleFontSize": 14,
+              "symbolSize": 140,
               "offset": 14
             }
           },
@@ -270,8 +271,8 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "dx": 8,
-          "fontSize": 11,
+          "dx": 9,
+          "fontSize": 13,
           "fontWeight": "bold",
           "color": "#d95f02"
         },
@@ -305,8 +306,8 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "dx": 8,
-          "fontSize": 11,
+          "dx": 9,
+          "fontSize": 13,
           "fontWeight": "bold",
           "color": "#0f766e"
         },
@@ -340,9 +341,9 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 11.5,
-          "fontWeight": 500,
-          "fill": "#334155",
+          "fontSize": 13,
+          "fontWeight": 600,
+          "fill": "#1e293b",
           "text": [
             "Even chytrid-free frogs fell 72.8%,",
             "showing wetland drying and heat",
@@ -374,9 +375,9 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 11.5,
-          "fontWeight": 500,
-          "fill": "#334155",
+          "fontSize": 13,
+          "fontWeight": 600,
+          "fill": "#1e293b",
           "text": [
             "Migratory shorebirds fell 56.4%",
             "as overseas coastal stopover",
@@ -408,40 +409,40 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 18,
+      "fontSize": 20,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 14,
       "subtitleColor": "#475569"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 12,
+      "titleFontSize": 14.5,
       "titleFontWeight": "bold",
       "titleColor": "#334155",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 11,
+      "labelFontSize": 13.5,
       "labelColor": "#475569"
     },
     "legend": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 12,
+      "titleFontSize": 14,
       "titleFontWeight": "bold",
       "titleColor": "#1e293b",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 11,
+      "labelFontSize": 13.5,
       "labelColor": "#334155"
     },
     "header": {
       "title": null,
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 13.5,
+      "labelFontSize": 15.5,
       "labelFontWeight": "bold",
       "labelColor": "#0f172a"
     },
     "facet": {
-      "spacing": 14
+      "spacing": 16
     },
     "view": {
       "stroke": null
