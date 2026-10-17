@@ -299,7 +299,7 @@
         "frame": "bounds"
       },
       "width": "container",
-      "height": 190,
+      "height": 270,
       "layer": [
         {
           "description": "Streamgraph Area Flow",
@@ -442,7 +442,7 @@
         {
           "description": "Annotation 4: 2014-2016 Administrative Catch-Up callout",
           "data": {
-            "values": [{ "year": 2014.8, "yVal": 80 }]
+            "values": [{ "year": 2015, "yVal": 97 }]
           },
           "transform": [
             {
@@ -454,7 +454,9 @@
           "mark": {
             "type": "text",
             "align": "right",
-            "fontSize": 11,
+            "baseline": "top",
+            "dx": -8,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#0f172a",
             "text": [
