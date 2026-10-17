@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-  <link rel="stylesheet" type="text/css" href="styles/styles.css?v=14">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css?v=15">
 
   <title>Australia's Vanishing Wildlife: Decline, Threats, and the Path to Recovery</title>
 </head>
@@ -65,6 +65,24 @@
         </div>
       </div>
 
+      <!-- Global Interactivity Guide Banner -->
+      <div class="interactive-banner">
+        <div class="interactive-banner__item">
+          <span class="interactive-banner__icon">🔍</span>
+          <span><strong>Hover for Details:</strong> Interactive tooltips are active on all charts for exact counts, percentages &amp; survey sites.</span>
+        </div>
+        <div class="interactive-banner__divider"></div>
+        <div class="interactive-banner__item">
+          <span class="interactive-banner__icon">⚡</span>
+          <span><strong>Cross-Chart Linking:</strong> Click animal classes or map states to highlight corresponding data across linked views.</span>
+        </div>
+        <div class="interactive-banner__divider"></div>
+        <div class="interactive-banner__item">
+          <span class="interactive-banner__icon">↔️</span>
+          <span><strong>Timeline Scrubbing:</strong> Click &amp; drag the brush on Chart 1's timeline to filter the streamgraph window.</span>
+        </div>
+      </div>
+
       <div class="chart-block chart-block--side-caption">
         <div id="vis-c1" class="full-width"></div>
         <div class="chart-caption chart-caption--side">
@@ -72,7 +90,7 @@
             <b>Paper Protection vs. Biological Reality:</b> Under Australia's national environment law (the <b>EPBC Act</b>), setting year 2000 wildlife populations at a baseline of <b>1.0 (100%)</b> reveals a <b>62.6% collapse</b> by 2020 (index <b>0.374</b>). Even though regulators added <b>94 new vertebrate species</b> to the protection list after 2000—bringing total protected vertebrates to <b>429</b> today—legal listing has consistently lagged behind real-world decline.
           </p>
           <p class="caption-hint">
-            💡 <b>Interactive Guide:</b> Click and drag horizontally across the top timeline to zoom into any time window in the streamgraph below.
+            💡 <b>Interactive Guide:</b> Click and drag horizontally across the top timeline to filter the streamgraph. Hover over points and stream flows for exact counts.
           </p>
         </div>
       </div>
@@ -91,18 +109,28 @@
 
       <div class="chart-block chart-block--side-caption">
         <div id="vis-c2" class="full-width"></div>
-        <p class="chart-caption chart-caption--side">
-          <b>The "Silent Extinction" of Cold-Blooded Wildlife:</b> Public conservation campaigns heavily favour iconic mammals and birds, yet amphibians (only 3% remaining) and reptiles (6% remaining) have suffered near-total collapses since 1985. Even frogs untouched by chytrid fungus plunged by 72.8%, proving that wetland drying, warming temperatures, and habitat destruction act aggressively alongside disease.
-        </p>
+        <div class="chart-caption chart-caption--side">
+          <p>
+            <b>The "Silent Extinction" of Cold-Blooded Wildlife:</b> Public conservation campaigns heavily favour iconic mammals and birds, yet amphibians (only 3% remaining) and reptiles (6% remaining) have suffered near-total collapses since 1985. Even frogs untouched by chytrid fungus plunged by 72.8%, proving that wetland drying, warming temperatures, and habitat destruction act aggressively alongside disease.
+          </p>
+          <p class="caption-hint">
+            ⚡ <b>Cross-Chart Link:</b> Click any animal class (e.g. Amphibians or Reptiles) to highlight its sub-groups in the dumbbell plot below. Click again to reset.
+          </p>
+        </div>
       </div>
 
       <div style="margin-top: 3.5rem;"></div>
 
       <div class="chart-block chart-block--side-caption">
         <div id="vis-c3" class="full-width"></div>
-        <p class="chart-caption chart-caption--side">
-          <b>The "Bite-Size" Mammal Paradox:</b> Marine mammals (+42.9%) rebounded following commercial whaling bans, while mid-sized marsupials (35g–5.5kg) plunged by 47.9%. Ecologists identify this as the Critical Weight Range paradox: native bandicoots, bettongs, and quolls are the ideal prey size for feral cats and foxes. Meanwhile, migratory shorebirds fell 56.4% due to coastal mudflat reclamation overseas.
-        </p>
+        <div class="chart-caption chart-caption--side">
+          <p>
+            <b>The "Bite-Size" Mammal Paradox:</b> Marine mammals (+42.9%) rebounded following commercial whaling bans, while mid-sized marsupials (35g–5.5kg) plunged by 47.9%. Ecologists identify this as the Critical Weight Range paradox: native bandicoots, bettongs, and quolls are the ideal prey size for feral cats and foxes. Meanwhile, migratory shorebirds fell 56.4% due to coastal mudflat reclamation overseas.
+          </p>
+          <p class="caption-hint">
+            🔍 <b>Coordinated Details:</b> Linked with the waffle chart above. Hover over dots to view 2000 baseline vs. 2022 level numbers.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -125,6 +153,9 @@
             <p>
               <b>Tasmania's Island Shield vs. Mainland Collapse:</b> Victoria (-62.3%) and the Northern Territory (-61.8%) suffered the steepest declines, driven by land clearing, toxic cane toads, and intense wildfires. In contrast, Tasmania recorded the lowest decline (-32.5%). Bass Strait acts as a natural ocean moat that prevented European red foxes from establishing, preserving an irreplaceable sanctuary for native marsupials.
             </p>
+            <p class="caption-hint caption-hint--small">
+              🗺️ <b>3-Map Sync:</b> Click any state polygon or symbol to highlight it across all 3 maps simultaneously. Click ocean to reset.
+            </p>
             <p class="caption-note">
               <em>Note: Shading encodes relative percentage abundance change across regions.</em>
             </p>
@@ -138,6 +169,9 @@
             <p>
               <b>The Northern Surveillance Blind Spot:</b> Populous eastern states like New South Wales (62 tracked species) and Queensland (58 species) benefit from extensive survey networks near universities. Conversely, the Northern Territory monitors only 29 species despite suffering Australia's second-worst decline (-61.8%). Sparser northern monitoring creates an urgent blind spot where biodiversity is collapsing with minimal field surveillance.
             </p>
+            <p class="caption-hint caption-hint--small">
+              🔍 <b>Interactive Tooltips:</b> Hover over any circle or state to inspect distinct species monitored and survey counts.
+            </p>
             <p class="caption-note">
               <em>Note: Symbol size encodes distinct threatened species actively monitored.</em>
             </p>
@@ -149,9 +183,14 @@
       <div class="chart-row" style="margin-top: 3.5rem; margin-bottom: 0;">
         <div class="chart-block chart-block--side-caption full-width">
           <div id="vis-m3" class="full-width"></div>
-          <p class="chart-caption chart-caption--side">
-            <b>The "Citizen Science" Bias:</b> Bird monitoring blankets Australia thanks to thousands of volunteer birdwatchers active during the day. Conversely, reptiles and amphibians leave vast voids across the interior: they are small, nocturnal, and cryptic, requiring professional ecologists to dig specialised pitfall traps across remote outback terrain during rare seasonal rain events.
-          </p>
+          <div class="chart-caption chart-caption--side">
+            <p>
+              <b>The "Citizen Science" Bias:</b> Bird monitoring blankets Australia thanks to thousands of volunteer birdwatchers active during the day. Conversely, reptiles and amphibians leave vast voids across the interior: they are small, nocturnal, and cryptic, requiring professional ecologists to dig specialised pitfall traps across remote outback terrain during rare seasonal rain events.
+            </p>
+            <p class="caption-hint">
+              🗺️ <b>Linked Spatial Filter:</b> Synchronized with Maps 1 and 2 above. Hover over monitoring points to inspect individual survey sites.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -174,6 +213,9 @@
             <p>
               <b>The Eastern Coastline Hotspot:</b> New South Wales (91 birds, 57 mammals) and Queensland (73 birds, 64 mammals) harbour the highest threatened species counts. Both states combine rich biodiversity with intense coastal urbanization and agricultural clearing. Over half of all listed amphibians concentrate here, where mountaintop frogs have nowhere higher to escape rising temperatures.
             </p>
+            <p class="caption-hint caption-hint--small">
+              👆 <b>Interactive Heatmap:</b> Click any cell to isolate that fauna group and state. Hover to inspect exact threatened species counts.
+            </p>
           </div>
         </div>
 
@@ -183,6 +225,9 @@
           <div class="chart-caption chart-caption--bottom">
             <p>
               <b>Survivor Bias &amp; The Historical Filter:</b> Amphibians (36.7%) and reptiles (26.2%) have far higher shares of Critically Endangered species than mammals (8.0%). This reflects historical survivor bias: Australia's most fragile mammals were wiped out during early pastoral settlement. Today's surviving mammals represent more resilient remnants, whereas cold-blooded vertebrates are hitting acute extinction thresholds today.
+            </p>
+            <p class="caption-hint caption-hint--small">
+              🔍 <b>Category Tooltips:</b> Hover over segments to see proportion percentages and species counts by risk tier.
             </p>
           </div>
         </div>
@@ -208,6 +253,9 @@
             <p>
               <b>The Fire–Predator Synergy:</b> Invasive species (78.4%) and altered fire regimes (59.8%) are the leading threats to Australian wildlife, compounding one another. Flammable invasive weeds fuel intense bushfires that incinerate fallen logs and low scrub. Once ground cover is stripped bare, feral cats and foxes exploit open burned landscapes to hunt surviving native animals.
             </p>
+            <p class="caption-hint caption-hint--small">
+              🔍 <b>Threat Tooltips:</b> Hover over bars to see the exact percentage and species count impacted by each threat category.
+            </p>
           </div>
         </div>
 
@@ -218,6 +266,9 @@
             <p>
               <b>Habitat Engineers Outrank Predators:</b> While feral cats (123) and foxes (95) kill prey directly, European rabbits threaten the most wildlife (322 species). By overgrazing native seedlings, rabbits trigger erosion and starve burrowing marsupials. Similarly, <i>Phytophthora</i> root-rot fungus (236) rots entire forest canopies, destroying vital food and hollow shelters for arboreal fauna.
             </p>
+            <p class="caption-hint caption-hint--small">
+              🔍 <b>Species Tooltips:</b> Hover over lollipop endpoints to inspect the exact number of listed taxa threatened by each invader.
+            </p>
           </div>
         </div>
       </div>
@@ -226,9 +277,14 @@
       <div class="chart-row">
         <div class="chart-block chart-block--side-caption full-width">
           <div id="vis-c8" class="full-width"></div>
-          <p class="chart-caption chart-caption--side">
-            <b>Total Hectares vs. Range Destruction:</b> Evaluating habitat loss strictly by raw area can be deceptive. The Red Goshawk lost 3.02 million hectares across northern savannas, representing 2.4% of its vast range. In contrast, the Southern Black-throated Finch lost 0.70 million hectares, but that cleared 10.02% of its entire global range for Queensland agriculture and mining.
-          </p>
+          <div class="chart-caption chart-caption--side">
+            <p>
+              <b>Total Hectares vs. Range Destruction:</b> Evaluating habitat loss strictly by raw area can be deceptive. The Red Goshawk lost 3.02 million hectares across northern savannas, representing 2.4% of its vast range. In contrast, the Southern Black-throated Finch lost 0.70 million hectares, but that cleared 10.02% of its entire global range for Queensland agriculture and mining.
+            </p>
+            <p class="caption-hint">
+              🔍 <b>Butterfly Tooltips:</b> Hover over bars to inspect both absolute hectares cleared and proportional range lost.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -252,6 +308,9 @@
             <p>
               <b>The Fenced Sanctuary Dividend:</b> Eradicating feral predators triggers explosive mammal recovery. Between 2000 and 2017, populations inside predator-free fenced reserves and islands surged by +729% (index reaching 8.29). Meanwhile, unmanaged wild populations collapsed by 59.3%. Fenced havens decisively demonstrate that extinction is preventable, serving as vital demographic arks until landscape-scale predator control succeeds.
             </p>
+            <p class="caption-hint caption-hint--small">
+              🔍 <b>Trajectory Tooltips:</b> Hover over points along the timeline to compare year-by-year index levels across management types.
+            </p>
           </div>
         </div>
 
@@ -261,6 +320,9 @@
           <div class="chart-caption chart-caption--bottom">
             <p>
               <b>The 86% Policy Bottleneck:</b> Despite compelling evidence that intervention works, Australia faces a stark funding deficit. Under the 2022–2032 Threatened Species Action Plan, only 14.0% of listed vertebrate fauna receive dedicated priority recovery funding. Approximately 86% of threatened animals lack targeted support, proving that reversing decline requires expanding funded on-ground conservation beyond symbolic legal listing.
+            </p>
+            <p class="caption-hint caption-hint--small">
+              🔍 <b>Policy Tooltips:</b> Hover over bar segments to see priority vs. non-priority species counts and percentage breakdowns.
             </p>
           </div>
         </div>
@@ -283,7 +345,7 @@
     </div>
   </footer>
 
-  <script src="js/vega_lite_vis.js?v=14"></script>
+  <script src="js/vega_lite_vis.js?v=15"></script>
 
 </body>
 </html>
