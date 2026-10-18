@@ -7,11 +7,11 @@
       "Rust Orange = decline (<100%); Turquoise = recovery (>100%)."
     ],
     "font": "Inter, sans-serif",
-    "fontSize": 20,
+    "fontSize": 22,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14,
+    "subtitleFontSize": 15.5,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -39,7 +39,7 @@
       ],
       "header": {
         "labelFont": "Inter, sans-serif",
-        "labelFontSize": 15.5,
+        "labelFontSize": 17.5,
         "labelFontWeight": "bold",
         "labelColor": "#0f172a",
         "labelOrient": "left",
@@ -52,7 +52,7 @@
   "spec": {
     "width": "container",
     "height": {
-      "step": 38
+      "step": 42
     },
     "encoding": {
       "opacity": {
@@ -81,7 +81,8 @@
             },
             "axis": {
               "title": null,
-              "labelFontSize": 14,
+              "labelFontSize": 16,
+              "labelFontWeight": 600,
               "labelColor": "#1e293b",
               "labelLimit": 380
             }
@@ -94,9 +95,9 @@
             },
             "axis": {
               "title": "Population Level (% of 2000 Baseline)",
-              "titleFontSize": 14.5,
+              "titleFontSize": 16.5,
               "titleFontWeight": "bold",
-              "labelFontSize": 13.5,
+              "labelFontSize": 15,
               "format": ".0f"
             }
           },
@@ -157,9 +158,9 @@
               "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
-              "labelFontSize": 13.5,
-              "titleFontSize": 14,
-              "symbolSize": 140,
+              "labelFontSize": 15,
+              "titleFontSize": 16,
+              "symbolSize": 180,
               "offset": 14
             }
           },
@@ -194,7 +195,7 @@
         "mark": {
           "type": "point",
           "filled": true,
-          "size": 130
+          "size": 140
         },
         "encoding": {
           "y": {
@@ -229,9 +230,9 @@
               "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
-              "labelFontSize": 13.5,
-              "titleFontSize": 14,
-              "symbolSize": 140,
+              "labelFontSize": 15,
+              "titleFontSize": 16,
+              "symbolSize": 180,
               "offset": 14
             }
           },
@@ -271,8 +272,8 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "dx": 9,
-          "fontSize": 13,
+          "dx": 10,
+          "fontSize": 15,
           "fontWeight": "bold",
           "color": "#d95f02"
         },
@@ -306,8 +307,8 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "dx": 9,
-          "fontSize": 13,
+          "dx": 10,
+          "fontSize": 15,
           "fontWeight": "bold",
           "color": "#0f766e"
         },
@@ -341,7 +342,7 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 13,
+          "fontSize": 14.5,
           "fontWeight": 600,
           "fill": "#1e293b",
           "text": [
@@ -375,7 +376,7 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 13,
+          "fontSize": 14.5,
           "fontWeight": 600,
           "fill": "#1e293b",
           "text": [
@@ -409,7 +410,7 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 13,
+          "fontSize": 14.5,
           "fontWeight": 600,
           "fill": "#1e293b",
           "text": [
@@ -443,35 +444,35 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 20,
+      "fontSize": 22,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14,
+      "subtitleFontSize": 15.5,
       "subtitleColor": "#475569"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 14.5,
+      "titleFontSize": 16.5,
       "titleFontWeight": "bold",
       "titleColor": "#334155",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 13.5,
+      "labelFontSize": 15,
       "labelColor": "#475569"
     },
     "legend": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 14,
+      "titleFontSize": 16,
       "titleFontWeight": "bold",
       "titleColor": "#1e293b",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 13.5,
+      "labelFontSize": 15,
       "labelColor": "#334155"
     },
     "header": {
       "title": null,
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 15.5,
+      "labelFontSize": 17.5,
       "labelFontWeight": "bold",
       "labelColor": "#0f172a"
     },

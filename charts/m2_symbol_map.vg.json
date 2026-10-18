@@ -8,7 +8,12 @@
   },
   "title": {
     "text": "Biodiversity Breadth: Distinct Threatened Species Tracked",
-    "subtitle": "Circle size encodes the number of distinct threatened species actively monitored in each state/territory.",
+    "subtitle": [
+      "Circle size encodes the number of distinct threatened species actively",
+      "monitored in each state/territory."
+    ],
+    "subtitleLimit": 560,
+    "limit": 560,
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",
@@ -168,7 +173,7 @@
       "data": {
         "values": [
           {
-            "lon": 154.2,
+            "lon": 152.8,
             "lat": -33.0,
             "text": [
               "New South Wales: 62 species",
