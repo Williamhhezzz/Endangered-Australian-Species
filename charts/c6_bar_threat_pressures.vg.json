@@ -120,21 +120,27 @@
     },
     {
       "description": "Layer 3: Callout Annotation for Fire & Predator Trap",
-      "data": {
-        "values": [{}]
-      },
+      "transform": [
+        {
+          "filter": "datum.Threat === 'Transportation and service corridors'"
+        }
+      ],
       "mark": {
         "type": "text",
         "align": "left",
-        "x": 210,
-        "y": 155,
+        "baseline": "middle",
         "fontSize": 11,
         "fill": "#334155",
         "fontStyle": "italic"
       },
       "encoding": {
-        "x": null,
-        "y": null,
+        "x": {
+          "datum": 36
+        },
+        "y": {
+          "field": "Threat",
+          "type": "nominal"
+        },
         "text": {
           "value": [
             "The Bushfire–Predator Trap:",
