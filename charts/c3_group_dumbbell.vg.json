@@ -271,8 +271,9 @@
         "mark": {
           "type": "text",
           "align": "left",
-          "baseline": "middle",
+          "baseline": "bottom",
           "dx": 10,
+          "dy": -4,
           "fontSize": 15,
           "fontWeight": "bold",
           "color": "#d95f02"
@@ -306,8 +307,9 @@
         "mark": {
           "type": "text",
           "align": "left",
-          "baseline": "middle",
+          "baseline": "bottom",
           "dx": 10,
+          "dy": -4,
           "fontSize": 15,
           "fontWeight": "bold",
           "color": "#0f766e"
@@ -361,7 +363,7 @@
             }
           },
           "x": {
-            "datum": 106
+            "datum": 108
           }
         }
       },
@@ -395,7 +397,7 @@
             }
           },
           "x": {
-            "datum": 105
+            "datum": 108
           }
         }
       },
@@ -403,7 +405,7 @@
         "description": "Multi-line Insight 3: Mid-sized vs marine mammals",
         "transform": [
           {
-            "filter": "datum.subgroup === 'Small land mammals'"
+            "filter": "indexof(datum.subgroup, 'Mid-sized mammals') >= 0"
           }
         ],
         "mark": {
@@ -429,7 +431,7 @@
             }
           },
           "x": {
-            "datum": 105
+            "datum": 108
           }
         }
       }

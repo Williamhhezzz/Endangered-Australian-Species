@@ -27,7 +27,7 @@
       "hconcat": [
         {
           "title": {
-            "text": "Birds (n = 397)",
+            "text": "Birds",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
@@ -158,7 +158,7 @@
         },
         {
           "title": {
-            "text": "Mammals (n = 154)",
+            "text": "Mammals",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
@@ -294,7 +294,7 @@
       "hconcat": [
         {
           "title": {
-            "text": "Reptiles (n = 35)",
+            "text": "Reptiles",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
@@ -425,7 +425,7 @@
         },
         {
           "title": {
-            "text": "Amphibians (n = 44)",
+            "text": "Amphibians",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
