@@ -14,6 +14,7 @@
     "frame": "bounds",
     "offset": 12
   },
+  "padding": {"left": 25, "right": 15, "top": 10, "bottom": 10},
   "params": [
     {
       "name": "highlight_state",
@@ -27,14 +28,14 @@
       "hconcat": [
         {
           "title": {
-            "text": "Birds",
+            "text": "Birds (397 sites)",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 440,
+          "width": 425,
           "height": 270,
           "projection": {
             "type": "conicEqualArea",
@@ -158,14 +159,14 @@
         },
         {
           "title": {
-            "text": "Mammals",
+            "text": "Mammals (154 sites)",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 440,
+          "width": 425,
           "height": 270,
           "projection": {
             "type": "conicEqualArea",
@@ -294,14 +295,14 @@
       "hconcat": [
         {
           "title": {
-            "text": "Reptiles",
+            "text": "Reptiles (35 sites)",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 440,
+          "width": 425,
           "height": 270,
           "projection": {
             "type": "conicEqualArea",
@@ -425,14 +426,14 @@
         },
         {
           "title": {
-            "text": "Amphibians",
+            "text": "Amphibians (44 sites)",
             "font": "Inter, sans-serif",
             "fontSize": 13.5,
             "fontWeight": "bold",
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 440,
+          "width": 425,
           "height": 270,
           "projection": {
             "type": "conicEqualArea",

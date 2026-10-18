@@ -133,11 +133,41 @@
       }
     },
     {
+      "description": "Leader lines to ocean annotations",
+      "data": {
+        "values": [
+          { "lon1": 133.5, "lat1": -19.5, "lon2": 133.5, "lat2": -11.2 },
+          { "lon1": 147.0, "lat1": -32.5, "lon2": 153.5, "lat2": -32.5 }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#475569",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon1",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat1",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "lon2"
+        },
+        "latitude2": {
+          "field": "lat2"
+        }
+      }
+    },
+    {
       "description": "Annotation: Ocean label for Northern Territory",
       "data": {
         "values": [
           {
-            "lon": 133,
+            "lon": 133.5,
             "lat": -10.0,
             "text": [
               "Northern Territory: Only 29 species",
@@ -149,7 +179,6 @@
       "mark": {
         "type": "text",
         "align": "center",
-        "baseline": "bottom",
         "fontSize": 11,
         "fontWeight": "bold",
         "fill": "#1e293b"
@@ -173,8 +202,8 @@
       "data": {
         "values": [
           {
-            "lon": 152.8,
-            "lat": -33.0,
+            "lon": 154.0,
+            "lat": -32.5,
             "text": [
               "New South Wales: 62 species",
               "tracked near major universities"

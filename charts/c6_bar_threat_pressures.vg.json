@@ -59,7 +59,7 @@
       },
       "axis": {
         "format": "d",
-        "grid": true,
+        "grid": false,
         "titleFontSize": 13,
         "labelFontSize": 12
       }
@@ -129,9 +129,10 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
+        "dy": -12,
         "fontSize": 11,
-        "fill": "#334155",
-        "fontStyle": "italic"
+        "fill": "#1e293b",
+        "fontStyle": "normal"
       },
       "encoding": {
         "x": {

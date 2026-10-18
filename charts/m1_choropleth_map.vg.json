@@ -165,26 +165,33 @@
       }
     },
     {
-      "description": "Pointer line to Tasmania",
+      "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon": 147.2, "lat": -42.0 },
-          { "lon": 148.8, "lat": -42.0 }
+          { "lon1": 133.5, "lat1": -19.0, "lon2": 133.5, "lat2": -11.2 },
+          { "lon1": 144.5, "lat1": -37.0, "lon2": 139.0, "lat2": -39.2 },
+          { "lon1": 146.5, "lat1": -42.0, "lon2": 149.0, "lat2": -42.0 }
         ]
       },
       "mark": {
-        "type": "line",
-        "color": "#1e293b",
-        "strokeWidth": 1.2
+        "type": "rule",
+        "stroke": "#475569",
+        "strokeWidth": 1
       },
       "encoding": {
         "longitude": {
-          "field": "lon",
+          "field": "lon1",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "lat",
+          "field": "lat1",
           "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "lon2"
+        },
+        "latitude2": {
+          "field": "lat2"
         }
       }
     },
@@ -193,7 +200,7 @@
       "data": {
         "values": [
           {
-            "lon": 133,
+            "lon": 133.5,
             "lat": -10.0,
             "text": [
               "Northern Territory (-61.8%):",
@@ -228,8 +235,8 @@
       "data": {
         "values": [
           {
-            "lon": 135,
-            "lat": -38.8,
+            "lon": 138.5,
+            "lat": -39.5,
             "text": [
               "Victoria (-62.3%): Steepest loss",
               "from historic farmland clearing"
@@ -263,7 +270,7 @@
       "data": {
         "values": [
           {
-            "lon": 149.2,
+            "lon": 149.3,
             "lat": -42.0,
             "text": [
               "Tasmania (-32.5%): Lowest loss",

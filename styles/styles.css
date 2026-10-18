@@ -124,18 +124,15 @@ body {
 }
 
 .interaction-hint {
-  background: #f1f5f9;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 4px 0 12px 0;
   color: #1e40af;
-  border-left: 3px solid #2b5c8f;
-  padding: 5px 12px;
-  border-radius: 4px;
-  font-size: 12.5px;
+  font-size: 13px;
+  font-style: italic;
   font-weight: 500;
-  display: inline-block;
-  margin: 6px 0 12px 0;
-  line-height: 1.5;
-  text-align: left;
-  font-style: normal;
+  display: block;
 }
 
 
@@ -265,6 +262,15 @@ body {
   box-sizing: border-box;
 }
 
+.chart-caption--side--split {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
 .chart-caption--side p {
   max-width: 100%;
   width: 100%;
@@ -315,10 +321,10 @@ body {
 }
 
 .chart-caption--bottom {
-  max-width: 36ch; /* ~300px-320px, strictly enforcing 7-10 words per line */
-  margin: 14px auto 0 auto; /* centers the text block inside the 50% card with symmetric left/right whitespace */
-  text-align: left; /* keeps the text lines left-aligned, avoiding centered-text penalties */
-  font-size: 14.5px;
+  max-width: 40ch; /* ~350px-370px: keeps strictly 8-10 words per line while filling the chart width cleanly */
+  margin: 12px auto 0 auto;
+  text-align: left;
+  font-size: 15px;
   line-height: 1.55;
   color: #334155;
   padding-top: 0;

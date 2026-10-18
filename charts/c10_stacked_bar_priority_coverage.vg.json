@@ -86,6 +86,7 @@
           "axis": {
             "format": "%",
             "grid": true,
+            "tickCount": 5,
             "titleFontSize": 13,
             "labelFontSize": 12
           }

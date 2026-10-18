@@ -106,14 +106,14 @@
             "align": "center",
             "fontSize": 12.5,
             "color": "#475569",
-            "text": "2001–2009: Millennium Drought dries inland rivers, accelerating early decline"
+            "text": "2001–2009: Millennium Drought dries inland rivers"
           },
           "encoding": {
             "x": {
               "datum": 2005
             },
             "y": {
-              "datum": 0.88
+              "datum": 1.08
             }
           }
         },
@@ -235,30 +235,24 @@
           }
         },
         {
-          "description": "Annotation 1: EPBC Act enacted at baseline",
-          "transform": [
-            {
-              "filter": "datum.year === 2000"
-            }
-          ],
+          "description": "Annotation 1: Baseline Reference Label",
+          "data": {
+            "values": [{}]
+          },
           "mark": {
             "type": "text",
-            "align": "left",
-            "dx": 8,
-            "dy": -10,
-            "fontSize": 13,
+            "align": "center",
+            "fontSize": 12.5,
             "fontWeight": "bold",
-            "color": "#0f172a",
-            "text": "2000: EPBC Act Baseline (Index = 1.0)"
+            "color": "#64748b",
+            "text": "Baseline = 1.0"
           },
           "encoding": {
             "x": {
-              "field": "year",
-              "type": "quantitative"
+              "datum": 2017.5
             },
             "y": {
-              "field": "value",
-              "type": "quantitative"
+              "datum": 1.05
             }
           }
         },
@@ -445,7 +439,7 @@
         {
           "description": "Annotation 4: 2014-2016 Administrative Catch-Up callout",
           "data": {
-            "values": [{ "year": 2014.7, "yVal": 96 }]
+            "values": [{ "year": 2014.7, "yVal": 98 }]
           },
           "transform": [
             {
@@ -462,9 +456,8 @@
             "fontWeight": "bold",
             "color": "#0f172a",
             "text": [
-              "2014–2016: Overdue paperwork",
-              "backlog cleared (not a sudden",
-              "spike in wild extinctions)"
+              "2014–2016: Overdue listing",
+              "backlog cleared"
             ]
           },
           "encoding": {

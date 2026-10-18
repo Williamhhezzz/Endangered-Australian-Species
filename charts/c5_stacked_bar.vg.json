@@ -4,7 +4,7 @@
   "height": 294,
   "title": {
     "text": "Extinction Risk Severity Across Animal Groups",
-    "subtitle": "Proportion of listed species in each legal risk tier. Click a risk tier in the legend to isolate.",
+    "subtitle": "Proportion of listed species in each legal risk tier.",
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",

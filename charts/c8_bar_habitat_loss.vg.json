@@ -13,10 +13,11 @@
     "subtitleFont": "Inter, sans-serif",
     "subtitleFontSize": 13,
     "subtitleColor": "#475569",
-    "anchor": "start",
+    "anchor": "middle",
     "frame": "bounds",
     "offset": 12
   },
+  "padding": {"left": 15, "right": 15, "top": 10, "bottom": 10},
   "data": {
     "url": "data/c8_habitat_loss.csv"
   },

@@ -19,7 +19,13 @@
     "frame": "bounds"
   },
   "data": {
-    "url": "data/c4_heatmap.csv"
+    "url": "data/c4_heatmap.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "species_count": "number"
+      }
+    }
   },
   "transform": [
     {"calculate": "datum.State == 'NSW' ? 'New South Wales' : datum.State == 'QLD' ? 'Queensland' : datum.State == 'VIC' ? 'Victoria' : datum.State == 'WA' ? 'Western Australia' : datum.State == 'SA' ? 'South Australia' : datum.State == 'NT' ? 'Northern Territory' : datum.State == 'TAS' ? 'Tasmania' : 'Australian Capital Territory'", "as": "FullState"}
@@ -152,7 +158,7 @@
       "description": "Layer 2: Cell Value Text Annotations for Top 2 Hotspots",
       "transform": [
         {
-          "filter": "datum.species_count === 91 || datum.species_count === 73"
+          "filter": "datum.species_count == 91 || datum.species_count == 73"
         }
       ],
       "mark": {
