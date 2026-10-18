@@ -5,7 +5,7 @@
   "height": 280,
   "title": {
     "text": "Threatened Wildlife Listed Across Australian States",
-    "subtitle": "Number of legally listed threatened species by state and animal group. Click any cell to isolate.",
+    "subtitle": "Number of legally listed threatened species by state and animal group.",
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",
@@ -22,7 +22,7 @@
     "url": "data/c4_heatmap.csv"
   },
   "transform": [
-    {"calculate": "datum.State == 'NSW' ? 'New South Wales' : datum.State == 'QLD' ? 'Queensland' : datum.State == 'VIC' ? 'Victoria' : datum.State == 'WA' ? 'Western Australia' : datum.State == 'SA' ? 'South Australia' : datum.State == 'NT' ? 'Northern Territory' : datum.State == 'TAS' ? 'Tasmania' : 'Aust. Capital Territory'", "as": "FullState"}
+    {"calculate": "datum.State == 'NSW' ? 'New South Wales' : datum.State == 'QLD' ? 'Queensland' : datum.State == 'VIC' ? 'Victoria' : datum.State == 'WA' ? 'Western Australia' : datum.State == 'SA' ? 'South Australia' : datum.State == 'NT' ? 'Northern Territory' : datum.State == 'TAS' ? 'Tasmania' : 'Australian Capital Territory'", "as": "FullState"}
   ],
   "encoding": {
     "x": {
@@ -38,7 +38,7 @@
         "ticks": false
       },
       "sort": [
-        "Aust. Capital Territory",
+        "Australian Capital Territory",
         "New South Wales",
         "Northern Territory",
         "Queensland",
@@ -133,7 +133,7 @@
           {
             "field": "TaxonomicGroup",
             "type": "nominal",
-            "title": "Fauna Group"
+            "title": "Animal Group"
           },
           {
             "field": "FullState",
@@ -160,7 +160,7 @@
         "fontSize": 12,
         "fontWeight": "bold",
         "baseline": "middle",
-        "color": "#ffffff",
+        "fill": "#ffffff",
         "cursor": "pointer"
       },
       "encoding": {

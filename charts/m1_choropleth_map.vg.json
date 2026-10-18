@@ -9,7 +9,7 @@
   },
   "title": {
     "text": "State-Level Wildlife Population Decline (2000–2022)",
-    "subtitle": "Average percentage change in monitored fauna relative to 2000 baseline (NSW & ACT combined).",
+    "subtitle": "Average percentage change in monitored wildlife relative to 2000 baseline (New South Wales & Australian Capital Territory combined).",
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",
@@ -95,8 +95,8 @@
             ]
           },
           "legend": {
-            "orient": "bottom-left",
-            "direction": "horizontal",
+            "orient": "top-right",
+            "direction": "vertical",
             "format": ".1f",
             "tickCount": 4,
             "titleFontSize": 12.5,
@@ -162,8 +162,8 @@
       "description": "Pointer line to Tasmania",
       "data": {
         "values": [
-          { "lon": 147.2, "lat": -42.2 },
-          { "lon": 148.2, "lat": -42.2 }
+          { "lon": 147.2, "lat": -42.0 },
+          { "lon": 148.8, "lat": -42.0 }
         ]
       },
       "mark": {
@@ -183,18 +183,16 @@
       }
     },
     {
-      "description": "Annotation: Ocean labels for NT and Victoria",
+      "description": "Annotation: Ocean label for NT",
       "data": {
         "values": [
           {
             "lon": 133,
-            "lat": -10.2,
-            "text": "Northern Territory: -61.8%"
-          },
-          {
-            "lon": 143,
-            "lat": -39.6,
-            "text": "Victoria: -62.3% (steepest drop)"
+            "lat": -10.0,
+            "text": [
+              "Northern Territory (-61.8%):",
+              "Cane toads & severe bushfires"
+            ]
           }
         ]
       },
@@ -220,15 +218,50 @@
       }
     },
     {
+      "description": "Annotation: Ocean label for Victoria",
+      "data": {
+        "values": [
+          {
+            "lon": 135,
+            "lat": -38.8,
+            "text": [
+              "Victoria (-62.3%): Steepest loss",
+              "from historic farmland clearing"
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1e293b"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
       "description": "Annotation: Ocean label for Tasmania",
       "data": {
         "values": [
           {
-            "lon": 148.5,
-            "lat": -42.2,
+            "lon": 149.2,
+            "lat": -42.0,
             "text": [
-              "Tasmania: -32.5% (lowest loss,",
-              "Bass Strait blocked red foxes)"
+              "Tasmania (-32.5%): Lowest loss",
+              "as Bass Strait blocked red foxes"
             ]
           }
         ]

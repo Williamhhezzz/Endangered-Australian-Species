@@ -113,7 +113,7 @@
               "datum": 2005
             },
             "y": {
-              "datum": 0.92
+              "datum": 0.88
             }
           }
         },
@@ -128,7 +128,7 @@
             "fontSize": 12.5,
             "fontWeight": "bold",
             "color": "#991b1b",
-            "text": "By 2020: -62.6% net drop (Index = 0.374)"
+            "text": "By 2020: -62.6% drop despite 20 years of national law"
           },
           "encoding": {
             "x": {
@@ -290,7 +290,7 @@
     },
     {
       "title": {
-        "text": "B. New Vertebrate Species Added to EPBC Law Since 2000",
+        "text": "B. New Animal Species Added to National Protection Law Since 2000",
         "font": "Inter, sans-serif",
         "fontSize": 15,
         "fontWeight": "bold",
@@ -357,6 +357,9 @@
               "field": "ListingsCount",
               "type": "quantitative",
               "stack": "center",
+              "scale": {
+                "domain": [0, 118]
+              },
               "axis": {
                 "title": "New Listings Since 2000",
                 "titleFontSize": 13,
@@ -370,7 +373,7 @@
             "color": {
               "field": "FaunaClass",
               "type": "nominal",
-              "title": "Fauna Class",
+              "title": "Animal Group",
               "scale": {
                 "domain": [
                   "Birds",
@@ -403,7 +406,7 @@
               {
                 "field": "FaunaClass",
                 "type": "nominal",
-                "title": "Fauna Class"
+                "title": "Animal Group"
               },
               {
                 "field": "ListingsCount",
@@ -442,7 +445,7 @@
         {
           "description": "Annotation 4: 2014-2016 Administrative Catch-Up callout",
           "data": {
-            "values": [{ "year": 2015, "yVal": 97 }]
+            "values": [{ "year": 2014.7, "yVal": 96 }]
           },
           "transform": [
             {
@@ -455,14 +458,13 @@
             "type": "text",
             "align": "right",
             "baseline": "top",
-            "dx": -8,
             "fontSize": 12,
             "fontWeight": "bold",
             "color": "#0f172a",
             "text": [
-              "2014–2016:",
-              "Backlog review adds",
-              "overdue bird listings"
+              "2014–2016: Overdue paperwork",
+              "backlog cleared (not a sudden",
+              "spike in wild extinctions)"
             ]
           },
           "encoding": {

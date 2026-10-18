@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Sub-Group Divergence Across Animal Classes",
+    "text": "Population Change Across Animal Sub-Groups (2000–2022)",
     "subtitle": [
       "Population level relative to 2000 baseline (100% = no change).",
       "Rust Orange = decline (<100%); Turquoise = recovery (>100%)."
@@ -394,7 +394,41 @@
             }
           },
           "x": {
-            "datum": 106
+            "datum": 105
+          }
+        }
+      },
+      {
+        "description": "Multi-line Insight 3: Mid-sized vs marine mammals",
+        "transform": [
+          {
+            "filter": "datum.subgroup === 'Small land mammals'"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "fontSize": 13,
+          "fontWeight": 600,
+          "fill": "#1e293b",
+          "text": [
+            "Cats & foxes hunt mid-sized",
+            "marsupials (-47.9%), while whaling",
+            "bans aided marine mammals (+42.9%)."
+          ]
+        },
+        "encoding": {
+          "y": {
+            "field": "subgroup",
+            "type": "nominal",
+            "sort": {
+              "field": "current_2022",
+              "order": "ascending"
+            }
+          },
+          "x": {
+            "datum": 105
           }
         }
       }

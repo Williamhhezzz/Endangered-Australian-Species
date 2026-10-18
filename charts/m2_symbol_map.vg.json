@@ -84,7 +84,7 @@
             "zero": true
           },
           "legend": {
-            "orient": "bottom-left",
+            "orient": "top-right",
             "format": "d",
             "titleFontSize": 12.5,
             "labelFontSize": 11,
@@ -133,10 +133,10 @@
         "values": [
           {
             "lon": 133,
-            "lat": -10.2,
+            "lat": -10.0,
             "text": [
-              "Northern Territory: Only 29",
-              "species tracked despite -61.8% drop"
+              "Northern Territory: Only 29 species",
+              "tracked despite -61.8% wildlife drop"
             ]
           }
         ]
@@ -168,11 +168,11 @@
       "data": {
         "values": [
           {
-            "lon": 154,
+            "lon": 154.2,
             "lat": -33.0,
             "text": [
               "New South Wales: 62 species",
-              "tracked (highest in Australia)"
+              "tracked near major universities"
             ]
           }
         ]

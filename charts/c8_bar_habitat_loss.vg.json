@@ -121,6 +121,33 @@
             "fill": "#3b6998",
             "text": "3.02M"
           }
+        },
+        {
+          "description": "Annotation for Red Goshawk habitat context",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "fontSize": 10.5,
+            "fill": "#334155"
+          },
+          "encoding": {
+            "x": {
+              "datum": 3.8
+            },
+            "y": {
+              "datum": "Koala"
+            },
+            "text": {
+              "value": [
+                "Red Goshawk lost 3.02M ha,",
+                "but that is only 2.4% of its",
+                "vast continental range."
+              ]
+            }
+          }
         }
       ]
     },
@@ -216,6 +243,33 @@
             "fontWeight": "bold",
             "fill": "#c2571a",
             "text": "10.0%"
+          }
+        },
+        {
+          "description": "Annotation for Finch habitat destruction context",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "fontSize": 10.5,
+            "fill": "#9a3412"
+          },
+          "encoding": {
+            "x": {
+              "datum": 6.2
+            },
+            "y": {
+              "datum": "Ghost bat"
+            },
+            "text": {
+              "value": [
+                "Grazing & coal mining cleared",
+                "10.0% of the Finch's entire",
+                "potential habitat in Queensland."
+              ]
+            }
           }
         }
       ]

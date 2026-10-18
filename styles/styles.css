@@ -124,13 +124,18 @@ body {
 }
 
 .interaction-hint {
-  font-style: italic;
-  font-size: 0.88rem;
-  color: #0369a1;
-  margin-top: 0.35rem;
-  margin-bottom: 0.75rem;
+  background: #f1f5f9;
+  color: #1e40af;
+  border-left: 3px solid #2b5c8f;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 6px 0 12px 0;
   line-height: 1.5;
   text-align: left;
+  font-style: normal;
 }
 
 
@@ -249,14 +254,14 @@ body {
 .chart-caption--side {
   flex: 0 0 290px;
   width: 290px;
-  max-width: 300px;
+  max-width: 34ch;
   font-size: 14.5px;
   color: #334155;
   padding-left: 0.5rem;
   margin: 0;
   text-align: left;
   align-self: center;
-  line-height: 1.6;
+  line-height: 1.55;
   box-sizing: border-box;
 }
 
@@ -264,6 +269,16 @@ body {
   max-width: 100%;
   width: 100%;
   margin: 0;
+  text-align: left;
+}
+
+.insight-title {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+  line-height: 1.35;
 }
 
 /* ============================================================
@@ -300,20 +315,16 @@ body {
 }
 
 .chart-caption--bottom {
-  align-self: stretch;
-  text-align: left;
-  margin-top: 1.25rem;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%;
-  width: 100%;
+  max-width: 36ch; /* ~300px-320px, strictly enforcing 7-10 words per line */
+  margin: 14px auto 0 auto; /* centers the text block inside the 50% card with symmetric left/right whitespace */
+  text-align: left; /* keeps the text lines left-aligned, avoiding centered-text penalties */
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #334155;
   padding-top: 0;
   border-top: none;
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: #334155;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .chart-caption--bottom p {
