@@ -165,7 +165,7 @@
       "description": "Right End Label: Predator-Free Havens",
       "data": {
         "values": [
-          {"Year": 2017, "Index": 8.29, "text": "+729% (8.3x)"}
+          {"Year": 2017, "Index": 8.29, "text": "+729%"}
         ]
       },
       "mark": {
@@ -173,7 +173,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 8,
-        "fontSize": 11,
+        "fontSize": 11.5,
         "fontWeight": "bold",
         "fill": "#15803d"
       },
@@ -187,7 +187,7 @@
       "description": "Right End Label: Any Known Management",
       "data": {
         "values": [
-          {"Year": 2017, "Index": 1.28, "text": "+28% (1.3x)"}
+          {"Year": 2017, "Index": 1.28, "text": "+28%"}
         ]
       },
       "mark": {
@@ -195,7 +195,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 8,
-        "fontSize": 11,
+        "fontSize": 11.5,
         "fontWeight": "bold",
         "fill": "#6366f1"
       },
@@ -209,7 +209,7 @@
       "description": "Right End Label: No Known Management",
       "data": {
         "values": [
-          {"Year": 2017, "Index": 0.41, "text": "-59% (0.4x)"}
+          {"Year": 2017, "Index": 0.41, "text": "-59%"}
         ]
       },
       "mark": {
@@ -217,7 +217,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 8,
-        "fontSize": 11,
+        "fontSize": 11.5,
         "fontWeight": "bold",
         "fill": "#334155"
       },
