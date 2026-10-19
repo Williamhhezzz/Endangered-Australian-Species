@@ -5,8 +5,8 @@
   "title": {
     "text": "Top Threat Pressures Affecting Listed Species",
     "subtitle": [
-      "Percentage of nationally listed threatened species impacted by each major threat category",
-      "(a species can face multiple threats)."
+      "Percentage of listed threatened species impacted",
+      "by each major threat (multiple threats possible)."
     ],
     "font": "Inter, sans-serif",
     "fontSize": 18,
@@ -144,10 +144,11 @@
         },
         "text": {
           "value": [
-            "The Bushfire–Predator Trap:",
-            "Weeds fuel hot fires (59.8%) that",
-            "strip ground cover, leaving survivors",
-            "exposed to feral cats and foxes."
+            "Compounding Pressures:",
+            "The top 3 threats each impact",
+            "over 50% of listed species,",
+            "meaning most face multiple",
+            "overlapping threats at once."
           ]
         }
       }

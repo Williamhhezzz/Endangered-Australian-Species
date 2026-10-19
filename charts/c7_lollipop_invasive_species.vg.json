@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "The Deadliest Invaders",
-    "subtitle": "Number of nationally listed species (animals and plants) impacted by top invasive threats.",
+    "subtitle": [
+      "Number of listed species (animals and plants)",
+      "harmed by Australia's top 10 invasive threats."
+    ],
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",
@@ -152,10 +155,10 @@
         },
         "text": {
           "value": [
-            "Habitat Loss Outranks Predators:",
-            "Rabbits (322) & root-rot mould (236)",
-            "harm more species than cats (123) by",
-            "destroying native food and shelter."
+            "Beyond Feral Predators:",
+            "3 of the top 10 invaders are",
+            "introduced weeds & root mould",
+            "that destroy native habitat."
           ]
         }
       }

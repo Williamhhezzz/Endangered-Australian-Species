@@ -29,7 +29,7 @@ body {
 
 .hero-inner {
   width: 92%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -71,7 +71,7 @@ body {
 
 .container {
   width: 92%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem 0;
   padding-bottom: 1rem;
@@ -133,6 +133,7 @@ body {
   font-style: italic;
   font-weight: 500;
   display: block;
+  max-width: 44ch;
 }
 
 
@@ -252,13 +253,13 @@ body {
   flex: 0 0 290px;
   width: 290px;
   max-width: 34ch;
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: #334155;
   padding-left: 0.5rem;
   margin: 0;
   text-align: left;
   align-self: center;
-  line-height: 1.55;
+  line-height: 1.6;
   box-sizing: border-box;
 }
 
@@ -280,7 +281,7 @@ body {
 
 .insight-title {
   display: block;
-  font-size: 15.5px;
+  font-size: 17px;
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 6px;
@@ -320,12 +321,14 @@ body {
   display: block !important;
 }
 
-.chart-caption--bottom {
-  max-width: 40ch; /* ~350px-370px: keeps strictly 8-10 words per line while filling the chart width cleanly */
-  margin: 12px auto 0 auto;
+/* For captions under 50/50 charts */
+.chart-caption--bottom,
+.chart-caption {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 42ch; /* strictly 7-9 words per line at 16px */
+  margin: 14px 0 0 0; /* flush-left with the chart title & section header sightline! */
   text-align: left;
-  font-size: 15px;
-  line-height: 1.55;
   color: #334155;
   padding-top: 0;
   border-top: none;
@@ -492,13 +495,25 @@ div[id^="vis-"] .vega-embed svg {
 
 .page-footer__inner {
   width: 92%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1.25rem;
+}
+
+.page-footer p,
+.page-footer__author,
+.page-footer__sources {
+  max-width: 50ch;
+  line-height: 1.55;
+}
+
+.page-footer__sources span {
+  display: inline-block;
+  max-width: 50ch;
 }
 
 .page-footer strong {

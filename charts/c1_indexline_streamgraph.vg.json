@@ -7,8 +7,8 @@
   "title": {
     "text": "Wild Population Collapse vs. New Species Added to National Law (2000–2020)",
     "subtitle": [
-      "Comparing real-world wildlife population levels (Threatened Species Index, 2000 = 1.0 baseline)",
-      "against cumulative species added to national protection law (2000–2020)."
+      "Comparing wild population levels (Year 2000 = 1.0 baseline)",
+      "against new species added to national protection law."
     ],
     "font": "Inter, sans-serif",
     "fontSize": 18,
@@ -124,18 +124,21 @@
           },
           "mark": {
             "type": "text",
-            "align": "center",
+            "align": "right",
             "fontSize": 12.5,
             "fontWeight": "bold",
             "color": "#991b1b",
-            "text": "By 2020: -62.6% drop despite 20 years of national law"
+            "text": [
+              "By 2020: -62.6% net drop",
+              "despite 20 years of law"
+            ]
           },
           "encoding": {
             "x": {
-              "datum": 2016
+              "datum": 2019.8
             },
             "y": {
-              "datum": 0.56
+              "datum": 0.52
             }
           }
         },
@@ -284,7 +287,7 @@
     },
     {
       "title": {
-        "text": "B. New Animal Species Added to National Protection Law Since 2000",
+        "text": "B. New Species Added to National Law Since 2000",
         "font": "Inter, sans-serif",
         "fontSize": 15,
         "fontWeight": "bold",
@@ -337,14 +340,9 @@
                 "titleFontSize": 13,
                 "titleFontWeight": "bold",
                 "labelFontSize": 12,
+                "labelAngle": 0,
                 "grid": false,
-                "values": [
-                  2000, 2001, 2002, 2003, 2004,
-                  2005, 2006, 2007, 2008, 2009,
-                  2010, 2011, 2012, 2013, 2014,
-                  2015, 2016, 2017, 2018, 2019,
-                  2020
-                ]
+                "values": [2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020]
               }
             },
             "y": {

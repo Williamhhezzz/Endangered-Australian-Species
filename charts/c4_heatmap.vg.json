@@ -5,7 +5,7 @@
   "height": 280,
   "title": {
     "text": "Threatened Wildlife Listed Across Australian States",
-    "subtitle": "Number of legally listed threatened species by state and animal group.",
+    "subtitle": "Legally listed threatened species by state and animal group.",
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",
@@ -152,35 +152,6 @@
             "title": "Threatened Species"
           }
         ]
-      }
-    },
-    {
-      "description": "Layer 2: Cell Value Text Annotations for Top 2 Hotspots",
-      "transform": [
-        {
-          "filter": "datum.species_count == 91 || datum.species_count == 73"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "baseline": "middle",
-        "fill": "#ffffff",
-        "cursor": "pointer"
-      },
-      "encoding": {
-        "text": {
-          "field": "species_count",
-          "type": "quantitative"
-        },
-        "opacity": {
-          "condition": {
-            "param": "cell_select",
-            "value": 1
-          },
-          "value": 0.25
-        }
       }
     }
   ],

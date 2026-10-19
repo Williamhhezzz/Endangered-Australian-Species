@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Field Survey Geography Across Animal Groups",
-    "subtitle": "Each point represents an active ecological monitoring site across Australia.",
+    "subtitle": [
+      "Each point represents an active ecological",
+      "monitoring site recorded across Australia."
+    ],
     "font": "Inter, sans-serif",
     "fontSize": 18,
     "fontWeight": "bold",

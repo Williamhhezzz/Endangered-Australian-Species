@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Land Clearing Impact: Absolute Habitat Area Lost vs. Proportional Range Destruction",
+    "text": "Land Clearing: Total Area Lost vs. Habitat Share Destroyed",
     "subtitle": [
-      "Comparing total habitat cleared (Million Hectares, left) against the percentage",
-      "of the species' entire historical range destroyed (%, right)."
+      "Comparing total habitat cleared (Million Hectares, left)",
+      "against share of potential habitat destroyed (%, right)."
     ],
     "font": "Inter, sans-serif",
     "fontSize": 18,

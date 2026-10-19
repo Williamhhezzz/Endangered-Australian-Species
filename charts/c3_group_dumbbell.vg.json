@@ -314,7 +314,7 @@
           "type": "text",
           "align": "center",
           "dx": 0,
-          "dy": -10,
+          "dy": 13,
           "fontSize": 15,
           "fontWeight": "bold",
           "color": "#d95f02"
