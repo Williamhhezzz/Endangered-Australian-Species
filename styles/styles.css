@@ -274,8 +274,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.insight-block--panel-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 0%;
+  padding-top: 55px;
+}
+
+.insight-block--panel-b {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 0%;
+  padding-bottom: 25px;
+}
+
+.insight-block .interaction-hint {
+  margin: 0 0 8px 0;
+  line-height: 1.45;
+  color: #1e40af;
+  font-size: 13.5px;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .chart-caption--side p {
@@ -590,6 +615,19 @@ div[id^="vis-"] .vega-embed svg {
     max-width: 100%;
     margin-top: 0.75rem;
     padding-left: 0;
+  }
+
+  .chart-caption--side--split {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .insight-block--panel-a,
+  .insight-block--panel-b {
+    padding-top: 0;
+    padding-bottom: 0;
+    flex: 0 0 auto;
   }
 
   .chart-caption--bottom {
