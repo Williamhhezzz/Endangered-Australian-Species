@@ -46,7 +46,7 @@
         "frame": "bounds"
       },
       "width": "container",
-      "height": 270,
+      "height": 310,
       "layer": [
         {
           "description": "1.0 Baseline Reference Line",
@@ -296,7 +296,7 @@
         "frame": "bounds"
       },
       "width": "container",
-      "height": 270,
+      "height": 300,
       "layer": [
         {
           "description": "Streamgraph Area Flow",

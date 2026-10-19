@@ -21,7 +21,7 @@
   "data": {
     "url": "data/c8_habitat_loss.csv"
   },
-  "spacing": 15,
+  "spacing": 20,
   "hconcat": [
     {
       "title": {
@@ -32,8 +32,8 @@
         "color": "#1e293b",
         "anchor": "middle"
       },
-      "width": 440,
-      "height": 300,
+      "width": 530,
+      "height": 340,
       "encoding": {
         "y": {
           "field": "Species",
@@ -161,8 +161,8 @@
         "color": "#1e293b",
         "anchor": "middle"
       },
-      "width": 440,
-      "height": 300,
+      "width": 530,
+      "height": 340,
       "encoding": {
         "y": {
           "field": "Species",

@@ -18,7 +18,7 @@
     "offset": 12
   },
   "width": "container",
-  "height": 280,
+  "height": 330,
   "data": {
     "url": "data/c7_invasive_species.csv",
     "format": {

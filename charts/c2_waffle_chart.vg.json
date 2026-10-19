@@ -39,7 +39,7 @@
       "as": "panel_title"
     }
   ],
-  "spacing": 25,
+  "spacing": 28,
   "facet": {
     "field": "panel_title",
     "type": "nominal",
@@ -60,8 +60,8 @@
     }
   },
   "spec": {
-    "width": 195,
-    "height": 195,
+    "width": 250,
+    "height": 250,
     "mark": {
       "type": "rect",
       "stroke": "#ffffff",

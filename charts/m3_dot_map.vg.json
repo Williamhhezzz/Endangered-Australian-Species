@@ -27,7 +27,7 @@
   "spacing": 20,
   "vconcat": [
     {
-      "spacing": 40,
+      "spacing": 30,
       "hconcat": [
         {
           "title": {
@@ -38,8 +38,8 @@
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 425,
-          "height": 270,
+          "width": 520,
+          "height": 330,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [-134, 0, 0],
@@ -169,8 +169,8 @@
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 425,
-          "height": 270,
+          "width": 520,
+          "height": 330,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [-134, 0, 0],
@@ -294,7 +294,7 @@
       ]
     },
     {
-      "spacing": 40,
+      "spacing": 30,
       "hconcat": [
         {
           "title": {
@@ -305,8 +305,8 @@
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 425,
-          "height": 270,
+          "width": 520,
+          "height": 330,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [-134, 0, 0],
@@ -436,8 +436,8 @@
             "color": "#1e293b",
             "anchor": "start"
           },
-          "width": 425,
-          "height": 270,
+          "width": 520,
+          "height": 330,
           "projection": {
             "type": "conicEqualArea",
             "rotate": [-134, 0, 0],
