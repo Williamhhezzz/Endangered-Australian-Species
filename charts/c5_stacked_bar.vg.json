@@ -78,6 +78,7 @@
           "title": "Proportion of Listed Species",
           "axis": {
             "format": "%",
+            "values": [0, 0.2, 0.4, 0.6, 0.8, 1.0],
             "grid": true,
             "titleFontSize": 13,
             "labelFontSize": 12

@@ -191,6 +191,7 @@
           },
           "axis": {
             "format": ".1f",
+            "values": [0, 2, 4, 6, 8, 10, 12, 14],
             "grid": true,
             "titleFontSize": 13,
             "labelFontSize": 12

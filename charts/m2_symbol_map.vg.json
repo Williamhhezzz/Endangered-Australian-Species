@@ -137,14 +137,15 @@
       "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon1": 133.5, "lat1": -17.5, "lon2": 133.0, "lat2": -8.5 },
+          { "lon1": 133.5, "lat1": -19.0, "lon2": 126.5, "lat2": -13.5 },
           { "lon1": 147.2, "lat1": -33.0, "lon2": 151.0, "lat2": -33.0 }
         ]
       },
       "mark": {
         "type": "rule",
         "stroke": "#475569",
-        "strokeWidth": 1
+        "strokeWidth": 1,
+        "clip": false
       },
       "encoding": {
         "longitude": {
@@ -168,8 +169,8 @@
       "data": {
         "values": [
           {
-            "lon": 133.0,
-            "lat": -6.8,
+            "lon": 121.5,
+            "lat": -13.0,
             "text": [
               "Northern Territory: Only 29 species",
               "tracked despite -61.8% wildlife drop"
@@ -182,7 +183,8 @@
         "align": "center",
         "fontSize": 11,
         "fontWeight": "bold",
-        "fill": "#1e293b"
+        "fill": "#1e293b",
+        "clip": false
       },
       "encoding": {
         "longitude": {
@@ -218,7 +220,8 @@
         "baseline": "middle",
         "fontSize": 11,
         "fontWeight": "bold",
-        "fill": "#1e293b"
+        "fill": "#1e293b",
+        "clip": false
       },
       "encoding": {
         "longitude": {
