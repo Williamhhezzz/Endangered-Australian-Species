@@ -169,7 +169,7 @@
       "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon1": 133.0, "lat1": -18.0, "lon2": 126.5, "lat2": -13.5 },
+          { "lon1": 133.0, "lat1": -18.0, "lon2": 124.5, "lat2": -11.8 },
           { "lon1": 144.5, "lat1": -37.0, "lon2": 139.0, "lat2": -39.2 },
           { "lon1": 146.5, "lat1": -42.0, "lon2": 149.0, "lat2": -42.0 }
         ]
@@ -202,8 +202,8 @@
       "data": {
         "values": [
           {
-            "lon": 121.5,
-            "lat": -13.0,
+            "lon": 119.5,
+            "lat": -11.0,
             "text": [
               "Northern Territory (-61.8%):",
               "Cane toads & severe bushfires"
@@ -303,6 +303,73 @@
         },
         "text": {
           "field": "text"
+        }
+      }
+    },
+    {
+      "description": "Subtle state labels for unannotated mainland states (White text)",
+      "data": {
+        "values": [
+          { "state": "WA", "lon": 122.0, "lat": -25.5 },
+          { "state": "NT", "lon": 133.5, "lat": -20.5 },
+          { "state": "QLD", "lon": 144.0, "lat": -22.5 },
+          { "state": "SA", "lon": 135.5, "lat": -30.0 }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 9.5,
+        "fontWeight": "bold",
+        "fill": "#ffffff",
+        "opacity": 0.85,
+        "clip": false
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Subtle state label for NSW (Dark text for light tan polygon)",
+      "data": {
+        "values": [
+          { "state": "NSW", "lon": 146.0, "lat": -32.5 }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 9.5,
+        "fontWeight": "bold",
+        "fill": "#1e293b",
+        "opacity": 0.85,
+        "clip": false
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state",
+          "type": "nominal"
         }
       }
     }

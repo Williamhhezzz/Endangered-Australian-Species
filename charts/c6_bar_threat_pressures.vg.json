@@ -32,6 +32,10 @@
     {
       "calculate": "format(datum.Proportion, '.1f') + '%'",
       "as": "pct_label"
+    },
+    {
+      "calculate": "datum.Threat === 'Invasive species/genes' ? 'Invasive species & diseases' : datum.Threat === 'Biological resource use' ? 'Logging, hunting & fishing' : datum.Threat === 'Transportation and service corridors' ? 'Roads, railways & utility lines' : datum.Threat === 'Human intrusions and disturbance' ? 'Human recreation & disturbance' : datum.Threat",
+      "as": "Threat_Clean"
     }
   ],
   "encoding": {
@@ -47,7 +51,8 @@
       "axis": {
         "labelFontSize": 12.5,
         "labelColor": "#0f172a",
-        "labelLimit": 260
+        "labelLimit": 260,
+        "labelExpr": "datum.value === 'Invasive species/genes' ? 'Invasive species & diseases' : datum.value === 'Biological resource use' ? 'Logging, hunting & fishing' : datum.value === 'Transportation and service corridors' ? 'Roads, railways & utility lines' : datum.value === 'Human intrusions and disturbance' ? 'Human recreation & disturbance' : datum.value"
       }
     },
     "x": {
@@ -84,7 +89,7 @@
         },
         "tooltip": [
           {
-            "field": "Threat",
+            "field": "Threat_Clean",
             "type": "nominal",
             "title": "Threat Pressure"
           },

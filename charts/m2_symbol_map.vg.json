@@ -137,7 +137,7 @@
       "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon1": 133.5, "lat1": -19.0, "lon2": 126.5, "lat2": -13.5 },
+          { "lon1": 133.5, "lat1": -19.0, "lon2": 124.5, "lat2": -11.8 },
           { "lon1": 147.2, "lat1": -33.0, "lon2": 151.0, "lat2": -33.0 }
         ]
       },
@@ -169,8 +169,8 @@
       "data": {
         "values": [
           {
-            "lon": 121.5,
-            "lat": -13.0,
+            "lon": 119.5,
+            "lat": -11.0,
             "text": [
               "Northern Territory: Only 29 species",
               "tracked despite -61.8% wildlife drop"
