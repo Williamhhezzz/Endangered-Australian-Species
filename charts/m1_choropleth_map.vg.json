@@ -1,8 +1,8 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 540,
-  "height": 420,
+  "width": 600,
+  "height": 440,
   "autosize": {
     "type": "pad",
     "contains": "padding"
@@ -14,18 +14,18 @@
       "Average percentage change in monitored wildlife since 2000",
       "(New South Wales & Australian Capital Territory combined)."
     ],
-    "subtitleLimit": 560,
-    "limit": 560,
+    "subtitleLimit": 580,
+    "limit": 580,
     "font": "Inter, sans-serif",
-    "fontSize": 13.5,
+    "fontSize": 18,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 11,
+    "subtitleFontSize": 13,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
-    "offset": 10
+    "offset": 12
   },
   "params": [
     {
@@ -37,8 +37,9 @@
     "type": "conicEqualArea",
     "rotate": [-134, 0, 0],
     "parallels": [-18, -36],
-    "center": [0, -25.0],
-    "scale": 670
+    "center": [0, -26.0],
+    "scale": 580,
+    "translate": [240, 220]
   },
   "layer": [
     {
@@ -100,7 +101,9 @@
             ]
           },
           "legend": {
-            "orient": "top-right",
+            "orient": "none",
+            "legendX": 445,
+            "legendY": 35,
             "direction": "vertical",
             "format": ".1f",
             "tickCount": 4,
