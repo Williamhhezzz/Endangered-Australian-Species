@@ -20,7 +20,7 @@
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 13,
+    "subtitleFontSize": 11.5,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -92,12 +92,12 @@
           },
           "legend": {
             "orient": "none",
-            "legendX": 445,
-            "legendY": 30,
-            "format": "d",
-            "titleFontSize": 12.5,
-            "labelFontSize": 11,
-            "values": [15, 30, 45, 60],
+            "legendX": 435,
+            "legendY": 20,
+            "titleFontSize": 12,
+            "labelFontSize": 10.5,
+            "values": [15, 29, 44, 59, 65],
+            "labelExpr": "datum.value == 15 ? '1-15' : datum.value == 29 ? '16-29' : datum.value == 44 ? '30-44' : datum.value == 59 ? '45-59' : '60 and above'",
             "offset": 8
           }
         },
@@ -249,7 +249,7 @@
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 11.5,
       "subtitleColor": "#475569"
     },
     "axis": {

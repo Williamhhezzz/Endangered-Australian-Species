@@ -21,7 +21,7 @@
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 13,
+    "subtitleFontSize": 11.5,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -319,7 +319,7 @@
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 11.5,
       "subtitleColor": "#475569"
     },
     "axis": {
