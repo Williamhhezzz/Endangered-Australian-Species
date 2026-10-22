@@ -1,8 +1,8 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 400,
+  "width": 540,
+  "height": 420,
   "autosize": {
     "type": "pad",
     "contains": "padding"
@@ -17,11 +17,11 @@
     "subtitleLimit": 560,
     "limit": 560,
     "font": "Inter, sans-serif",
-    "fontSize": 18,
+    "fontSize": 13.5,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 13,
+    "subtitleFontSize": 11,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -37,9 +37,8 @@
     "type": "conicEqualArea",
     "rotate": [-134, 0, 0],
     "parallels": [-18, -36],
-    "center": [0, -27],
-    "translate": [250, 200],
-    "scale": 640
+    "center": [0, -25.0],
+    "scale": 670
   },
   "layer": [
     {
@@ -169,7 +168,7 @@
       "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon1": 133.0, "lat1": -18.0, "lon2": 124.5, "lat2": -11.8 },
+          { "lon1": 133.5, "lat1": -16.5, "lon2": 133.5, "lat2": -11.2 },
           { "lon1": 144.5, "lat1": -37.0, "lon2": 139.0, "lat2": -39.2 },
           { "lon1": 146.5, "lat1": -42.0, "lon2": 149.0, "lat2": -42.0 }
         ]
@@ -202,8 +201,8 @@
       "data": {
         "values": [
           {
-            "lon": 119.5,
-            "lat": -11.0,
+            "lon": 133.5,
+            "lat": -9.5,
             "text": [
               "Northern Territory (-61.8%):",
               "Cane toads & severe bushfires"
@@ -303,73 +302,6 @@
         },
         "text": {
           "field": "text"
-        }
-      }
-    },
-    {
-      "description": "Subtle state labels for unannotated mainland states (White text)",
-      "data": {
-        "values": [
-          { "state": "WA", "lon": 122.0, "lat": -25.5 },
-          { "state": "NT", "lon": 133.5, "lat": -20.5 },
-          { "state": "QLD", "lon": 144.0, "lat": -22.5 },
-          { "state": "SA", "lon": 135.5, "lat": -30.0 }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "fontSize": 9.5,
-        "fontWeight": "bold",
-        "fill": "#ffffff",
-        "opacity": 0.85,
-        "clip": false
-      },
-      "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "state",
-          "type": "nominal"
-        }
-      }
-    },
-    {
-      "description": "Subtle state label for NSW (Dark text for light tan polygon)",
-      "data": {
-        "values": [
-          { "state": "NSW", "lon": 146.0, "lat": -32.5 }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "fontSize": 9.5,
-        "fontWeight": "bold",
-        "fill": "#1e293b",
-        "opacity": 0.85,
-        "clip": false
-      },
-      "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "state",
-          "type": "nominal"
         }
       }
     }

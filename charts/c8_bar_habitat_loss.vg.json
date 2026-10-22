@@ -13,7 +13,7 @@
     "subtitleFont": "Inter, sans-serif",
     "subtitleFontSize": 13,
     "subtitleColor": "#475569",
-    "anchor": "middle",
+    "anchor": "start",
     "frame": "bounds",
     "offset": 12
   },

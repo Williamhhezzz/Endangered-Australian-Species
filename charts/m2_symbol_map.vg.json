@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 400,
+  "width": 540,
+  "height": 420,
   "autosize": {
     "type": "pad",
     "contains": "padding"
@@ -16,11 +16,11 @@
     "subtitleLimit": 560,
     "limit": 560,
     "font": "Inter, sans-serif",
-    "fontSize": 18,
+    "fontSize": 13.5,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 13,
+    "subtitleFontSize": 11,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -36,9 +36,8 @@
     "type": "conicEqualArea",
     "rotate": [-134, 0, 0],
     "parallels": [-18, -36],
-    "center": [0, -27],
-    "translate": [250, 200],
-    "scale": 640
+    "center": [0, -25.0],
+    "scale": 670
   },
   "layer": [
     {
@@ -137,7 +136,7 @@
       "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon1": 133.5, "lat1": -19.0, "lon2": 124.5, "lat2": -11.8 },
+          { "lon1": 133.5, "lat1": -16.5, "lon2": 133.5, "lat2": -11.2 },
           { "lon1": 147.2, "lat1": -33.0, "lon2": 151.0, "lat2": -33.0 }
         ]
       },
@@ -169,8 +168,8 @@
       "data": {
         "values": [
           {
-            "lon": 119.5,
-            "lat": -11.0,
+            "lon": 133.5,
+            "lat": -9.5,
             "text": [
               "Northern Territory: Only 29 species",
               "tracked despite -61.8% wildlife drop"

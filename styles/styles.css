@@ -357,8 +357,8 @@ body {
 .chart-caption {
   font-size: 16.5px;
   line-height: 1.6;
-  max-width: 46ch; /* strictly 7-9 words per line at 16.5px */
-  margin: 16px 0 0 0; /* flush-left with the chart title & section header sightline! */
+  max-width: 42ch; /* strictly 7-9 words per line at 16.5px */
+  margin: 16px auto 0 auto; /* centered horizontally beneath half-width chart! */
   text-align: left;
   color: #334155;
   padding-top: 0;
@@ -388,6 +388,13 @@ div[id^="vis-"] {
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
+}
+
+#vis-m3,
+#vis-m3 .vega-embed {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  justify-content: flex-start !important;
 }
 
 .vega-embed {

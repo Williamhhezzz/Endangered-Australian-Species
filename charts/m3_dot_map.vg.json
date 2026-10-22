@@ -15,9 +15,9 @@
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
-    "offset": 12
+    "offset": 8
   },
-  "padding": {"left": 25, "right": 15, "top": 10, "bottom": 10},
+  "padding": {"left": 0, "right": 10, "top": 5, "bottom": 5},
   "params": [
     {
       "name": "highlight_state",
