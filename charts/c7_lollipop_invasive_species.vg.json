@@ -38,13 +38,19 @@
     "y": {
       "field": "Invasive_Species",
       "type": "nominal",
-      "title": null,
+      "title": "Invasive Threat",
       "sort": "-x",
       "axis": {
+        "titleFontSize": 13,
+        "titleFontWeight": "bold",
+        "titleColor": "#334155",
         "labelFontSize": 12.5,
         "labelColor": "#0f172a",
-        "ticks": false,
-        "domain": false,
+        "ticks": true,
+        "tickColor": "#94a3b8",
+        "domain": true,
+        "domainColor": "#94a3b8",
+        "domainWidth": 1.5,
         "labelLimit": 260,
         "labelExpr": "datum.value === 'Phytophthora cinnamomi (Plant pathogen)' ? 'Root-rot mould (Phytophthora)' : datum.value"
       }

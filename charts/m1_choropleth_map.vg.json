@@ -171,7 +171,7 @@
       "description": "Leader lines to ocean annotations",
       "data": {
         "values": [
-          { "lon1": 133.5, "lat1": -16.5, "lon2": 133.5, "lat2": -11.2 },
+          { "lon1": 132.5, "lat1": -15.5, "lon2": 126.5, "lat2": -12.2 },
           { "lon1": 144.5, "lat1": -37.0, "lon2": 139.0, "lat2": -39.2 },
           { "lon1": 146.5, "lat1": -42.0, "lon2": 149.0, "lat2": -42.0 }
         ]
@@ -204,8 +204,8 @@
       "data": {
         "values": [
           {
-            "lon": 133.5,
-            "lat": -9.5,
+            "lon": 118.0,
+            "lat": -9.8,
             "text": [
               "Northern Territory (-61.8%):",
               "Cane toads & severe bushfires"
