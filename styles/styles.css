@@ -421,6 +421,11 @@ div[id^="vis-"] .vega-embed svg {
   box-sizing: border-box !important;
 }
 
+#vis-c8 .vega-embed svg {
+  width: auto !important;
+  max-width: 100% !important;
+}
+
 
 
 /* ============================================================
