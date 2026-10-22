@@ -117,14 +117,10 @@
           }
         },
         {
-          "description": "Numeric Labels on extreme species tips",
+          "description": "Numeric Label on top species tip",
           "transform": [
             {
-              "filter": "datum.Species === 'Red goshawk' || datum.Species === 'Southern black-throated finch'"
-            },
-            {
-              "calculate": "datum.Species === 'Red goshawk' ? '3.02M' : '0.70M'",
-              "as": "label_val"
+              "filter": "datum.Species === 'Red goshawk'"
             }
           ],
           "mark": {
@@ -133,19 +129,12 @@
             "baseline": "middle",
             "dx": -6,
             "fontSize": 10,
-            "fontWeight": "bold"
+            "fontWeight": "bold",
+            "fill": "#0f172a"
           },
           "encoding": {
-            "color": {
-              "condition": {
-                "test": "datum.Species === 'Red goshawk'",
-                "value": "#0f172a"
-              },
-              "value": "#475569"
-            },
             "text": {
-              "field": "label_val",
-              "type": "nominal"
+              "value": "3.02M"
             }
           }
         },
@@ -260,14 +249,10 @@
           }
         },
         {
-          "description": "Numeric Labels on extreme species tips",
+          "description": "Numeric Label on top species tip",
           "transform": [
             {
-              "filter": "datum.Species === 'Red goshawk' || datum.Species === 'Southern black-throated finch'"
-            },
-            {
-              "calculate": "datum.Species === 'Red goshawk' ? '2.4%' : '10.0%'",
-              "as": "label_val"
+              "filter": "datum.Species === 'Southern black-throated finch'"
             }
           ],
           "mark": {
@@ -276,19 +261,12 @@
             "baseline": "middle",
             "dx": 6,
             "fontSize": 10,
-            "fontWeight": "bold"
+            "fontWeight": "bold",
+            "fill": "#0f172a"
           },
           "encoding": {
-            "color": {
-              "condition": {
-                "test": "datum.Species === 'Southern black-throated finch'",
-                "value": "#0f172a"
-              },
-              "value": "#475569"
-            },
             "text": {
-              "field": "label_val",
-              "type": "nominal"
+              "value": "10.0%"
             }
           }
         },

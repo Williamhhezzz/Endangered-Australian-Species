@@ -515,7 +515,7 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 14.5,
+          "fontSize": 16.5,
           "fontWeight": 600,
           "fill": "#1e293b",
           "text": [
@@ -548,7 +548,7 @@
             ]
           },
           "x": {
-            "datum": 105
+            "datum": 115
           }
         }
       }

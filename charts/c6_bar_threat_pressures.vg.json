@@ -128,21 +128,21 @@
       "description": "Layer 3: Callout Annotation for Fire & Predator Trap",
       "transform": [
         {
-          "filter": "datum.Threat === 'Transportation and service corridors'"
+          "filter": "datum.Threat === 'Climate change and severe weather'"
         }
       ],
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dy": -12,
+        "dy": -6,
         "fontSize": 11,
         "fill": "#1e293b",
         "fontStyle": "normal"
       },
       "encoding": {
         "x": {
-          "datum": 36
+          "datum": 48
         },
         "y": {
           "field": "Threat",

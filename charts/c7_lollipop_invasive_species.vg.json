@@ -146,21 +146,21 @@
       "description": "Layer 4: Callout Annotation for Habitat Loss Outranks Predators",
       "transform": [
         {
-          "filter": "datum.Invasive_Species === 'Blackberry (Weed)'"
+          "filter": "datum.Invasive_Species === 'Lantana (Weed)'"
         }
       ],
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "dy": -12,
+        "dy": -6,
         "fontSize": 11,
         "fill": "#1e293b",
         "fontStyle": "normal"
       },
       "encoding": {
         "x": {
-          "datum": 110
+          "datum": 160
         },
         "y": {
           "field": "Invasive_Species",

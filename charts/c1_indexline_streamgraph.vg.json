@@ -408,66 +408,6 @@
               }
             ]
           }
-        },
-        {
-          "description": "Annotation 4: 2014-2016 Catch-up vertical rule",
-          "data": {
-            "values": [{ "year": 2015 }]
-          },
-          "transform": [
-            {
-              "filter": {
-                "param": "time_brush"
-              }
-            }
-          ],
-          "mark": {
-            "type": "rule",
-            "strokeDash": [3, 3],
-            "strokeWidth": 1.5,
-            "color": "#64748b"
-          },
-          "encoding": {
-            "x": {
-              "field": "year",
-              "type": "quantitative"
-            }
-          }
-        },
-        {
-          "description": "Annotation 4: 2014-2016 Administrative Catch-Up callout",
-          "data": {
-            "values": [{ "year": 2014.7, "yVal": 98 }]
-          },
-          "transform": [
-            {
-              "filter": {
-                "param": "time_brush"
-              }
-            }
-          ],
-          "mark": {
-            "type": "text",
-            "align": "right",
-            "baseline": "top",
-            "fontSize": 12,
-            "fontWeight": "bold",
-            "color": "#0f172a",
-            "text": [
-              "2014–2016: Overdue listing",
-              "backlog cleared"
-            ]
-          },
-          "encoding": {
-            "x": {
-              "field": "year",
-              "type": "quantitative"
-            },
-            "y": {
-              "field": "yVal",
-              "type": "quantitative"
-            }
-          }
         }
       ]
     }
