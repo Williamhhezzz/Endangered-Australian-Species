@@ -127,7 +127,7 @@
             "align": "right",
             "fontSize": 12.5,
             "fontWeight": "bold",
-            "color": "#991b1b",
+            "color": "#0f172a",
             "text": [
               "By 2020: -62.6% net drop",
               "despite 20 years of law"
@@ -270,7 +270,7 @@
             "type": "point",
             "filled": true,
             "size": 130,
-            "color": "#991b1b"
+            "color": "#0f172a"
           },
           "encoding": {
             "x": {
@@ -374,10 +374,10 @@
                   "Amphibians"
                 ],
                 "range": [
-                  "#2b5c8f",
-                  "#9fc280",
-                  "#4a8c6f",
-                  "#9e3d64"
+                  "#1e3a8a",
+                  "#a16207",
+                  "#0f766e",
+                  "#a21caf"
                 ]
               },
               "legend": {

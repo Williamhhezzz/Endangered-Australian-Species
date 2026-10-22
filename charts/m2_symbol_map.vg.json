@@ -65,7 +65,8 @@
       },
       "mark": {
         "type": "circle",
-        "color": "#1f6f78",
+        "color": "#475569",
+        "fillOpacity": 0.82,
         "stroke": "#ffffff",
         "strokeWidth": 1.5,
         "cursor": "pointer"

@@ -38,7 +38,7 @@
     "y": {
       "field": "Invasive_Species",
       "type": "nominal",
-      "title": "Invasive Threat",
+      "title": null,
       "sort": "-x",
       "axis": {
         "titleFontSize": 13,

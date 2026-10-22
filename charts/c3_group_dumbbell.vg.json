@@ -4,7 +4,7 @@
     "text": "Population Change Across Animal Sub-Groups (2000–2022)",
     "subtitle": [
       "Population level relative to 2000 baseline (100% = no change).",
-      "Rust Orange = decline (<100%); Turquoise = recovery (>100%)."
+      "Burnt Orange = decline (<100%); Sky Blue = recovery (>100%)."
     ],
     "font": "Inter, sans-serif",
     "fontSize": 22,
@@ -178,8 +178,8 @@
               ],
               "range": [
                 "#94a3b8",
-                "#d95f02",
-                "#1ae8c6"
+                "#ea580c",
+                "#0284c7"
               ]
             },
             "legend": {
@@ -264,8 +264,8 @@
               ],
               "range": [
                 "#94a3b8",
-                "#d95f02",
-                "#1ae8c6"
+                "#ea580c",
+                "#0284c7"
               ]
             },
             "legend": {
@@ -318,7 +318,7 @@
           "baseline": "middle",
           "fontSize": 15,
           "fontWeight": "bold",
-          "color": "#d95f02"
+          "color": "#ea580c"
         },
         "encoding": {
           "y": {
@@ -421,7 +421,7 @@
           "baseline": "middle",
           "fontSize": 15,
           "fontWeight": "bold",
-          "color": "#d95f02"
+          "color": "#ea580c"
         },
         "encoding": {
           "y": {
@@ -469,7 +469,7 @@
           "dx": 8,
           "fontSize": 15,
           "fontWeight": "bold",
-          "color": "#0f766e"
+          "color": "#0284c7"
         },
         "encoding": {
           "y": {

@@ -94,7 +94,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#2b5c8f"
+                  "value": "#1e3a8a"
                 },
                 "opacity": {
                   "condition": {
@@ -225,7 +225,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#9fc280"
+                  "value": "#a16207"
                 },
                 "opacity": {
                   "condition": {
@@ -361,7 +361,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#4a8c6f"
+                  "value": "#0f766e"
                 },
                 "opacity": {
                   "condition": {
@@ -492,7 +492,7 @@
                   "type": "quantitative"
                 },
                 "color": {
-                  "value": "#9e3d64"
+                  "value": "#a21caf"
                 },
                 "opacity": {
                   "condition": {

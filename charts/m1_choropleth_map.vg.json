@@ -96,8 +96,10 @@
             "type": "linear",
             "domain": [-65, -30],
             "range": [
-              "#7f1d1d",
-              "#fff7ed"
+              "#9a3412",
+              "#ea580c",
+              "#fdba74",
+              "#ffedd5"
             ]
           },
           "legend": {
