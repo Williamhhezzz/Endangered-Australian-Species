@@ -123,6 +123,34 @@
           "type": "nominal"
         }
       }
+    },
+    {
+      "description": "Insight Annotation: Overlapping threats",
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 10.5,
+        "fill": "#334155",
+        "x": 215,
+        "y": 175
+      },
+      "encoding": {
+        "x": {
+          "value": 215
+        },
+        "y": {
+          "value": 175
+        },
+        "text": {
+          "value": [
+            "Top 3 threats each exceed 50%,",
+            "showing species face overlapping pressures"
+          ]
+        }
+      }
     }
   ],
   "config": {

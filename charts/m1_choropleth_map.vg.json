@@ -91,7 +91,7 @@
         "color": {
           "field": "pct_change",
           "type": "quantitative",
-          "title": "% Change (2000–2022)",
+          "title": "Change Since 2000",
           "scale": {
             "type": "linear",
             "domain": [-65, -30],
@@ -208,7 +208,10 @@
           {
             "lon": 118.0,
             "lat": -9.8,
-            "text": "Northern Territory: -61.8%"
+            "text": [
+              "Northern Territory (-61.8%):",
+              "Cane toads & severe wildfires"
+            ]
           }
         ]
       },
@@ -241,7 +244,10 @@
           {
             "lon": 138.5,
             "lat": -39.5,
-            "text": "Victoria: -62.3% (steepest drop)"
+            "text": [
+              "Victoria (-62.3%): Intensive",
+              "historic farmland clearing"
+            ]
           }
         ]
       },
@@ -274,7 +280,10 @@
           {
             "lon": 149.3,
             "lat": -42.0,
-            "text": "Tasmania: -32.5% (smallest drop)"
+            "text": [
+              "Tasmania (-32.5%): Bass Strait",
+              "sea barrier blocked red foxes"
+            ]
           }
         ]
       },

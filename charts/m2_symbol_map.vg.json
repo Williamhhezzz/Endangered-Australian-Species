@@ -174,7 +174,10 @@
           {
             "lon": 118.0,
             "lat": -9.8,
-            "text": "Northern Territory: 29 species tracked"
+            "text": [
+              "Northern Territory (29 species):",
+              "Thin tracking despite -61.8% drop"
+            ]
           }
         ]
       },
@@ -207,7 +210,10 @@
           {
             "lon": 151.5,
             "lat": -33.0,
-            "text": "New South Wales: 62 species tracked"
+            "text": [
+              "New South Wales (62 species):",
+              "Dense surveys near major cities"
+            ]
           }
         ]
       },
