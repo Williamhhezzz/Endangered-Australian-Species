@@ -174,10 +174,7 @@
           {
             "lon": 118.0,
             "lat": -9.8,
-            "text": [
-              "Northern Territory: Only 29 species",
-              "tracked despite -61.8% wildlife drop"
-            ]
+            "text": "Northern Territory: 29 species tracked"
           }
         ]
       },
@@ -210,10 +207,7 @@
           {
             "lon": 151.5,
             "lat": -33.0,
-            "text": [
-              "New South Wales: 62 species",
-              "tracked near major cities"
-            ]
+            "text": "New South Wales: 62 species tracked"
           }
         ]
       },

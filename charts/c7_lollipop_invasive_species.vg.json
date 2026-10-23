@@ -141,40 +141,6 @@
           "type": "quantitative"
         }
       }
-    },
-    {
-      "description": "Layer 4: Callout Annotation for Habitat Loss Outranks Predators",
-      "transform": [
-        {
-          "filter": "datum.Invasive_Species === 'Lantana (Weed)'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dy": -6,
-        "fontSize": 11,
-        "fill": "#1e293b",
-        "fontStyle": "normal"
-      },
-      "encoding": {
-        "x": {
-          "datum": 160
-        },
-        "y": {
-          "field": "Invasive_Species",
-          "type": "nominal"
-        },
-        "text": {
-          "value": [
-            "Beyond Feral Predators:",
-            "3 of the top 10 invaders are",
-            "introduced weeds & root mould",
-            "that destroy native habitat."
-          ]
-        }
-      }
     }
   ],
   "config": {

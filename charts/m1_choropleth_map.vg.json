@@ -208,10 +208,7 @@
           {
             "lon": 118.0,
             "lat": -9.8,
-            "text": [
-              "Northern Territory (-61.8%):",
-              "Cane toads & severe bushfires"
-            ]
+            "text": "Northern Territory: -61.8%"
           }
         ]
       },
@@ -244,10 +241,7 @@
           {
             "lon": 138.5,
             "lat": -39.5,
-            "text": [
-              "Victoria (-62.3%): Steepest loss",
-              "from historic farmland clearing"
-            ]
+            "text": "Victoria: -62.3% (steepest drop)"
           }
         ]
       },
@@ -280,10 +274,7 @@
           {
             "lon": 149.3,
             "lat": -42.0,
-            "text": [
-              "Tasmania (-32.5%): Lowest loss",
-              "as Bass Strait blocked red foxes"
-            ]
+            "text": "Tasmania: -32.5% (smallest drop)"
           }
         ]
       },

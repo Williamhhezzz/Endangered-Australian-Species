@@ -240,8 +240,8 @@
         "fontWeight": "bold",
         "fill": "#0284c7",
         "text": [
-          "Removing feral cats and foxes",
-          "proves extinction is reversible."
+          "Predator-Free Havens:",
+          "8.3x baseline by 2017 (vs. 0.4x unmanaged)"
         ]
       },
       "encoding": {
@@ -249,7 +249,7 @@
           "datum": 2000.5
         },
         "y": {
-          "datum": 7.6
+          "datum": 7.8
         }
       }
     }

@@ -123,41 +123,6 @@
           "type": "nominal"
         }
       }
-    },
-    {
-      "description": "Layer 3: Callout Annotation for Fire & Predator Trap",
-      "transform": [
-        {
-          "filter": "datum.Threat === 'Climate change and severe weather'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dy": -6,
-        "fontSize": 11,
-        "fill": "#1e293b",
-        "fontStyle": "normal"
-      },
-      "encoding": {
-        "x": {
-          "datum": 48
-        },
-        "y": {
-          "field": "Threat",
-          "type": "nominal"
-        },
-        "text": {
-          "value": [
-            "Compounding Pressures:",
-            "The top 3 threats each impact",
-            "over 50% of listed species,",
-            "meaning most face multiple",
-            "overlapping threats at once."
-          ]
-        }
-      }
     }
   ],
   "config": {

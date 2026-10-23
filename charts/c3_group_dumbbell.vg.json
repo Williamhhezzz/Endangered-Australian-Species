@@ -304,10 +304,10 @@
         }
       },
       {
-        "description": "Percentage Change Text Label for Mid-sized mammals (Left of Dot in whitespace)",
+        "description": "Percentage Change Text Label for Left-of-Dot Extremes (Freshwater reptiles, Migratory shorebirds, Mid-sized mammals)",
         "transform": [
           {
-            "filter": "datum.current_2022 < 100 && indexof(datum.subgroup, 'Mid-sized mammals') >= 0"
+            "filter": "datum.subgroup === 'Freshwater reptiles' || datum.subgroup === 'Migratory shorebirds' || indexof(datum.subgroup, 'Mid-sized mammals') >= 0"
           }
         ],
         "mark": {
@@ -501,54 +501,6 @@
           "text": {
             "field": "change_pct",
             "type": "nominal"
-          }
-        }
-      },
-      {
-        "description": "Multi-line Insight 1: Chytrid-free frogs",
-        "transform": [
-          {
-            "filter": "datum.subgroup === 'Frogs not hit by chytrid fungus'"
-          }
-        ],
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "fontSize": 16.5,
-          "fontWeight": 600,
-          "fill": "#1e293b",
-          "text": [
-            "Even chytrid-free frogs fell 72.8%,",
-            "showing wetland drying and heat",
-            "compound fungal disease."
-          ]
-        },
-        "encoding": {
-          "y": {
-            "field": "subgroup",
-            "type": "nominal",
-            "sort": [
-              "Land-breeding frogs",
-              "Frogs not hit by chytrid fungus",
-              "Wetland-breeding frogs",
-              "Frogs hit by fungal disease",
-              "Stream-dwelling frogs",
-              "Freshwater reptiles",
-              "Terrestrial reptiles",
-              "Marine reptiles",
-              "Migratory shorebirds",
-              "Terrestrial birds",
-              "Marine birds & seabirds",
-              "Mid-sized mammals (35g–5.5kg)",
-              "Terrestrial mammals (all)",
-              "Small land mammals",
-              "Large land mammals",
-              "Marine mammals"
-            ]
-          },
-          "x": {
-            "datum": 115
           }
         }
       }
