@@ -132,7 +132,7 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "fontSize": 13.5,
+        "fontSize": 11.5,
         "fontWeight": "bold",
         "fill": "#334155",
         "x": 215,
