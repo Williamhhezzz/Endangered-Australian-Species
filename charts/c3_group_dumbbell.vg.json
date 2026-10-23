@@ -515,7 +515,8 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 10.5,
+          "fontSize": 13.5,
+          "fontWeight": "bold",
           "fill": "#334155",
           "text": [
             "Even fungus-free frogs fell 72.8%,",
@@ -546,7 +547,7 @@
             ]
           },
           "x": {
-            "datum": 104
+            "datum": 108
           }
         }
       },
@@ -561,7 +562,8 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 10.5,
+          "fontSize": 13.5,
+          "fontWeight": "bold",
           "fill": "#334155",
           "text": [
             "Shorebirds (-56.4%) lose overseas",
@@ -592,7 +594,7 @@
             ]
           },
           "x": {
-            "datum": 104
+            "datum": 108
           }
         }
       }

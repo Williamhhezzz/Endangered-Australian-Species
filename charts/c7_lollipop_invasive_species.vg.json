@@ -150,14 +150,15 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "fontSize": 10.5,
+        "fontSize": 13.5,
+        "fontWeight": "bold",
         "fill": "#334155",
-        "x": 165,
+        "x": 215,
         "y": 175
       },
       "encoding": {
         "x": {
-          "value": 165
+          "value": 215
         },
         "y": {
           "value": 175
