@@ -4,16 +4,11 @@
   "width": "container",
   "height": 330,
   "title": {
-    "text": "Threatened Wildlife Listed Across Australian States",
-    "subtitle": "Legally listed threatened species by state and animal group.",
+    "text": "Threatened Wildlife Legally Listed Across Australian States",
     "font": "Inter, sans-serif",
     "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
-    "subtitleColor": "#475569",
-    "subtitlePadding": 6,
     "offset": 13,
     "anchor": "start",
     "frame": "bounds"
@@ -161,10 +156,7 @@
       "font": "Inter, sans-serif",
       "fontSize": 20.5,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "grid": false,

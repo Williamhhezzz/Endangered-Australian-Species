@@ -4,17 +4,10 @@
   "height": 310,
   "title": {
     "text": "Threatened Mammal Recovery by Management (2000–2017)",
-    "subtitle": [
-      "Population index (Year 2000 = 1.0) comparing",
-      "fenced sanctuaries, general management, and wild sites."
-    ],
     "font": "Inter, sans-serif",
     "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
-    "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
     "offset": 12
@@ -22,6 +15,12 @@
   "data": {
     "url": "data/c9_mammal_management.csv"
   },
+  "transform": [
+    {
+      "calculate": "format(datum.Index * 100, '.1f') + '%'",
+      "as": "pop_level_pct"
+    }
+  ],
   "layer": [
     {
       "description": "Baseline Reference Line at Index = 1.0",
@@ -39,6 +38,16 @@
     },
     {
       "description": "Trend Lines",
+      "params": [
+        {
+          "name": "mgmt_select",
+          "select": {
+            "type": "point",
+            "fields": ["Management"]
+          },
+          "bind": "legend"
+        }
+      ],
       "mark": {
         "type": "line",
         "strokeWidth": 3.5,
@@ -98,6 +107,13 @@
             "labelLimit": 200,
             "symbolSize": 120
           }
+        },
+        "opacity": {
+          "condition": {
+            "param": "mgmt_select",
+            "value": 1
+          },
+          "value": 0.15
         }
       }
     },
@@ -141,6 +157,13 @@
             ]
           }
         },
+        "opacity": {
+          "condition": {
+            "param": "mgmt_select",
+            "value": 1
+          },
+          "value": 0.15
+        },
         "tooltip": [
           {
             "field": "Management",
@@ -155,8 +178,13 @@
           {
             "field": "Index",
             "type": "quantitative",
-            "title": "Index Value",
+            "title": "Population Index (2000 = 1.0)",
             "format": ".2f"
+          },
+          {
+            "field": "pop_level_pct",
+            "type": "nominal",
+            "title": "Population Level (% of 2000)"
           }
         ]
       }
@@ -241,8 +269,8 @@
         "fill": "#0284c7",
         "text": [
           "Predator-Free Havens (+729%):",
-          "Fenced reserves & islands prove",
-          "complete cat and fox removal works"
+          "Complete cat & fox removal",
+          "sparks rapid recovery"
         ]
       },
       "encoding": {
@@ -261,10 +289,7 @@
       "font": "Inter, sans-serif",
       "fontSize": 20.5,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",

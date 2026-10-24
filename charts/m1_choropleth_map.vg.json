@@ -10,10 +10,7 @@
   "padding": {"top": 15},
   "title": {
     "text": "State-Level Wildlife Population Decline (2000–2022)",
-    "subtitle": [
-      "Average percentage change in monitored wildlife since 2000",
-      "(New South Wales & Australian Capital Territory combined)."
-    ],
+    "subtitle": "(New South Wales & Australian Capital Territory combined)",
     "subtitleLimit": 580,
     "limit": 580,
     "font": "Inter, sans-serif",
@@ -91,7 +88,7 @@
         "color": {
           "field": "pct_change",
           "type": "quantitative",
-          "title": "Change Since 2000",
+          "title": "Change Since 2000 (%)",
           "scale": {
             "type": "linear",
             "domain": [-65, -30],
@@ -210,7 +207,8 @@
             "lat": -9.8,
             "text": [
               "Northern Territory (-61.8%):",
-              "Cane toads & severe wildfires"
+              "Poisonous cane toads & wildfires",
+              "kill native wildlife"
             ]
           }
         ]

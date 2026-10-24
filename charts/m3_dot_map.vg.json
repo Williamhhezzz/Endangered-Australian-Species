@@ -1,18 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Field Survey Geography Across Animal Groups",
-    "subtitle": [
-      "Each point represents an active ecological",
-      "monitoring site recorded across Australia."
-    ],
+    "text": "Active Wildlife Monitoring Sites Across Animal Groups",
     "font": "Inter, sans-serif",
     "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
-    "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
     "offset": 8
@@ -567,10 +560,7 @@
       "font": "Inter, sans-serif",
       "fontSize": 20.5,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",

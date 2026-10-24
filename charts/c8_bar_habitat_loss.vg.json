@@ -1,18 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Land Clearing: Total Area Lost vs. Habitat Share Destroyed",
-    "subtitle": [
-      "Comparing total habitat cleared (Million Hectares, left)",
-      "against share of potential habitat destroyed (%, right)."
-    ],
+    "text": "Land Clearing: Total Habitat Area Lost vs. Proportion of Habitat Destroyed",
     "font": "Inter, sans-serif",
-    "fontSize": 16,
+    "fontSize": 15,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 11.5,
-    "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
     "offset": 12
@@ -30,14 +23,7 @@
   "spacing": 20,
   "hconcat": [
     {
-      "title": {
-        "text": "Absolute Area Cleared (Million Hectares)",
-        "font": "Inter, sans-serif",
-        "fontSize": 12,
-        "fontWeight": "600",
-        "color": "#1e293b",
-        "anchor": "middle"
-      },
+      "title": null,
       "width": 320,
       "height": 340,
       "encoding": {
@@ -58,7 +44,7 @@
             "Southern black-throated finch"
           ],
           "axis": {
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "labelFontWeight": "normal",
             "labelColor": "#0f172a",
             "labelLimit": 260,
@@ -68,7 +54,7 @@
         "x": {
           "field": "Area_Lost_Millions",
           "type": "quantitative",
-          "title": "Area Lost (Million Ha)",
+          "title": "Area Lost (Million Hectares)",
           "scale": {
             "reverse": true,
             "domain": [0, 4.0]
@@ -76,8 +62,8 @@
           "axis": {
             "format": ".1f",
             "grid": true,
-            "titleFontSize": 11,
-            "labelFontSize": 10
+            "titleFontSize": 12,
+            "labelFontSize": 12
           }
         }
       },
@@ -179,14 +165,7 @@
       ]
     },
     {
-      "title": {
-        "text": "Proportional Range Destroyed (%)",
-        "font": "Inter, sans-serif",
-        "fontSize": 12,
-        "fontWeight": "600",
-        "color": "#1e293b",
-        "anchor": "middle"
-      },
+      "title": null,
       "width": 320,
       "height": 340,
       "encoding": {
@@ -219,8 +198,8 @@
             "format": ".1f",
             "values": [0, 2, 4, 6, 8, 10, 12, 14],
             "grid": true,
-            "titleFontSize": 11,
-            "labelFontSize": 10
+            "titleFontSize": 12,
+            "labelFontSize": 12
           }
         }
       },
@@ -275,7 +254,7 @@
             "align": "left",
             "baseline": "middle",
             "dx": 6,
-            "fontSize": 10,
+            "fontSize": 11.5,
             "fontWeight": "bold"
           },
           "encoding": {
@@ -293,28 +272,27 @@
           }
         },
         {
-          "description": "Annotation for Finch habitat destruction context",
+          "description": "Annotation for small-range species vulnerability",
           "data": {
             "values": [{}]
           },
           "mark": {
             "type": "text",
             "align": "left",
-            "fontSize": 9.5,
+            "fontSize": 11.5,
             "fill": "#334155"
           },
           "encoding": {
             "x": {
-              "datum": 6.2
+              "datum": 5.2
             },
             "y": {
-              "datum": "Ghost bat"
+              "datum": "Malleefowl"
             },
             "text": {
               "value": [
-                "Grazing & coal mining cleared",
-                "10.0% of the Finch's entire",
-                "potential habitat in Queensland."
+                "Small-range species lose a critical",
+                "habitat share from smaller clearings"
               ]
             }
           }
@@ -326,20 +304,17 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 16,
+      "fontSize": 15,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 11.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 11,
+      "titleFontSize": 12,
       "titleFontWeight": "bold",
       "titleColor": "#334155",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 10,
+      "labelFontSize": 12,
       "labelColor": "#475569"
     },
     "legend": {

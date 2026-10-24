@@ -4,17 +4,10 @@
   "height": 330,
   "title": {
     "text": "Top Threat Pressures Affecting Listed Species",
-    "subtitle": [
-      "Percentage of listed threatened species impacted",
-      "by each major threat (multiple threats possible)."
-    ],
     "font": "Inter, sans-serif",
     "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
-    "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
     "offset": 12
@@ -147,8 +140,8 @@
         },
         "text": {
           "value": [
-            "Species face",
-            "overlapping pressures"
+            "Top 3 threats each exceed 50%;",
+            "most species face overlapping threats"
           ]
         }
       }
@@ -160,10 +153,7 @@
       "font": "Inter, sans-serif",
       "fontSize": 20.5,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",

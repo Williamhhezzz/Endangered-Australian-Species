@@ -1,18 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "The Deadliest Invaders",
-    "subtitle": [
-      "Number of listed species (animals and plants)",
-      "harmed by Australia's top 10 invasive threats."
-    ],
+    "text": "Top 10 Invasive Species by Threatened Species Harmed",
     "font": "Inter, sans-serif",
     "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
-    "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
     "offset": 12
@@ -178,10 +171,7 @@
       "font": "Inter, sans-serif",
       "fontSize": 20.5,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",

@@ -187,6 +187,12 @@
         },
         {
           "description": "Interactive Points & Tooltips",
+          "transform": [
+            {
+              "calculate": "format(datum.value * 100, '.1f') + '%'",
+              "as": "pop_pct"
+            }
+          ],
           "mark": {
             "type": "point",
             "filled": true,
@@ -217,6 +223,11 @@
                 "type": "quantitative",
                 "title": "Index Value",
                 "format": ".3f"
+              },
+              {
+                "field": "pop_pct",
+                "type": "nominal",
+                "title": "Population Level (% of 2000)"
               }
             ]
           }
@@ -395,6 +406,50 @@
                 "format": "d"
               }
             ]
+          }
+        },
+        {
+          "description": "Government Review Reference Line (2015)",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "rule",
+            "strokeDash": [4, 4],
+            "color": "#94a3b8",
+            "strokeWidth": 1.5
+          },
+          "encoding": {
+            "x": {
+              "datum": 2015
+            }
+          }
+        },
+        {
+          "description": "Government Review Annotation",
+          "data": {
+            "values": [{}]
+          },
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "fontSize": 10.5,
+            "fontWeight": "bold",
+            "fill": "#0f172a"
+          },
+          "encoding": {
+            "x": {
+              "datum": 2014.6
+            },
+            "y": {
+              "datum": 88
+            },
+            "text": {
+              "value": [
+                "2014–2016: Government review",
+                "adds overdue bird listings"
+              ]
+            }
           }
         }
       ]

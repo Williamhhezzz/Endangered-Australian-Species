@@ -4,15 +4,10 @@
   "height": 330,
   "title": {
     "text": "Extinction Risk Severity Across Animal Groups",
-    "subtitle": "Proportion of listed species in each legal risk tier.",
     "font": "Inter, sans-serif",
     "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
-    "subtitleColor": "#475569",
-    "subtitlePadding": 6,
     "offset": 14,
     "anchor": "start",
     "frame": "bounds"
@@ -196,10 +191,7 @@
       "font": "Inter, sans-serif",
       "fontSize": 20.5,
       "fontWeight": "bold",
-      "color": "#0f172a",
-      "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
-      "subtitleColor": "#475569"
+      "color": "#0f172a"
     },
     "axis": {
       "titleFont": "Inter, sans-serif",
