@@ -7,11 +7,11 @@
       "Burnt Orange = decline (<100%); Sky Blue = recovery (>100%)."
     ],
     "font": "Inter, sans-serif",
-    "fontSize": 21,
+    "fontSize": 24,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 14.5,
+    "subtitleFontSize": 16,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -515,7 +515,7 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 13.5,
+          "fontSize": 15.5,
           "fontWeight": "bold",
           "fill": "#334155",
           "text": [
@@ -562,7 +562,7 @@
           "type": "text",
           "align": "left",
           "baseline": "middle",
-          "fontSize": 13.5,
+          "fontSize": 15.5,
           "fontWeight": "bold",
           "fill": "#334155",
           "text": [
@@ -609,11 +609,11 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 21,
+      "fontSize": 24,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 14.5,
+      "subtitleFontSize": 16,
       "subtitleColor": "#475569"
     },
     "axis": {
