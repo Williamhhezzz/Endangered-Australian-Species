@@ -7,11 +7,11 @@
       "the 1985 population level remaining in 2022)."
     ],
     "font": "Inter, sans-serif",
-    "fontSize": 16,
+    "fontSize": 20.5,
     "fontWeight": "bold",
     "color": "#0f172a",
     "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 11.5,
+    "subtitleFontSize": 14.5,
     "subtitleColor": "#475569",
     "anchor": "start",
     "frame": "bounds",
@@ -131,11 +131,11 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 16,
+      "fontSize": 20.5,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 11.5,
+      "subtitleFontSize": 14.5,
       "subtitleColor": "#475569"
     },
     "axis": {
