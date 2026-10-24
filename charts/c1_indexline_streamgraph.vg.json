@@ -4,22 +4,6 @@
     "type": "pad",
     "contains": "padding"
   },
-  "title": {
-    "text": "Wild Population Collapse vs. New Species Added to National Law (2000–2020)",
-    "subtitle": [
-      "Comparing wild population levels (Year 2000 = 1.0 baseline)",
-      "against new species added to national protection law."
-    ],
-    "font": "Inter, sans-serif",
-    "fontSize": 18,
-    "fontWeight": "bold",
-    "color": "#0f172a",
-    "subtitleFont": "Inter, sans-serif",
-    "subtitleFontSize": 13,
-    "subtitleColor": "#475569",
-    "anchor": "start",
-    "frame": "bounds"
-  },
   "data": {
     "url": "data/c1_indexline_streamgraph.csv",
     "format": {
@@ -37,7 +21,7 @@
   "vconcat": [
     {
       "title": {
-        "text": "A. Average Wildlife Population Level (Year 2000 = 1.0 Baseline)",
+        "text": "Average Wildlife Population Level (Year 2000 = 1.0 Baseline)",
         "font": "Inter, sans-serif",
         "fontSize": 15,
         "fontWeight": "bold",
@@ -287,7 +271,7 @@
     },
     {
       "title": {
-        "text": "B. New Species Added to National Law Since 2000",
+        "text": "New Species Added to National Law Since 2000",
         "subtitle": "Tracking 94 newly listed species added after 2000 (on top of 335 already protected in 2000).",
         "font": "Inter, sans-serif",
         "fontSize": 15,
