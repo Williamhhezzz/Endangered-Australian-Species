@@ -281,9 +281,9 @@ body {
 .insight-block--panel-a {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1 1 0%;
-  padding-top: 55px;
+  padding-top: 0;
 }
 
 .insight-block--panel-b {
