@@ -23,7 +23,7 @@
       "title": {
         "text": "Average Wildlife Population Level (Year 2000 = 1.0 Baseline)",
         "font": "Inter, sans-serif",
-        "fontSize": 15,
+        "fontSize": 16,
         "fontWeight": "bold",
         "color": "#1e293b",
         "anchor": "start",
@@ -274,11 +274,11 @@
         "text": "New Species Added to National Law Since 2000",
         "subtitle": "Tracking 94 newly listed species added after 2000 (on top of 335 already protected in 2000).",
         "font": "Inter, sans-serif",
-        "fontSize": 15,
+        "fontSize": 16,
         "fontWeight": "bold",
         "color": "#1e293b",
         "subtitleFont": "Inter, sans-serif",
-        "subtitleFontSize": 12,
+        "subtitleFontSize": 11.5,
         "subtitleColor": "#475569",
         "anchor": "start",
         "frame": "bounds"
@@ -404,11 +404,11 @@
     "font": "Inter, sans-serif",
     "title": {
       "font": "Inter, sans-serif",
-      "fontSize": 18,
+      "fontSize": 16,
       "fontWeight": "bold",
       "color": "#0f172a",
       "subtitleFont": "Inter, sans-serif",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 11.5,
       "subtitleColor": "#475569"
     },
     "axis": {
