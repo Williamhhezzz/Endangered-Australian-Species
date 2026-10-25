@@ -267,10 +267,7 @@
         "fontSize": 11.5,
         "fontWeight": "bold",
         "fill": "#0284c7",
-        "text": [
-          "Fenced Havens:",
-          "Complete cat & fox removal"
-        ]
+        "text": "Havens are usually created by fencing"
       },
       "encoding": {
         "x": {
