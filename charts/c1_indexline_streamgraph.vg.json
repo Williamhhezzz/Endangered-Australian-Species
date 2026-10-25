@@ -336,8 +336,7 @@
               "type": "quantitative",
               "scale": {
                 "zero": false,
-                "nice": false,
-                "domain": [2000, 2020]
+                "nice": false
               },
               "axis": {
                 "format": "d",
@@ -422,7 +421,7 @@
           ],
           "mark": {
             "type": "bar",
-            "width": 40,
+            "width": 50,
             "opacity": 0.001,
             "clip": false,
             "cursor": "pointer"
@@ -433,8 +432,7 @@
               "type": "quantitative",
               "scale": {
                 "zero": false,
-                "nice": false,
-                "domain": [2000, 2020]
+                "nice": false
               }
             },
             "y": {
@@ -445,7 +443,7 @@
                 "domain": [0, 118]
               }
             },
-            "color": {
+            "detail": {
               "field": "FaunaClass",
               "type": "nominal"
             },
