@@ -179,10 +179,10 @@
               "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
-              "labelFontSize": 15,
-              "titleFontSize": 16,
-              "symbolSize": 180,
-              "offset": 14
+              "labelFontSize": 17,
+              "titleFontSize": 18,
+              "symbolSize": 260,
+              "offset": 16
             }
           },
           "tooltip": [
@@ -265,10 +265,10 @@
               "title": "Trend Status",
               "orient": "bottom",
               "direction": "horizontal",
-              "labelFontSize": 15,
-              "titleFontSize": 16,
-              "symbolSize": 180,
-              "offset": 14
+              "labelFontSize": 17,
+              "titleFontSize": 18,
+              "symbolSize": 260,
+              "offset": 16
             }
           },
           "tooltip": [
@@ -306,9 +306,9 @@
         "mark": {
           "type": "text",
           "align": "left",
-          "dx": 8,
-          "dy": 0,
-          "baseline": "middle",
+          "dx": 2,
+          "dy": -9,
+          "baseline": "bottom",
           "fontSize": 15,
           "fontWeight": "bold",
           "stroke": "#ffffff",
@@ -359,9 +359,9 @@
         "mark": {
           "type": "text",
           "align": "left",
-          "dx": 8,
-          "dy": 0,
-          "baseline": "middle",
+          "dx": 2,
+          "dy": -9,
+          "baseline": "bottom",
           "fontSize": 15,
           "fontWeight": "bold",
           "color": "#ea580c"
@@ -473,11 +473,11 @@
     },
     "legend": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 16,
+      "titleFontSize": 18,
       "titleFontWeight": "bold",
       "titleColor": "#1e293b",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 15,
+      "labelFontSize": 17,
       "labelColor": "#334155"
     },
     "header": {

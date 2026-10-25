@@ -96,9 +96,9 @@
         "legend": {
           "orient": "bottom",
           "title": null,
-          "labelFontSize": 13,
-          "symbolSize": 150,
-          "offset": 12
+          "labelFontSize": 16,
+          "symbolSize": 250,
+          "offset": 16
         }
       },
       "opacity": {
@@ -149,11 +149,11 @@
     },
     "legend": {
       "titleFont": "Inter, sans-serif",
-      "titleFontSize": 12,
+      "titleFontSize": 16,
       "titleFontWeight": "bold",
       "titleColor": "#1e293b",
       "labelFont": "Inter, sans-serif",
-      "labelFontSize": 11,
+      "labelFontSize": 16,
       "labelColor": "#334155"
     },
     "header": {
