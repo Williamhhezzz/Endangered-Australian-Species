@@ -178,7 +178,7 @@
           {
             "field": "Index",
             "type": "quantitative",
-            "title": "Population Index (Year 2000 = 1.0)",
+            "title": "Population Index",
             "format": ".2f"
           },
           {
@@ -268,7 +268,7 @@
         "fontWeight": "bold",
         "fill": "#0284c7",
         "text": [
-          "Fenced Havens (+729%):",
+          "Fenced Havens:",
           "Complete cat & fox removal"
         ]
       },

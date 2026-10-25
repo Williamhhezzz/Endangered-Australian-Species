@@ -226,7 +226,7 @@
               {
                 "field": "value",
                 "type": "quantitative",
-                "title": "Population Index (Year 2000 = 1.0)",
+                "title": "Population Index",
                 "format": ".3f"
               },
               {

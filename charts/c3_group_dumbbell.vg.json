@@ -297,56 +297,6 @@
         }
       },
       {
-        "description": "Percentage Change Text Label for Mid-sized mammals (Left of Dot in whitespace)",
-        "transform": [
-          {
-            "filter": "indexof(datum.subgroup, 'Mid-sized mammals') >= 0"
-          }
-        ],
-        "mark": {
-          "type": "text",
-          "align": "right",
-          "dx": -8,
-          "dy": 0,
-          "baseline": "middle",
-          "fontSize": 15,
-          "fontWeight": "bold",
-          "color": "#ea580c"
-        },
-        "encoding": {
-          "y": {
-            "field": "subgroup",
-            "type": "nominal",
-            "sort": [
-              "Land-breeding frogs",
-              "Frogs not hit by chytrid fungus",
-              "Wetland-breeding frogs",
-              "Frogs hit by fungal disease",
-              "Stream-dwelling frogs",
-              "Freshwater reptiles",
-              "Terrestrial reptiles",
-              "Marine reptiles",
-              "Migratory shorebirds",
-              "Terrestrial birds",
-              "Marine birds & seabirds",
-              "Mid-sized mammals (35g–5.5kg)",
-              "Terrestrial mammals (all)",
-              "Small land mammals",
-              "Large land mammals",
-              "Marine mammals"
-            ]
-          },
-          "x": {
-            "field": "current_2022",
-            "type": "quantitative"
-          },
-          "text": {
-            "field": "change_pct",
-            "type": "nominal"
-          }
-        }
-      },
-      {
         "description": "White halo under Land-breeding frogs label to mask grey connector line",
         "transform": [
           {
