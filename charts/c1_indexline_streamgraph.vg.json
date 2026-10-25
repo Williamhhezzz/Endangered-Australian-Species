@@ -393,29 +393,11 @@
                 "labelFontSize": 12,
                 "symbolSize": 150
               }
-            },
-            "tooltip": [
-              {
-                "field": "year",
-                "type": "quantitative",
-                "title": "Year"
-              },
-              {
-                "field": "FaunaClass",
-                "type": "nominal",
-                "title": "Animal Group"
-              },
-              {
-                "field": "ListingsCount",
-                "type": "quantitative",
-                "title": "Listings Count",
-                "format": "d"
-              }
-            ]
+            }
           }
         },
         {
-          "description": "Hover Points for Streamgraph",
+          "description": "Hover Stacked Bars for Streamgraph",
           "transform": [
             {
               "filter": "datum.year <= 2020"
@@ -439,9 +421,11 @@
             }
           ],
           "mark": {
-            "type": "point",
-            "size": 80,
-            "opacity": 0
+            "type": "bar",
+            "width": 40,
+            "opacity": 0.001,
+            "clip": false,
+            "cursor": "pointer"
           },
           "encoding": {
             "x": {

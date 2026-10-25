@@ -139,7 +139,9 @@ body {
   font-style: italic;
   font-weight: 500;
   display: block;
-  max-width: 34ch;
+  max-width: 100%;
+  width: fit-content;
+  line-height: 1.5;
 }
 
 
@@ -256,9 +258,9 @@ body {
 }
 
 .chart-caption--side {
-  flex: 0 0 380px;
-  width: 380px;
-  max-width: 40ch;
+  flex: 0 0 390px;
+  width: 390px;
+  max-width: 100%;
   font-size: 16.5px;
   color: #334155;
   padding-left: 0.75rem;
@@ -296,12 +298,13 @@ body {
 
 .insight-block .interaction-hint {
   margin: 0 0 8px 0;
-  line-height: 1.45;
+  line-height: 1.5;
   color: #1e40af;
   font-size: 13.5px;
   font-style: italic;
   font-weight: 500;
-  max-width: 34ch;
+  max-width: 100%;
+  width: fit-content;
 }
 
 .chart-caption--side p {
