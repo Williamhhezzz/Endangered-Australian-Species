@@ -182,7 +182,8 @@
               "labelFontSize": 17,
               "titleFontSize": 18,
               "symbolSize": 260,
-              "offset": 16
+              "offset": 16,
+              "labelLimit": 350
             }
           },
           "tooltip": [
@@ -268,7 +269,8 @@
               "labelFontSize": 17,
               "titleFontSize": 18,
               "symbolSize": 260,
-              "offset": 16
+              "offset": 16,
+              "labelLimit": 350
             }
           },
           "tooltip": [
@@ -478,7 +480,8 @@
       "titleColor": "#1e293b",
       "labelFont": "Inter, sans-serif",
       "labelFontSize": 17,
-      "labelColor": "#334155"
+      "labelColor": "#334155",
+      "labelLimit": 350
     },
     "header": {
       "title": null,
