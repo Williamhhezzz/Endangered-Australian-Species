@@ -123,7 +123,7 @@
           {
             "field": "TaxonomicGroup",
             "type": "nominal",
-            "title": "Fauna Group"
+            "title": "Animal Group"
           },
           {
             "field": "ActionStatus",

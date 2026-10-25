@@ -189,7 +189,7 @@
             {
               "field": "class",
               "type": "nominal",
-              "title": "Class"
+              "title": "Animal Group"
             },
             {
               "field": "subgroup",
@@ -275,7 +275,7 @@
             {
               "field": "class",
               "type": "nominal",
-              "title": "Class"
+              "title": "Animal Group"
             },
             {
               "field": "subgroup",
@@ -494,100 +494,6 @@
           "text": {
             "field": "change_pct",
             "type": "nominal"
-          }
-        }
-      },
-      {
-        "description": "Insight Annotation: Chytrid-free frogs in Amphibians facet",
-        "transform": [
-          {
-            "filter": "datum.subgroup === 'Frogs not hit by chytrid fungus'"
-          }
-        ],
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "fontSize": 15.5,
-          "fontWeight": "bold",
-          "fill": "#334155",
-          "text": [
-            "Fungus-free frogs fell steeper (-72.8%)",
-            "as drying habitats compound disease"
-          ]
-        },
-        "encoding": {
-          "y": {
-            "field": "subgroup",
-            "type": "nominal",
-            "sort": [
-              "Land-breeding frogs",
-              "Frogs not hit by chytrid fungus",
-              "Wetland-breeding frogs",
-              "Frogs hit by fungal disease",
-              "Stream-dwelling frogs",
-              "Freshwater reptiles",
-              "Terrestrial reptiles",
-              "Marine reptiles",
-              "Migratory shorebirds",
-              "Terrestrial birds",
-              "Marine birds & seabirds",
-              "Mid-sized mammals (35g–5.5kg)",
-              "Terrestrial mammals (all)",
-              "Small land mammals",
-              "Large land mammals",
-              "Marine mammals"
-            ]
-          },
-          "x": {
-            "datum": 104
-          }
-        }
-      },
-      {
-        "description": "Insight Annotation: Migratory shorebirds in Birds facet",
-        "transform": [
-          {
-            "filter": "datum.subgroup === 'Migratory shorebirds'"
-          }
-        ],
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "fontSize": 15.5,
-          "fontWeight": "bold",
-          "fill": "#334155",
-          "text": [
-            "Shorebirds (-56.4%) lose coastal",
-            "mudflat stopovers across Asia"
-          ]
-        },
-        "encoding": {
-          "y": {
-            "field": "subgroup",
-            "type": "nominal",
-            "sort": [
-              "Land-breeding frogs",
-              "Frogs not hit by chytrid fungus",
-              "Wetland-breeding frogs",
-              "Frogs hit by fungal disease",
-              "Stream-dwelling frogs",
-              "Freshwater reptiles",
-              "Terrestrial reptiles",
-              "Marine reptiles",
-              "Migratory shorebirds",
-              "Terrestrial birds",
-              "Marine birds & seabirds",
-              "Mid-sized mammals (35g–5.5kg)",
-              "Terrestrial mammals (all)",
-              "Small land mammals",
-              "Large land mammals",
-              "Marine mammals"
-            ]
-          },
-          "x": {
-            "datum": 104
           }
         }
       }

@@ -126,7 +126,7 @@
           {
             "field": "EPBCStatus",
             "type": "nominal",
-            "title": "EPBC Status"
+            "title": "Extinction Risk Tier"
           },
           {
             "field": "species_count",

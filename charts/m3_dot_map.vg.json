@@ -114,7 +114,7 @@
                   {
                     "field": "TaxonomicGroup",
                     "type": "nominal",
-                    "title": "Fauna Group"
+                    "title": "Animal Group"
                   },
                   {
                     "field": "State",
@@ -122,31 +122,14 @@
                     "title": "State / Territory"
                   },
                   {
-                    "field": "species_count",
-                    "type": "quantitative",
-                    "title": "Species Tracked at Site"
-                  },
-                  {
                     "field": "species_monitored",
                     "type": "nominal",
-                    "title": "Species List"
+                    "title": "Monitored Species"
                   },
                   {
                     "field": "EPBCStatus",
                     "type": "nominal",
-                    "title": "EPBC Status"
-                  },
-                  {
-                    "field": "latitude",
-                    "type": "quantitative",
-                    "title": "Latitude",
-                    "format": ".2f"
-                  },
-                  {
-                    "field": "longitude",
-                    "type": "quantitative",
-                    "title": "Longitude",
-                    "format": ".2f"
+                    "title": "Extinction Risk Tier"
                   }
                 ]
               }
@@ -245,7 +228,7 @@
                   {
                     "field": "TaxonomicGroup",
                     "type": "nominal",
-                    "title": "Fauna Group"
+                    "title": "Animal Group"
                   },
                   {
                     "field": "State",
@@ -253,31 +236,14 @@
                     "title": "State / Territory"
                   },
                   {
-                    "field": "species_count",
-                    "type": "quantitative",
-                    "title": "Species Tracked at Site"
-                  },
-                  {
                     "field": "species_monitored",
                     "type": "nominal",
-                    "title": "Species List"
+                    "title": "Monitored Species"
                   },
                   {
                     "field": "EPBCStatus",
                     "type": "nominal",
-                    "title": "EPBC Status"
-                  },
-                  {
-                    "field": "latitude",
-                    "type": "quantitative",
-                    "title": "Latitude",
-                    "format": ".2f"
-                  },
-                  {
-                    "field": "longitude",
-                    "type": "quantitative",
-                    "title": "Longitude",
-                    "format": ".2f"
+                    "title": "Extinction Risk Tier"
                   }
                 ]
               }
@@ -381,7 +347,7 @@
                   {
                     "field": "TaxonomicGroup",
                     "type": "nominal",
-                    "title": "Fauna Group"
+                    "title": "Animal Group"
                   },
                   {
                     "field": "State",
@@ -389,31 +355,14 @@
                     "title": "State / Territory"
                   },
                   {
-                    "field": "species_count",
-                    "type": "quantitative",
-                    "title": "Species Tracked at Site"
-                  },
-                  {
                     "field": "species_monitored",
                     "type": "nominal",
-                    "title": "Species List"
+                    "title": "Monitored Species"
                   },
                   {
                     "field": "EPBCStatus",
                     "type": "nominal",
-                    "title": "EPBC Status"
-                  },
-                  {
-                    "field": "latitude",
-                    "type": "quantitative",
-                    "title": "Latitude",
-                    "format": ".2f"
-                  },
-                  {
-                    "field": "longitude",
-                    "type": "quantitative",
-                    "title": "Longitude",
-                    "format": ".2f"
+                    "title": "Extinction Risk Tier"
                   }
                 ]
               }
@@ -512,7 +461,7 @@
                   {
                     "field": "TaxonomicGroup",
                     "type": "nominal",
-                    "title": "Fauna Group"
+                    "title": "Animal Group"
                   },
                   {
                     "field": "State",
@@ -520,31 +469,14 @@
                     "title": "State / Territory"
                   },
                   {
-                    "field": "species_count",
-                    "type": "quantitative",
-                    "title": "Species Tracked at Site"
-                  },
-                  {
                     "field": "species_monitored",
                     "type": "nominal",
-                    "title": "Species List"
+                    "title": "Monitored Species"
                   },
                   {
                     "field": "EPBCStatus",
                     "type": "nominal",
-                    "title": "EPBC Status"
-                  },
-                  {
-                    "field": "latitude",
-                    "type": "quantitative",
-                    "title": "Latitude",
-                    "format": ".2f"
-                  },
-                  {
-                    "field": "longitude",
-                    "type": "quantitative",
-                    "title": "Longitude",
-                    "format": ".2f"
+                    "title": "Extinction Risk Tier"
                   }
                 ]
               }

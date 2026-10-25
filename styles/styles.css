@@ -139,7 +139,7 @@ body {
   font-style: italic;
   font-weight: 500;
   display: block;
-  max-width: 44ch;
+  max-width: 34ch;
 }
 
 
@@ -301,6 +301,7 @@ body {
   font-size: 13.5px;
   font-style: italic;
   font-weight: 500;
+  max-width: 34ch;
 }
 
 .chart-caption--side p {

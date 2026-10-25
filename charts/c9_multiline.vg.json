@@ -17,8 +17,8 @@
   },
   "transform": [
     {
-      "calculate": "format(datum.Index * 100, '.1f') + '%'",
-      "as": "pop_level_pct"
+      "calculate": "(datum.Index >= 1 ? '+' : '') + round((datum.Index - 1) * 1000) / 10 + '%'",
+      "as": "change_since_2000"
     }
   ],
   "layer": [
@@ -168,7 +168,7 @@
           {
             "field": "Management",
             "type": "nominal",
-            "title": "Management Tier"
+            "title": "Management Status"
           },
           {
             "field": "Year",
@@ -178,13 +178,13 @@
           {
             "field": "Index",
             "type": "quantitative",
-            "title": "Population Index (2000 = 1.0)",
+            "title": "Population Index (Year 2000 = 1.0)",
             "format": ".2f"
           },
           {
-            "field": "pop_level_pct",
+            "field": "change_since_2000",
             "type": "nominal",
-            "title": "Population Level (% of 2000)"
+            "title": "Change Since 2000 (%)"
           }
         ]
       }
@@ -268,9 +268,8 @@
         "fontWeight": "bold",
         "fill": "#0284c7",
         "text": [
-          "Predator-Free Havens (+729%):",
-          "Complete cat & fox removal",
-          "sparks rapid recovery"
+          "Fenced Havens (+729%):",
+          "Complete cat & fox removal"
         ]
       },
       "encoding": {

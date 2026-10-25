@@ -116,13 +116,7 @@
           {
             "field": "taxa_count",
             "type": "quantitative",
-            "title": "Species Monitored",
-            "format": ","
-          },
-          {
-            "field": "time_series_count",
-            "type": "quantitative",
-            "title": "Survey Datasets",
+            "title": "Monitored Threatened Species",
             "format": ","
           }
         ]
@@ -168,8 +162,7 @@
             "lat": -9.8,
             "text": [
               "Northern Territory (29 species):",
-              "Half the tracking of eastern states",
-              "despite -61.8% collapse"
+              "Fewest mainland species tracked"
             ]
           }
         ]
@@ -205,8 +198,7 @@
             "lat": -33.0,
             "text": [
               "New South Wales (62 species):",
-              "Most tracked state due to",
-              "major city universities"
+              "Most species tracked nationally"
             ]
           }
         ]

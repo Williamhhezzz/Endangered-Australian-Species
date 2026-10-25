@@ -90,13 +90,13 @@
               {
                 "field": "Area_Lost_Millions",
                 "type": "quantitative",
-                "title": "Area Lost (M ha)",
+                "title": "Area Lost (Million Hectares)",
                 "format": ".2f"
               },
               {
                 "field": "Proportion_Lost",
                 "type": "quantitative",
-                "title": "Proportion Lost (%)",
+                "title": "Proportion of Habitat Destroyed (%)",
                 "format": ".2f"
               }
             ]
@@ -226,13 +226,13 @@
               {
                 "field": "Proportion_Lost",
                 "type": "quantitative",
-                "title": "Proportion Lost (%)",
+                "title": "Proportion of Habitat Destroyed (%)",
                 "format": ".2f"
               },
               {
                 "field": "Area_Lost_Millions",
                 "type": "quantitative",
-                "title": "Area Lost (M ha)",
+                "title": "Area Lost (Million Hectares)",
                 "format": ".2f"
               }
             ]
@@ -268,32 +268,6 @@
             "text": {
               "field": "label_val",
               "type": "nominal"
-            }
-          }
-        },
-        {
-          "description": "Annotation for small-range species vulnerability",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "text",
-            "align": "left",
-            "fontSize": 11.5,
-            "fill": "#334155"
-          },
-          "encoding": {
-            "x": {
-              "datum": 5.2
-            },
-            "y": {
-              "datum": "Malleefowl"
-            },
-            "text": {
-              "value": [
-                "Small-range species lose a critical",
-                "habitat share from smaller clearings"
-              ]
             }
           }
         }

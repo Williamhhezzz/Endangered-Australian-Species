@@ -4,6 +4,7 @@
     "type": "pad",
     "contains": "padding"
   },
+  "padding": {"right": 10},
   "data": {
     "url": "data/c1_indexline_streamgraph.csv",
     "format": {
@@ -171,8 +172,8 @@
               "field": "value",
               "type": "quantitative",
               "scale": {
-                "zero": false,
-                "domain": [0.2, 1.3]
+                "zero": true,
+                "domain": [0, 1.2]
               },
               "axis": {
                 "title": "Population Index (2000 = 1.0)",
@@ -180,7 +181,7 @@
                 "titleFontWeight": "bold",
                 "labelFontSize": 12.5,
                 "format": ".1f",
-                "values": [0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
+                "values": [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
               }
             }
           }
@@ -189,8 +190,12 @@
           "description": "Interactive Points & Tooltips",
           "transform": [
             {
-              "calculate": "format(datum.value * 100, '.1f') + '%'",
-              "as": "pop_pct"
+              "calculate": "datum.value",
+              "as": "Index"
+            },
+            {
+              "calculate": "round((datum.Index - 1) * 1000) / 10 + '%'",
+              "as": "change_since_2000"
             }
           ],
           "mark": {
@@ -221,13 +226,13 @@
               {
                 "field": "value",
                 "type": "quantitative",
-                "title": "Index Value",
+                "title": "Population Index (Year 2000 = 1.0)",
                 "format": ".3f"
               },
               {
-                "field": "pop_pct",
+                "field": "change_since_2000",
                 "type": "nominal",
-                "title": "Population Level (% of 2000)"
+                "title": "Change Since 2000"
               }
             ]
           }
@@ -331,7 +336,8 @@
               "type": "quantitative",
               "scale": {
                 "zero": false,
-                "nice": false
+                "nice": false,
+                "domain": [2000, 2020]
               },
               "axis": {
                 "format": "d",
@@ -409,47 +415,74 @@
           }
         },
         {
-          "description": "Government Review Reference Line (2015)",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "rule",
-            "strokeDash": [4, 4],
-            "color": "#94a3b8",
-            "strokeWidth": 1.5
-          },
-          "encoding": {
-            "x": {
-              "datum": 2015
-            }
-          }
-        },
-        {
-          "description": "Government Review Annotation",
-          "data": {
-            "values": [{}]
-          },
-          "mark": {
-            "type": "text",
-            "align": "right",
-            "fontSize": 10.5,
-            "fontWeight": "bold",
-            "fill": "#0f172a"
-          },
-          "encoding": {
-            "x": {
-              "datum": 2014.6
+          "description": "Hover Points for Streamgraph",
+          "transform": [
+            {
+              "filter": "datum.year <= 2020"
             },
-            "y": {
-              "datum": 88
+            {
+              "filter": {
+                "param": "time_brush"
+              }
             },
-            "text": {
-              "value": [
-                "2014–2016: Government review",
-                "adds overdue bird listings"
+            {
+              "fold": [
+                "Birds",
+                "Mammals",
+                "Reptiles",
+                "Amphibians"
+              ],
+              "as": [
+                "FaunaClass",
+                "ListingsCount"
               ]
             }
+          ],
+          "mark": {
+            "type": "point",
+            "size": 80,
+            "opacity": 0
+          },
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "quantitative",
+              "scale": {
+                "zero": false,
+                "nice": false,
+                "domain": [2000, 2020]
+              }
+            },
+            "y": {
+              "field": "ListingsCount",
+              "type": "quantitative",
+              "stack": "center",
+              "scale": {
+                "domain": [0, 118]
+              }
+            },
+            "color": {
+              "field": "FaunaClass",
+              "type": "nominal"
+            },
+            "tooltip": [
+              {
+                "field": "year",
+                "type": "quantitative",
+                "title": "Year"
+              },
+              {
+                "field": "FaunaClass",
+                "type": "nominal",
+                "title": "Animal Group"
+              },
+              {
+                "field": "ListingsCount",
+                "type": "quantitative",
+                "title": "Listings Count",
+                "format": "d"
+              }
+            ]
           }
         }
       ]

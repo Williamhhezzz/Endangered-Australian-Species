@@ -144,7 +144,7 @@
           {
             "field": "species_count",
             "type": "quantitative",
-            "title": "Threatened Species"
+            "title": "Legally Listed Species"
           }
         ]
       }
